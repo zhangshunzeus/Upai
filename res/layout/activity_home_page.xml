@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3F3F3"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -31,7 +32,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,11 +49,426 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:src="@drawable/homepage_banner" />
-                
-                <TextView  />
-                
+
+                <TextView
+                    android:id="@+id/tv_up_the_goddess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="41.5dp"
+                    android:text="U拍女神"
+                    android:textColor="@color/home_page_banner_up_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="66dp"
+                    android:background="@color/home_page_banner_up_text_color" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="68dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性感"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="与"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="优雅"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="96dp"
+                    android:background="@color/home_page_banner_up_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50.5dp"
+                    android:layout_marginTop="102dp"
+                    android:text="十足故事·情绪人像"
+                    android:textColor="@color/home_page_banner_up_text_color"
+                    android:textSize="7.5sp" />
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4.5dp"
+                android:background="@color/home_page_banner_up_text_color"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" >
+
+                <TextView
+                    android:id="@+id/tv_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/hot"
+                    android:gravity="center"
+                    android:text="热门推荐"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/tv_amateur_photography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/amateur_photography"
+                    android:gravity="center"
+                    android:text="业余摄影"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/tv_professional_photography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/professional_photography"
+                    android:gravity="center"
+                    android:text="专业摄影"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/tv_popular_activities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/popular_activities"
+                    android:gravity="center"
+                    android:text="热门活动"
+                    android:textColor="@color/menu_text_color"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4.5dp"
+                android:layout_marginLeft="4.5dp"
+                android:layout_marginRight="4.5dp"
+                android:background="@color/home_page_banner_up_text_color"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:text="热门资讯"
+                        android:textColor="@color/menu_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/hot_img_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/hot_img_one" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/hot_img_one"
+                            android:alpha="0.5"
+                            android:background="@color/app_bg"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="6dp"
+                            android:text="拍出欧美大牌范儿"
+                            android:textColor="@color/home_page_banner_up_text_color"
+                            android:textSize="9sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp" >
+
+                        <ImageView
+                            android:id="@+id/hot_img_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/hot_img_two" />
+
+                        <TextView
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/hot_img_two"
+                            android:alpha="0.5"
+                            android:background="@color/app_bg"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="6dp"
+                            android:text="拍出欧美大牌范儿"
+                            android:textColor="@color/home_page_banner_up_text_color"
+                            android:textSize="9sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4.5dp"
+                android:layout_marginLeft="4.5dp"
+                android:layout_marginRight="4.5dp"
+                android:background="@color/home_page_banner_up_text_color"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:text="热门摄影师"
+                        android:textColor="@color/menu_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/photographer" />
+
+                    <TextView
+                        android:id="@+id/pay_attention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/pay_attention_to_click"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:text="+  关注"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/photograher_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginLeft="134dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/photograher_head" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="56dp"
+                        android:gravity="center"
+                        android:text="Stevin Tuchiwsky"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pay_attention"
+                        android:layout_marginTop="76dp"
+                        android:gravity="center"
+                        android:text="人气  99K+   粉丝1356"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/pay_attention"
+                        android:layout_marginTop="96dp"
+                        android:gravity="center"
+                        android:text="@string/pay_attention_content"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="7sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4.5dp"
+                android:layout_marginLeft="4.5dp"
+                android:layout_marginRight="4.5dp"
+                android:background="@color/home_page_banner_up_text_color"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="15dp" >
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:text="图片欣赏"
+                        android:textColor="@color/menu_text_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:background="@color/line" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/appreciate_img" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="用生命拍照，拒绝ps的真人版美女与野兽"
+                        android:textColor="@color/appreciate_size_color"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今天"
+                        android:textColor="@color/appreciate_size_color"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="35评论"
+                        android:textColor="@color/appreciate_size_color"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#F94546"
+                        android:padding="2dp"
+                        android:text="图集"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/to_view_more" />
         </LinearLayout>
     </ScrollView>
+
+    <include 
+        layout="@layout/bottom_of_the_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
