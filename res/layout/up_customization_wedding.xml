@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/black" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/customization_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/start_photo"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/dingwei" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+    <ImageView
+        android:id="@+id/big_title"
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:src="@drawable/hun_sha_kai_pai_title"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/wedding_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wedding"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="84dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/hun_sha_context"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wedding_text"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="121dp"/>
+    <com.zhangwen.customization.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/hun_sha_kai_pai_head"
+        android:layout_below="@+id/hun_sha_context"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_self_frame"
+        android:text="关注"
+        android:gravity="center"
+        android:drawableLeft="@drawable/jia_guang_zhu"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:alpha="0.5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"/>
+    </RelativeLayout>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="伊超"
+        android:drawableRight="@drawable/collector"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="13dp"
+        android:layout_gravity="center_horizontal"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wedding_photoer"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#b1b1b1"/>
+    
+
+</LinearLayout>

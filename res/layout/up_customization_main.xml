@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customization_main_background_pic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.6"
+    android:background="@drawable/customization_main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/selector_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="197dp" >
+
+        <ImageView
+            android:id="@+id/customization_theme_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_main_yuan" />
+
+        <ImageView
+            android:id="@+id/customization_theme_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_main_theme_pic" />
+
+        <ImageView
+            android:id="@+id/customization_theme_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_selector_background"
+            android:visibility="gone" 
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/theme_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/customization_theme" />
+
+    <RelativeLayout
+         android:id="@+id/selector_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="96dp" >
+
+        <ImageView
+            android:id="@+id/customization_order_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_main_yuan" />
+
+        <ImageView
+            android:id="@+id/customization_order_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_main_order_pic" />
+
+        <ImageView
+            android:id="@+id/customization_order_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/customization_selector_background"
+            android:visibility="gone" 
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/order_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/customization_order" />
+
+</LinearLayout>

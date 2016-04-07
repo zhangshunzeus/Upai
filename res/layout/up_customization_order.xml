@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/black" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/customization_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/order"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/order_chongqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="38dp"
+            android:src="@drawable/chongqing" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/dingwei" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+ 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/banner" />
+
+            <!-- 这是记忆时光布局 -->
+
+            <RelativeLayout
+                android:id="@+id/ji_yi"
+                android:layout_width="match_parent"
+                android:layout_height="164dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jiyishiguang_pic" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/shi_guang_background" />
+
+                <ImageView
+                    android:id="@+id/shi_guang_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ji_yi_shi_guang_title" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shi_guang_text_title"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ji_yi_shi_guang_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ji_yi_cang"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ji_yi_last" />
+            </RelativeLayout>
+
+            <!-- 这是完美写真布局 -->
+
+            <RelativeLayout
+                android:id="@+id/wan_mei"
+                android:layout_width="match_parent"
+                android:layout_height="164dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wan_mei_xie_zhen_pic" />
+
+                <ImageView
+                    android:id="@+id/wan_mei_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wan_mei_xie_zhen_background" />
+
+                <ImageView
+                    android:id="@+id/wan_mei_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/wan_mei_xie_zhen_title" />
+
+                <ImageView
+                    android:id="@+id/wan_mei_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wan_mei_text_title"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/wan_mei_xie_zhen_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wan_mei_cang"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wan_mei_last" />
+            </RelativeLayout>
+            <!-- 温馨全家福布局 -->
+
+            <RelativeLayout
+                android:id="@+id/wen_xin"
+                android:layout_width="match_parent"
+                android:layout_height="164dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wen_xin_pic" />
+
+                <ImageView
+                    android:id="@+id/wen_xin_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wen_xin_background" />
+
+                <ImageView
+                    android:id="@+id/wen_xin_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/wen_xin_title" />
+
+                <ImageView
+                    android:id="@+id/wen_xin_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wen_xin_text_title"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/wen_xin_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wen_xin_cang"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wen_xin_last" />
+            </RelativeLayout>
+
+            <!-- 这是婚纱摄影布局 -->
+
+            <RelativeLayout
+                android:id="@+id/hun_sha"
+                android:layout_width="match_parent"
+                android:layout_height="164dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hun_sha_pic" />
+
+                <ImageView
+                    android:id="@+id/hun_sha_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hun_sha_background" />
+
+                <ImageView
+                    android:id="@+id/hun_sha_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/hun_sha_title" />
+
+                <ImageView
+                    android:id="@+id/hun_sha_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hun_sha_text_title"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/hun_sha_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hun_sha_cang"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hun_sha_last" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
