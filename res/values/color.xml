@@ -4,5 +4,11 @@
     <color name="potographer">#5d5d5d</color>
     <color name="text">#b0b0b0</color>
     <color name="number">#d6d5d5</color>
+    <color name="app_bg">#333333</color>
+    <color name="home_page_banner_up_text_color">#ffffff</color>
+    <color name="menu_text_color">#959595</color>
+    <color name="menu_text_color_click">#FF2030</color>
+    <color name="line">#939393</color>
+    <color name="appreciate_size_color">#5d5d5d</color>
 
 </resources>
