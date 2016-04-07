@@ -16,18 +16,20 @@
         <activity
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
-            
         </activity>
-        <activity android:name="com.zhangwen.customization.UPCustomizationMain">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name="com.example.ushooting.HomePageActivity" >        </activity>
+            <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity 
-            android:name="com.zhangwen.customization.UPCustomizationOrder"></activity>
-        <activity android:name="com.zhangwen.customization.UPCustomizationWedding"></activity>
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
+            <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
+            </activity>
+            <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
+            </activity>
+
     </application>
 
 </manifest>
