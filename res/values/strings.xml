@@ -4,5 +4,6 @@
     <string name="app_name">UShooting</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	<string name="pay_attention_content">摄影师Stevin Tuchiwsky单身上路，寻找那些宁静致远或者大气磅礴的风景，将自己融入\n风景中，营造出天涯浪子的不羁感。希望这些照片能给你的下次出行带来一些灵感。</string>
+	
 </resources>
