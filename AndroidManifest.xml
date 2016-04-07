@@ -16,6 +16,9 @@
         <activity
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
+            
+        </activity>
+        <activity android:name="com.example.ushooting.HomePageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
