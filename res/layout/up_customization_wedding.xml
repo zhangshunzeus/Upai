@@ -99,7 +99,49 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
         android:textSize="12sp"
-        android:textColor="#b1b1b1"/>
+        android:textColor="#b1b1b1"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:textSize="11sp"
+        android:textColor="#b1b1b1"
+            android:text="@string/wedding_guanfang"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:textSize="11sp"
+        android:textColor="#b1b1b1"
+            android:text="@string/wedding_renqi"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:textSize="11sp"
+        android:textColor="#b1b1b1"
+            android:text="@string/wedding_gaopinzhi"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:textSize="11sp"
+        android:textColor="#b1b1b1"
+            android:text="@string/wedding_gaoji"/>
+    </LinearLayout>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看资料"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:layout_gravity="center"/>
     
 
 </LinearLayout>
