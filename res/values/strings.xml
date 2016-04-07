@@ -4,5 +4,7 @@
     <string name="app_name">UShooting</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="sample_tex">\t\t有的美女头上顶着红色，紫色。蓝色等颜色大胆的的秀发
+	    ，和时尚潮流的服饰搭配起来看，很有摇滚的气息，自由奔放；而拥有自然发色的美女，在逆光中，显得轻松，飘逸，浪漫紊乱</string>
 
 </resources>
