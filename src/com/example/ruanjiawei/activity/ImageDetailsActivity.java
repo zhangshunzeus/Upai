@@ -1,7 +1,6 @@
 package com.example.ruanjiawei.activity;
 
-import com.example.ushooting.R;
-
+import com.ushooting.activity.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
