@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import com.example.ruanjiawei.adapter.CommentsBaseAdapter;
 import com.example.ruanjiawei.adapter.CommentsInfo;
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
 
 public class CommentsActivity extends Activity {
 	ArrayList<CommentsInfo> list = new ArrayList<CommentsInfo>();

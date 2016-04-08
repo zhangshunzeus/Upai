@@ -2,7 +2,7 @@ package com.example.ruanjiawei.adapter;
 
 import java.util.ArrayList;
 
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;
