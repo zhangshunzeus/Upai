@@ -23,6 +23,7 @@ public class UPCustomizationWedding extends Activity {
 	RelativeLayout prepayCang;
 	LinearLayout morePhoto;
 	LinearLayout morePhotoCang;
+	TextView lookData;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,9 @@ public class UPCustomizationWedding extends Activity {
 		morePhoto.setOnClickListener(l);
 		morePhotoCang = (LinearLayout) findViewById(R.id.more_photo_cang);
 		morePhotoCang.setOnClickListener(l);
+		
+		lookData=(TextView)findViewById(R.id.look_data);
+		lookData.setOnClickListener(l);
 
 	}
 
@@ -78,6 +82,10 @@ public class UPCustomizationWedding extends Activity {
 				morePhotoCang.setVisibility(View.VISIBLE);
 				Intent intent=new Intent(UPCustomizationWedding.this,MorePhotographer.class);
 				startActivity(intent);
+				break;
+			case R.id.look_data:
+				Intent intent_photodata=new Intent(UPCustomizationWedding.this,OrderPhotographerData.class);
+				startActivity(intent_photodata);
 				break;
 			default:
 				break;

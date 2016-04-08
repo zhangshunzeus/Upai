@@ -113,6 +113,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="13dp"
         android:drawableRight="@drawable/collector"
+        android:padding="10dp"
         android:text="伊超"
         android:textColor="@color/black"
         android:textSize="18sp" />
@@ -125,6 +126,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="13dp"
         android:drawableRight="@drawable/collection_cang"
+        android:padding="10dp"
         android:text="伊超"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -138,6 +140,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:lineSpacingExtra="3dp"
+        android:padding="10dp"
         android:text="@string/wedding_photoer"
         android:textColor="#b1b1b1"
         android:textSize="12sp" />
@@ -147,7 +150,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -182,10 +186,12 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/look_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:padding="10dp"
         android:text="查看资料"
         android:textColor="#666666"
         android:textSize="12sp" />
@@ -195,7 +201,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -263,8 +270,8 @@
     <LinearLayout
         android:id="@+id/more_photo"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
         android:gravity="center"
         android:orientation="vertical" >
 
@@ -273,6 +280,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
             android:src="@drawable/geng_duo" />
 
         <ImageView
@@ -294,8 +302,8 @@
     <LinearLayout
         android:id="@+id/more_photo_cang"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/gengduo_background"
         android:gravity="center"
         android:orientation="vertical"
@@ -305,6 +313,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
             android:src="@drawable/gengduo" />
 
         <ImageView

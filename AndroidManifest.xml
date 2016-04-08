@@ -35,17 +35,13 @@
             </activity>
             <!-- 更多摄影师页面 -->
             <activity android:name="com.zhangwen.customization.MorePhotographer"></activity>
-
+			<!-- 摄影师资料页面 -->
+			<activity android:name="com.zhangwen.customization.OrderPhotographerData"></activity>
+            
         <!-- 首页 -->
         <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>
-        <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
-            
-        </activity>
-        <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
-        </activity>
-        <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
-        </activity>
+        
         <!-- 创意设计 -->
         <activity android:name="com.ushooting.activity.CreativeDesignActivity">
             <intent-filter>
