@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -7,9 +7,17 @@
     <ListView
         android:id="@+id/sample_lv"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:dividerHeight="1dp" >
     </ListView>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/sample_refresh_tx"
+        android:layout_alignParentBottom="true"
+        android:text="正在刷新"
+        android:textColor="@color/text"
+        android:textSize="17sp"
+       
+         />
+
+</RelativeLayout>

@@ -13,7 +13,11 @@ import android.widget.TextView;
 
 import com.example.ushooting.R;
 
+import com.jiangkaiquan.massge.fragment.Chat;
+import com.jiangkaiquan.massge.fragment.Coment;
+import com.jiangkaiquan.massge.fragment.MessagePage;
 import com.jiangkaiquan.massge.fragment.Sample;
+import com.jiangkaiquan.massge.fragment.SendMessae;
 
 /**
  * 消息的类,结构为activity 包含大的frament
@@ -30,7 +34,10 @@ public class Message extends Activity {
 	private FragmentTransaction transaction = manager.beginTransaction();
 
 	private Sample sample;// 作品集的frament
-
+	private MessagePage mPage;// 消息首页的fragemtn
+	private SendMessae sendMessae;// 私信的fragemtn;
+	private Coment coment;// 评论的frament
+	private Chat chat;//聊天的frament;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -43,10 +50,22 @@ public class Message extends Activity {
 		layout = (LinearLayout) findViewById(R.id.message_liner);
 		back.setOnClickListener(listener);
 
-		sample = new Sample();
-		transaction.add(R.id.message_liner, sample);
-		transaction.show(sample);
+		loadFrament();
+		// 设置要显示的frament为首页
+		transaction.add(R.id.message_liner,chat);
+		transaction.show(chat);
 		transaction.commit();
+	}
+
+	/**
+	 * 加载frament
+	 */
+	private void loadFrament() {
+		sample = new Sample();
+		mPage = new MessagePage();
+		sendMessae = new SendMessae();
+		coment = new Coment();
+		chat=new Chat();
 	}
 
 	private OnClickListener listener = new OnClickListener() {
