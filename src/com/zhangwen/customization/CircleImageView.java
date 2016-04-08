@@ -1,6 +1,7 @@
 package com.zhangwen.customization;
 
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;

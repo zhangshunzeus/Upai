@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ushooting"
+    package="com.ushooting.activity"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,6 +17,7 @@
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
         </activity>
+<<<<<<< HEAD
         <activity android:name="com.example.ushooting.HomePageActivity" >        </activity>
             <!-- 定制页面 -->
             <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
@@ -34,7 +35,26 @@
             </activity>
             <!-- 更多摄影师页面 -->
             <activity android:name="com.zhangwen.customization.MorePhotographer"></activity>
+=======
+        <!-- 首页 -->
+        <activity android:name="com.ushooting.activity.HomePageActivity" >
+        </activity>
+        <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+            
+        </activity>
+        <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
+        </activity>
+        <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
+        </activity>
+        <!-- 创意设计 -->
+        <activity android:name="com.ushooting.activity.CreativeDesignActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> 1a71806216f006a548f348d73acc359ac57023e6
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
