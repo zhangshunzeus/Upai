@@ -1,6 +1,7 @@
 package com.zhangwen.customization;
 
-import com.example.ushooting.R;
+
+import com.ushooting.activity.R;
 
 import android.app.Activity;
 import android.os.Bundle;
