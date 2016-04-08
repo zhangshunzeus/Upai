@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/black"
     android:orientation="vertical" >
 
     <ScrollView
@@ -35,7 +35,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="图片详情"
+                    android:text="@string/imagedetails"
                     android:textColor="#ffffff" />
 
                 <TextView
@@ -74,25 +74,71 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="拍出女神性感与优雅"
+                    android:text="@string/imagedetails_titleone"
                     android:textColor="#fefefe"
-                    android:textSize="12sp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="故事性十足的情绪人"
+                    android:text="@string/imagedetails_titletwo"
                     android:textColor="#fefefe"
-                    android:textSize="12sp" />
+                    android:textStyle="bold" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="230dp"
+           <!--  <ImageView
+                android:layout_width="240dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/imagedetails_text"
+                android:textColor="#ffffff"
+                android:textSize="12sp" /> -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center_vertical"
+                android:text="@string/imagedetails_texts"
+                android:textColor="#cccccc"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/comments" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:src="@drawable/like" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:src="@drawable/download" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

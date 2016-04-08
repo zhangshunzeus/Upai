@@ -3,7 +3,9 @@ package com.jiangkaiquan.adpter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
+
+
 
 import android.content.Context;
 import android.view.LayoutInflater;

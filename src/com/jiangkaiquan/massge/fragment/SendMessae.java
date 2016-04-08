@@ -1,6 +1,6 @@
 package com.jiangkaiquan.massge.fragment;
 
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.SendMessageAdpter;
 
 import android.app.Fragment;

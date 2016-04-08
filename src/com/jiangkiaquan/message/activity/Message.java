@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.ushooting.R;
+import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
 import com.jiangkaiquan.massge.fragment.Coment;

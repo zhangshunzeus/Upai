@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#333333</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#f51515</color>
+    <color name="pay_money">#c0c0c0</color>
+    <color name="kaipai">#b1b1b1</color>
+    
+</resources>
