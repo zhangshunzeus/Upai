@@ -13,21 +13,48 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
-            android:label="@string/app_name" >
-        </activity>
-
         <activity android:name="com.example.ushooting.HomePageActivity" >
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+        </activity>
+        <!-- 我的 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 我的相册 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
+        </activity>
+        <!-- 业余摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.AmaterurPhotographyActivity" >
+        </activity>
+
+        <!-- 首页评论 -->
+        <activity android:name="com.example.ruanjiawei.activity.CommentsActivity" >
+        </activity>
+        <!-- 器材 -->
+        <activity android:name="com.example.ruanjiawei.activity.EquipmentActivity" >
+        </activity>
+        <!-- 图片详情 -->
+        <activity android:name="com.example.ruanjiawei.activity.ImageDetailsActivity" >
+        </activity>
+        
+        <!-- 登录 -->
+        <activity android:name="com.example.ruanjiawei.activity.LoginActicity" >
+        </activity>
+        
+        <!-- 专业摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.ProfessionalActivity" >
+        </activity>
+        
+        <!-- 自拍 -->
+        <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
+        </activity>
+
         <!-- 预约页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
         </activity>
@@ -41,11 +68,10 @@
         <!-- 首页 -->
         <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>
-       
+
         <!-- 创意设计 -->
         <activity android:name="com.ushooting.activity.CreativeDesignActivity" >
-            </activity>
-
+        </activity>
     </application>
 
 </manifest>

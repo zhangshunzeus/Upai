@@ -74,8 +74,8 @@ public class UPCustomizationWedding extends Activity {
 			case R.id.more_photo:// 更多摄影师
 				morePhoto.setVisibility(View.GONE);
 				morePhotoCang.setVisibility(View.VISIBLE);
-				Intent intent=new Intent(UPCustomizationWedding.this,MorePhotographer.class);//这个页面不见咯
-				startActivity(intent);
+				Intent intent=new Intent(UPCustomizationWedding.this,MorePhotographer.class);
+				startActivity(intent); 
 				break;
 			default:
 				break;
