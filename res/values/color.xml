@@ -7,4 +7,6 @@
     <color name="line">#939393</color>
     <color name="appreciate_size_color">#5d5d5d</color>
     <color name="creative_design_size_color">#cacaca</color>
+    <color name="landscape_architecture_size_color">#ffffff</color>
+    <color name="content_show">#000000</color>
 </resources>
