@@ -25,6 +25,21 @@
             android:text="作品集"
             android:textColor="@android:color/white"
             android:textSize="17sp" />
+        <!-- 热门推荐的按钮 -->
+
+        <TextView
+            android:id="@+id/message_more_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/double1"
+            android:paddingRight="15dp"
+            android:text="更多"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <LinearLayout

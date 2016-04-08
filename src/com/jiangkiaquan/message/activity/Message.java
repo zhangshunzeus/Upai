@@ -15,6 +15,7 @@ import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
 import com.jiangkaiquan.massge.fragment.Coment;
+import com.jiangkaiquan.massge.fragment.HotRecomend;
 import com.jiangkaiquan.massge.fragment.MessagePage;
 import com.jiangkaiquan.massge.fragment.Sample;
 import com.jiangkaiquan.massge.fragment.SendMessae;
@@ -27,6 +28,7 @@ import com.jiangkaiquan.massge.fragment.SendMessae;
  */
 public class Message extends Activity {
 	private ImageView back;
+	public TextView more;// 热门推荐。更多按钮
 	private TextView title;
 	private LinearLayout layout;
 
@@ -37,7 +39,9 @@ public class Message extends Activity {
 	private MessagePage mPage;// 消息首页的fragemtn
 	private SendMessae sendMessae;// 私信的fragemtn;
 	private Coment coment;// 评论的frament
-	private Chat chat;//聊天的frament;
+	private Chat chat;// 聊天的frament;
+	private HotRecomend recomend;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -48,13 +52,17 @@ public class Message extends Activity {
 		back = (ImageView) findViewById(R.id.message_back_bt);
 		title = (TextView) findViewById(R.id.message_title_tx);
 		layout = (LinearLayout) findViewById(R.id.message_liner);
+		more = (TextView) findViewById(R.id.message_more_tx);
+
 		back.setOnClickListener(listener);
+		more.setOnClickListener(listener);
 
 		loadFrament();
 		// 设置要显示的frament为首页
-		transaction.add(R.id.message_liner,chat);
-		transaction.show(chat);
+		transaction.add(R.id.message_liner, recomend);
+		transaction.show(recomend);
 		transaction.commit();
+		
 	}
 
 	/**
@@ -65,7 +73,8 @@ public class Message extends Activity {
 		mPage = new MessagePage();
 		sendMessae = new SendMessae();
 		coment = new Coment();
-		chat=new Chat();
+		chat = new Chat();
+		recomend=new HotRecomend();
 	}
 
 	private OnClickListener listener = new OnClickListener() {
@@ -77,6 +86,10 @@ public class Message extends Activity {
 			case R.id.message_back_bt:
 
 				break;
+			case R.id.message_more_tx:
+
+				break;
+
 
 			default:
 				break;

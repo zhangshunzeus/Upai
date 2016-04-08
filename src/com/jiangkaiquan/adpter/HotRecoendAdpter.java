@@ -6,35 +6,36 @@ import java.util.HashMap;
 import com.ushooting.activity.R;
 
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 /**
- * 聊天的adpter
+ * 热门推荐adpter
  * @author jkqme
  *
  */
-public class ChatAdpter extends BaseAdapter {
+public class HotRecoendAdpter extends BaseAdapter {
 	private ArrayList<HashMap<String, Object>> list;
 	private Context context;
 	private LayoutInflater inflater;
 
-	private ChatAdpter() {
+	private HotRecoendAdpter() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public ChatAdpter(ArrayList<HashMap<String, Object>> list, Context context) {
-		this.list = list;
-		this.context = context;
-		this.inflater = LayoutInflater.from(context);
+	public HotRecoendAdpter(ArrayList<HashMap<String, Object>> list,
+			Context context) {
+		this.context=context;
+		this.list=list;
+		inflater=LayoutInflater.from(context);
 	}
 
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return 10 ;
+		return 10;
 	}
 
 	@Override
@@ -52,12 +53,8 @@ public class ChatAdpter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		if (convertView == null) {
-			if (position % 2 == 0) {
-				convertView = inflater.inflate(R.layout.jiang_chat2_lv, null);
-			} else {
-				convertView = inflater.inflate(R.layout.jiang_lv_chat_1, null);
-			}
+		if(convertView==null){
+			convertView=inflater.inflate(R.layout.jiang_lv_hot_recoemd, null);
 		}
 		return convertView;
 	}
