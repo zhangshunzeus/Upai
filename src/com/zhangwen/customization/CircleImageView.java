@@ -1,6 +1,6 @@
 package com.zhangwen.customization;
 
-import com.ushooting.activity.R;
+import com.example.ushooting.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
