@@ -13,18 +13,18 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+       
+
         <activity android:name="com.example.ushooting.HomePageActivity" >
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+
         </activity>
         <!-- 我的 -->
         <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           
         </activity>
         <!-- 我的相册 -->
         <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
@@ -61,9 +61,7 @@
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
         </activity>
-        <!-- 更多摄影师页面 -->
-        <activity android:name="com.zhangwen.customization.MorePhotographer" >
-        </activity>
+
 
         <!-- 首页 -->
         <activity android:name="com.ushooting.activity.HomePageActivity" >
@@ -72,6 +70,18 @@
         <!-- 创意设计 -->
         <activity android:name="com.ushooting.activity.CreativeDesignActivity" >
         </activity>
+
+       
+        <!-- 动物萌宠 -->
+        <activity android:name="com.ushooting.activity.PetActivity" >
+        </activity>
+        <!-- 风景建筑 -->
+        <activity android:name="com.ushooting.activity.LandscapeArchitectureActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

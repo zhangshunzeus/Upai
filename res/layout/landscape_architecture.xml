@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F3F3"
     android:orientation="vertical" >
-
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -24,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="创意设计"
+            android:text="风景建筑"
             android:textColor="@color/home_page_banner_up_text_color"
             android:textSize="15sp" />
 
@@ -34,9 +33,9 @@
             android:layout_height="wrap_content"
             android:src="@drawable/add" />
     </LinearLayout>
-
+    
     <ListView
-        android:id="@+id/lv_creative_design"
+        android:id="@+id/lv_landscape_architecture"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

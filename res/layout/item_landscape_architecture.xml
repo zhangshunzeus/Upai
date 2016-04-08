@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/landscape_architecture_img_one" />
+
+        <ImageView
+            android:id="@+id/iv_bg_transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/transparent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:gravity="center"
+            android:text="罗马万神殿"
+            android:textColor="@color/landscape_architecture_size_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="94dp"
+            android:gravity="center"
+            android:text="佛罗伦萨大教堂"
+            android:textColor="@color/landscape_architecture_size_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,16 +1,17 @@
-package com.example.ruanjiawei.activity;
+package com.ushooting.activity;
 
-import com.ushooting.activity.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 
-public class AmaterurPhotographyActivity extends Activity {
+public class PetActivity extends Activity {
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.amateur_photography);
-
+		setContentView(R.layout.activity_of_pet);
 	}
+	
 }
