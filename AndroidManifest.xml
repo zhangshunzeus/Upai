@@ -19,11 +19,6 @@
         </activity>
         <!-- 图片详情 -->
         <activity android:name="com.example.ruanjiawei.activity.ImageDetailsActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 业余摄影 -->
         <activity android:name="com.example.ruanjiawei.activity.AmaterurPhotographyActivity" />
@@ -33,6 +28,16 @@
         <activity android:name="com.example.ruanjiawei.activity.ProfessionalActivity" />
         <!-- 自拍 -->
         <activity android:name="com.example.ruanjiawei.activity.TakeActivity" />
+        <!-- 评论 -->
+        <activity android:name="com.example.ruanjiawei.activity.CommentsActivity" >
+        </activity>
+        <activity android:name="com.example.ruanjiawei.activity.LoginActicity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
         </activity>
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >

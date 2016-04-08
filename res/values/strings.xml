@@ -54,5 +54,10 @@
     <string name="design">设计</string>
     <!-- 评论 -->
     <string name="comment">评论</string>
-
+    
+    <!-- 登录 -->
+    <string name="login">账号登录</string>
+    <string name="myup">我的U拍</string>
+     <string name="phone">手机/邮箱</string>
+     <string name="password">密码</string>
 </resources>

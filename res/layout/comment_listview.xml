@@ -8,7 +8,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:background="#ffffff" >
 
         <ImageView
             android:id="@+id/portrait"
@@ -26,7 +27,7 @@
             android:orientation="horizontal" >
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="124dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
@@ -40,20 +41,19 @@
 
                 <TextView
                     android:id="@+id/text"
-                    android:layout_width="130dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="好美的感觉，喜欢这个调调。"
                     android:textColor="#959595"
-                    android:textSize="14sp" />
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <RelativeLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_weight="1"
                 android:orientation="vertical" >
 
                 <TextView
