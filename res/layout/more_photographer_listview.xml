@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="124dp"
+    android:background="@drawable/photo_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/black_background" />
+
+        <com.zhangwen.customization.CircleImageView
+            android:id="@+id/photo_head"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/hun_sha_kai_pai_head" />
+
+        <TextView
+            android:id="@+id/photoer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo_head"
+            android:layout_centerHorizontal="true"
+            android:text="Steven  Pan"
+            android:textColor="@color/white"
+            android:textSize="9sp" />
+
+        <RelativeLayout
+            android:id="@+id/add_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoer_name"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp" 
+            android:layout_marginLeft="120dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/attention_frame" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/attention_jia" 
+                android:layout_centerHorizontal="true"
+                android:text="关注"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+        <LinearLayout 
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/add_attention"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人气  99K+"
+                android:textColor="@color/white"
+                android:textSize="9sp"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="粉丝 1356"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:textSize="9sp"/>
+        </LinearLayout>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fans"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pay_attention_content"
+            android:textColor="@color/white"
+            android:textSize="7sp"/>
+    </RelativeLayout>
+   <!--  更多摄影师点击之后隐藏 -->
+    <RelativeLayout
+            android:id="@+id/add_attention_cang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/already_attention_frame" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/already_attention" />
+
+        </RelativeLayout>
+
+</LinearLayout>
