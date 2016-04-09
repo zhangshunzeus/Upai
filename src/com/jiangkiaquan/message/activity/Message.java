@@ -1,6 +1,7 @@
 package com.jiangkiaquan.message.activity;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import com.jiangkaiquan.massge.fragment.Chat;
 import com.jiangkaiquan.massge.fragment.Coment;
 import com.jiangkaiquan.massge.fragment.HotRecomend;
 import com.jiangkaiquan.massge.fragment.MessagePage;
+import com.jiangkaiquan.massge.fragment.More;
 import com.jiangkaiquan.massge.fragment.Sample;
 import com.jiangkaiquan.massge.fragment.SendMessae;
 
@@ -40,8 +42,9 @@ public class Message extends Activity {
 	private SendMessae sendMessae;// 私信的fragemtn;
 	private Coment coment;// 评论的frament
 	private Chat chat;// 聊天的frament;
-	private HotRecomend recomend;
-
+	
+	private HotRecomend recomend;//推荐的fragment
+	private	More moreframent;//跟多的framgment
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -59,8 +62,8 @@ public class Message extends Activity {
 
 		loadFrament();
 		// 设置要显示的frament为首页
-		transaction.add(R.id.message_liner, recomend);
-		transaction.show(recomend);
+		transaction.add(R.id.message_liner, moreframent);
+		transaction.show(moreframent);
 		transaction.commit();
 		
 	}
@@ -75,6 +78,7 @@ public class Message extends Activity {
 		coment = new Coment();
 		chat = new Chat();
 		recomend=new HotRecomend();
+		moreframent=new More();
 	}
 
 	private OnClickListener listener = new OnClickListener() {
