@@ -16,6 +16,7 @@ import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
 import com.jiangkaiquan.massge.fragment.Coment;
+import com.jiangkaiquan.massge.fragment.Competition;
 import com.jiangkaiquan.massge.fragment.HotRecomend;
 import com.jiangkaiquan.massge.fragment.MessagePage;
 import com.jiangkaiquan.massge.fragment.More;
@@ -42,9 +43,10 @@ public class Message extends Activity {
 	private SendMessae sendMessae;// 私信的fragemtn;
 	private Coment coment;// 评论的frament
 	private Chat chat;// 聊天的frament;
-	
-	private HotRecomend recomend;//推荐的fragment
-	private	More moreframent;//跟多的framgment
+
+	private HotRecomend recomend;// 推荐的fragment
+	private More moreframent;// 跟多的framgment
+	private Competition competition;//热门赛事
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -62,10 +64,10 @@ public class Message extends Activity {
 
 		loadFrament();
 		// 设置要显示的frament为首页
-		transaction.add(R.id.message_liner, moreframent);
-		transaction.show(moreframent);
+		transaction.add(R.id.message_liner, competition);
+		transaction.show(competition);
 		transaction.commit();
-		
+
 	}
 
 	/**
@@ -77,8 +79,9 @@ public class Message extends Activity {
 		sendMessae = new SendMessae();
 		coment = new Coment();
 		chat = new Chat();
-		recomend=new HotRecomend();
-		moreframent=new More();
+		recomend = new HotRecomend();
+		moreframent = new More();
+		competition=new Competition();
 	}
 
 	private OnClickListener listener = new OnClickListener() {
@@ -93,7 +96,6 @@ public class Message extends Activity {
 			case R.id.message_more_tx:
 
 				break;
-
 
 			default:
 				break;
