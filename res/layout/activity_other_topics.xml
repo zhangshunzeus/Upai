@@ -162,7 +162,9 @@
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp" >
 
                     <ImageView
                         android:id="@+id/iv_other_topics_img_two"
@@ -198,10 +200,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="15dp"
                             android:text="获奖作品:阳光下的丽人"
                             android:textColor="@color/creative_design_size_color"
-                            android:textSize="7sp" />
+                            android:textSize="7sp"
+                            android:layout_weight="1" />
 
                         <ImageView
                             android:id="@+id/iv_praise_two"
@@ -213,17 +215,84 @@
                             android:id="@+id/iv_like_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="21dp"
-                            android:src="@drawable/zs_like" />
+                            android:src="@drawable/zs_like"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp" />
 
                         <ImageView
                             android:id="@+id/iv_collection_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="41dp"
                             android:src="@drawable/collection" />
                     </LinearLayout>
                 </RelativeLayout>
+                
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_other_topics_img_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/other_topics_img_two" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/two_label" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:text="3"
+                        android:textColor="@color/home_page_banner_up_text_color"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv_other_topics_img_three"
+                        android:background="@drawable/two"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="获奖作品:马背上的男人"
+                            android:textColor="@color/creative_design_size_color"
+                            android:textSize="7sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_praise_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/praise" />
+
+                        <ImageView
+                            android:id="@+id/iv_like_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/zs_like"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_collection_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/collection" />
+                    </LinearLayout>
+                </RelativeLayout>
+                
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

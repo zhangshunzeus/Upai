@@ -34,11 +34,15 @@
         </activity>
         <!-- 动物萌宠 -->
         <activity android:name="com.ushooting.activity.PetActivity" >
+             
         </activity>
         <!-- 风景建筑 -->
         <activity android:name="com.ushooting.activity.LandscapeArchitectureActivity" >
-            <intent-filter>
+        </activity>
+        <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
+           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
