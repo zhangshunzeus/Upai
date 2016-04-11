@@ -49,6 +49,7 @@ public class HotRecomend extends Fragment {
 		message = (Message) getActivity();
 		//显示更多按钮
 		message.more.setVisibility(View.VISIBLE);
+		message.setTitle("热门推荐");
 	}
 	@Override
 	public void onPause() {
@@ -56,4 +57,5 @@ public class HotRecomend extends Fragment {
 		super.onPause();
 		message.more.setVisibility(View.INVISIBLE);
 	}
+	
 }

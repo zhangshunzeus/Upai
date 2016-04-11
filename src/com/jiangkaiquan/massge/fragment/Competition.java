@@ -1,6 +1,7 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkaiquan.adpter.CompetitionAdpter;
+import com.jiangkiaquan.message.activity.Message;
 import com.ushooting.activity.R;
 
 import android.app.Fragment;
@@ -9,7 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
+/**
+ * 热门赛事的fragment
+ * @author jkqme
+ *
+ */
 public class Competition extends Fragment {
 	private ListView listView;
 	private CompetitionAdpter adpter;
@@ -27,5 +32,14 @@ public class Competition extends Fragment {
 		listView = (ListView) v.findViewById(R.id.competition_lv);
 		adpter = new CompetitionAdpter(null, getActivity());
 		listView.setAdapter(adpter);
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("摄集");
 	}
 }

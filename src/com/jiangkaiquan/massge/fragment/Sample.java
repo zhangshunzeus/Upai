@@ -2,6 +2,7 @@ package com.jiangkaiquan.massge.fragment;
 
 import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.SampleAdpter;
+import com.jiangkiaquan.message.activity.Message;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -38,5 +39,14 @@ public class Sample extends Fragment {
 	
 	private void loadVary() {
 		adpter = new SampleAdpter(null, getActivity());
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("作品集");
 	}
 }

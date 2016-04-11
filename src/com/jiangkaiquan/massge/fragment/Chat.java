@@ -9,7 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
+/**
+ * 聊天的frament
+ * @author jkqme
+ *
+ */
 public class Chat extends Fragment {
 	private ListView listView;
 	private ChatAdpter adpter;

@@ -2,6 +2,7 @@ package com.jiangkaiquan.massge.fragment;
 
 import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.SendMessageAdpter;
+import com.jiangkiaquan.message.activity.Message;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -38,5 +39,14 @@ public class SendMessae extends Fragment {
 		listView = (ListView) v.findViewById(R.id.send_message_lv);
 		adpter = new SendMessageAdpter(null, getActivity());
 		listView.setAdapter(adpter);
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("私信");
 	}
 }

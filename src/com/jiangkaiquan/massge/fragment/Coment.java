@@ -2,6 +2,7 @@ package com.jiangkaiquan.massge.fragment;
 
 import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.ComentAdpter;
+import com.jiangkiaquan.message.activity.Message;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -38,5 +39,15 @@ public class Coment extends Fragment {
 		listView = (ListView) v.findViewById(R.id.coment_lv);
 		adpter = new ComentAdpter(null, getActivity());
 		listView.setAdapter(adpter);
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("评论");
 	}
 }

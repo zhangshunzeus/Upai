@@ -1,5 +1,6 @@
 package com.jiangkaiquan.massge.fragment;
 
+import com.jiangkiaquan.message.activity.Message;
 import com.ushooting.activity.R;
 
 import android.app.Fragment;
@@ -21,5 +22,14 @@ public class MessagePage extends Fragment {
 		View view = inflater.inflate(R.layout.jiang_message_page, null);
 		// TODO Auto-generated method stub
 		return view;
+	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("消息");
 	}
 }

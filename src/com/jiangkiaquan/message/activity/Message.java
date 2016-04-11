@@ -102,4 +102,10 @@ public class Message extends Activity {
 			}
 		}
 	};
+	/**
+	 * 设置标题
+	 */
+	public void setTitle(String a){
+		title.setText(a);
+	}
 }

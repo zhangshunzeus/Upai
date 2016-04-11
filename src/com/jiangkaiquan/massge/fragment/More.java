@@ -1,6 +1,7 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkaiquan.adpter.MoreAdpter;
+import com.jiangkiaquan.message.activity.Message;
 import com.ushooting.activity.R;
 
 import android.app.Fragment;
@@ -28,5 +29,13 @@ public class More extends Fragment {
 		adpter = new MoreAdpter(null,getActivity());
 		listView.setAdapter(adpter);
 	}
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 
+		super.onCreate(savedInstanceState);
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("更多");
+	}
 }
