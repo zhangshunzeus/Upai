@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <ScrollView
+    <!-- <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
@@ -13,18 +13,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical" > -->
 
             <RelativeLayout
                 android:id="@+id/add_attention"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
                 android:background="@drawable/girls" >
 
                 <com.zhangwen.customization.CircleImageView
                     android:id="@+id/photo_head"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="25dp"
                     android:src="@drawable/hun_sha_kai_pai_head" />
@@ -114,6 +114,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:button="@null"
+                    android:checked="true"
                     android:drawableBottom="@drawable/photographer_data_selector"
                     android:drawablePadding="15dp"
                     android:gravity="center"
@@ -172,7 +173,7 @@
                 android:name="com.zhangwen.customization.OrderPhotographerDataFans"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
+        <!-- </LinearLayout>
+    </ScrollView> -->
 
 </LinearLayout>
