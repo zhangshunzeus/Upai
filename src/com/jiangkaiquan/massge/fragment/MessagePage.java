@@ -32,4 +32,12 @@ public class MessagePage extends Fragment {
 		message = (Message) getActivity();
 		message.setTitle("消息");
 	}
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("消息");
+	}
 }

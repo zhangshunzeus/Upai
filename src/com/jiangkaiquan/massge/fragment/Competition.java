@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
 /**
  * 热门赛事的fragment
+ * 
  * @author jkqme
- *
+ * 
  */
 public class Competition extends Fragment {
 	private ListView listView;
@@ -33,6 +35,7 @@ public class Competition extends Fragment {
 		adpter = new CompetitionAdpter(null, getActivity());
 		listView.setAdapter(adpter);
 	}
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -41,5 +44,15 @@ public class Competition extends Fragment {
 		Message message;
 		message = (Message) getActivity();
 		message.setTitle("摄集");
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Message message;
+		message = (Message) getActivity();
+
+		message.setTitle("热门推荐");
 	}
 }

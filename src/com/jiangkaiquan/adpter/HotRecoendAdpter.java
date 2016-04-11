@@ -5,16 +5,19 @@ import java.util.HashMap;
 
 import com.ushooting.activity.R;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 /**
  * 热门推荐adpter
+ * 
  * @author jkqme
- *
+ * 
  */
 public class HotRecoendAdpter extends BaseAdapter {
 	private ArrayList<HashMap<String, Object>> list;
@@ -27,9 +30,9 @@ public class HotRecoendAdpter extends BaseAdapter {
 
 	public HotRecoendAdpter(ArrayList<HashMap<String, Object>> list,
 			Context context) {
-		this.context=context;
-		this.list=list;
-		inflater=LayoutInflater.from(context);
+		this.context = context;
+		this.list = list;
+		inflater = LayoutInflater.from(context);
 	}
 
 	@Override
@@ -53,10 +56,35 @@ public class HotRecoendAdpter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		if(convertView==null){
-			convertView=inflater.inflate(R.layout.jiang_lv_hot_recoemd, null);
+		Holder holder;
+		if (convertView == null) {
+			convertView = inflater.inflate(R.layout.jiang_lv_hot_recoemd, null);
+			holder = new Holder();
+			holder.care = (ImageView) convertView
+					.findViewById(R.id.lv_hot_recomend_care_img);
+			holder.head = (ImageView) convertView
+					.findViewById(R.id.lv_hot_recomend_head_img);
+			holder.recomend_contextImg = (ImageView) convertView
+					.findViewById(R.id.lv_hot_recomend_context_img);
+
+			holder.photographer = (TextView) convertView
+					.findViewById(R.id.lv_hot_recomend_photographer_tx);
+			holder.recomend_time = (TextView) convertView
+					.findViewById(R.id.lv_hot_recoemd_time_tx);
+			holder.recomend_context = (TextView) convertView
+					.findViewById(R.id.lv_hot_recoemd_context_tx);
+			convertView.setTag(holder);
 		}
 		return convertView;
 	}
 
+	class Holder {
+		// 关注的按钮
+		ImageView care;
+		ImageView head;
+		TextView photographer;
+		TextView recomend_time;
+		TextView recomend_context;
+		ImageView recomend_contextImg;
+	}
 }

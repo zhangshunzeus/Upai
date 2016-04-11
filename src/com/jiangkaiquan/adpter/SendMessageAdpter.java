@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * 私信页面的adpter
@@ -54,12 +56,22 @@ public class SendMessageAdpter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
+		Holder holder;
 		if (convertView == null) {
 			convertView = inflater
 					.inflate(R.layout.jiang_send_message_lv, null);
-
+			holder=new Holder();
+			holder.send_message_img=(ImageView) convertView.findViewById(R.id.lv_send_message_img);
+			holder.send_message_name=(TextView) convertView.findViewById(R.id.lv_send_message_name_tx);
+			holder.personality_tx=(TextView) convertView.findViewById(R.id.lv_send_message_personality_tx);
+			holder.time_tx=(TextView) convertView.findViewById(R.id.lv_send_message_time_tx);
 		}
 		return convertView;
 	}
-
+	class Holder{
+		ImageView send_message_img;
+		TextView send_message_name;
+		TextView personality_tx;
+		TextView time_tx;
+	}
 }

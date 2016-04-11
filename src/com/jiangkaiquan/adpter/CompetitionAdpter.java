@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * 热门赛事的adpter
@@ -55,8 +57,17 @@ public class CompetitionAdpter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.jiang_lv_competition, null);
+			Holder holder=new Holder();
+		holder.competion=(ImageView)convertView.findViewById(R.id.lv_competion_img);
+		holder.competiontView=(TextView)convertView.findViewById(R.id.lv_competion_tv);
+		holder.competion_time=(TextView)convertView.findViewById(R.id.lv_competion_time_tv);
+		convertView.setTag(holder);
 		}
 		return convertView;
 	}
-
+	class Holder{
+		ImageView competion;
+		TextView competiontView;
+		TextView competion_time;
+	}
 }

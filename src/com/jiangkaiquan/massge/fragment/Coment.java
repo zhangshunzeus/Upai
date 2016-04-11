@@ -50,4 +50,12 @@ public class Coment extends Fragment {
 		message = (Message) getActivity();
 		message.setTitle("评论");
 	}
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Message message;
+		message = (Message) getActivity();
+		message.setTitle("评论");
+	}
 }

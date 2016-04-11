@@ -58,7 +58,7 @@
             android:adjustViewBounds="true"
             android:paddingTop="6dp"
             android:paddingBottom="3dp"
-            />"
+            />
     </LinearLayout>
 	
 </RelativeLayout>
