@@ -65,5 +65,9 @@
 	<string name="more_photo">更多摄影师</string>
 	<string name="more_photo_text">摄影师Stevin Tuchiwsky</string>
 	
+	<!-- 我的相册 -->
+	<string name="myphoyo">我的相册</string>
+	<string name="newphoto">新建相册</string>
+	
 
 </resources>
