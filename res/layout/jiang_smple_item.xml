@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingTop="6dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/sample_item_headimg_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sample_img1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="6dp"
+        android:paddingTop="6dp" >
+
+        <TextView
+            android:id="@+id/attention_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/radia_color"
+            android:padding="3dp"
+            android:text="以关注"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/smple_gruphername_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="摄影师苏小糖"
+                android:textColor="@color/potographer"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/sample_time_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1月5日  21:55 来自  iPhone"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/sample_context_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingTop="5dp"
+                android:text="@string/sample_tex"
+                android:textColor="@color/text"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/sample_img1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang1" />
+
+                <ImageView
+                    android:id="@+id/sample_img2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang2" />
+
+                <ImageView
+                    android:id="@+id/sample_img3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang3" />
+            </LinearLayout>
+            <!-- 第二行图片 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="2dp" >
+
+                <ImageView
+                    android:id="@+id/sample_img4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang4" />
+
+                <ImageView
+                    android:id="@+id/sample_img5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang5" />
+
+                <ImageView
+                    android:id="@+id/sample_img6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/suxiaotang6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sample_button_liner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="15dp" >
+
+                <!-- 分享 -->
+
+                <ImageView
+                    android:id="@+id/sample_item_shar_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/shar" />
+
+                <TextView
+                    android:id="@+id/sample_shar_num_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="900"
+                    android:textColor="@color/text"
+                    android:textSize="14sp" />
+                <!-- 评分 -->
+
+                <ImageView
+                    android:id="@+id/sample_item_evaluate_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/comment" />
+
+                <TextView
+                    android:id="@+id/sample_evaluate_num_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="490"
+                    android:textColor="@color/text"
+                    android:textSize="13sp" />
+
+                <!-- 消息  评论 -->
+
+                <ImageView
+                    android:id="@+id/sample_item_love_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/love" />
+
+                <TextView
+                    android:id="@+id/sample_love_num_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="464"
+                    android:textColor="@color/text"
+                    android:textSize="13sp" />
+                <!-- 喜欢 -->
+
+                <ImageView
+                    android:id="@+id/sample_item_coment_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/coment" />
+
+                <TextView
+                    android:id="@+id/sample_coment_num_tx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="464"
+                    android:textColor="@color/text"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
