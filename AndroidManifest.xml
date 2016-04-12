@@ -13,7 +13,7 @@
         android:icon="@drawable/logo_upai"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <!-- 图片详情 -->
+        <!-- 图片详情 -->
         <activity
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
