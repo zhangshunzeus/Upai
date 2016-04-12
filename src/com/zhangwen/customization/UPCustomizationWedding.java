@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class UPCustomizationWedding extends Activity {
 	LinearLayout morePhoto;
 	LinearLayout morePhotoCang;
 	TextView lookData;
+	ImageView returns;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,8 @@ public class UPCustomizationWedding extends Activity {
 		
 		lookData=(TextView)findViewById(R.id.look_data);
 		lookData.setOnClickListener(l);
+		returns=(ImageView)findViewById(R.id.return_finish);
+		returns.setOnClickListener(l);
 
 	}
 
@@ -86,6 +90,9 @@ public class UPCustomizationWedding extends Activity {
 			case R.id.look_data:
 				Intent intent_photodata=new Intent(UPCustomizationWedding.this,OrderPhotographerData.class);
 				startActivity(intent_photodata);
+				break;
+			case R.id.return_finish:
+				finish();
 				break;
 			default:
 				break;

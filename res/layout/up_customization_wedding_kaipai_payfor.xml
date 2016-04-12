@@ -62,6 +62,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:padding="10dp" >
 
@@ -135,21 +136,24 @@
         android:textSize="18sp" />
 
     <RadioGroup
+        android:id="@+id/radio_kaipai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal" >
 
         <RadioButton
+            android:id="@+id/all_money_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/selector_parmoney_all"
             android:button="@null"
             android:text="全款支付"
             android:textColor="@drawable/selector_text_style"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <RadioButton
+            android:id="@+id/first_money_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -157,16 +161,17 @@
             android:button="@null"
             android:text="首款支付"
             android:textColor="@drawable/selector_text_style"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </RadioGroup>
-
+	<!-- 首款支付显示隐藏 -->
     <LinearLayout
         android:id="@+id/all_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
-        android:padding="10dp" 
-        android:layout_marginTop="50dp">
+        android:padding="10dp"
+        android:visibility="gone" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -180,18 +185,83 @@
             android:layout_height="wrap_content"
             android:text="3200元"
             android:textColor="@color/red"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="100dp"
             android:background="@drawable/selector_parmoney_all2"
             android:button="@null"
             android:gravity="right"
             android:text="支付"
             android:textColor="@drawable/selector_text_style"
-            android:textSize="18sp" />
+            android:textSize="30sp" />
+    </LinearLayout>
+    <!-- 首款支付显示隐藏 -->
+
+    <LinearLayout
+        android:id="@+id/first_paymoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/first_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余付金额："
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2800元"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_pay_mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预付金额："
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400元"
+                android:textColor="@color/red"
+                android:textSize="30sp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/selector_parmoney_all2"
+                android:button="@null"
+                android:gravity="right"
+                android:text="支付"
+                android:textColor="@drawable/selector_text_style"
+                android:textSize="30sp" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

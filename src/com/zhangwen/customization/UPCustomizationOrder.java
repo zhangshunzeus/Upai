@@ -1,10 +1,5 @@
 package com.zhangwen.customization;
 
-
-
-
-
-
 import com.ushooting.activity.R;
 
 import android.app.Activity;
@@ -13,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class UPCustomizationOrder extends Activity {
@@ -24,6 +20,7 @@ public class UPCustomizationOrder extends Activity {
 	RelativeLayout wenXinX;
 	RelativeLayout hunSha;
 	RelativeLayout hunShaX;
+	ImageView returns;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +47,8 @@ public class UPCustomizationOrder extends Activity {
 		hunSha.setOnClickListener(l);
 		hunShaX = (RelativeLayout) findViewById(R.id.hun_sha_cang);
 		hunShaX.setOnClickListener(l);
+		returns=(ImageView)findViewById(R.id.return_finish);
+		returns.setOnClickListener(l);
 	}
 
 	OnClickListener l = new OnClickListener() {
@@ -73,8 +72,11 @@ public class UPCustomizationOrder extends Activity {
 			case R.id.hun_sha:
 				hunSha.setVisibility(View.GONE);
 				hunShaX.setVisibility(View.VISIBLE);
-				Intent intent=new Intent(UPCustomizationOrder.this,UPCustomizationWedding.class);
+				Intent intent = new Intent(UPCustomizationOrder.this, UPCustomizationWedding.class);
 				startActivity(intent);
+				break;
+			case R.id.return_finish:
+				finish();
 				break;
 			default:
 				break;
