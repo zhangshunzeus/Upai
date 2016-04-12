@@ -21,14 +21,10 @@
 
         <!-- 消息页面 -->
         <activity android:name="com.jiangkiaquan.message.activity.Message" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <!-- 首页 -->
-        <activity android:name="com.example.ushooting.HomePageActivity" >
+        <activity android:name="com.ushooting.HomePageActivity" >
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
@@ -45,9 +41,13 @@
         <!-- 摄影师资料页面 -->
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
         </activity>
+        
+        <activity android:name="com.ushooting.activity.OtherTopicsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- 首页 -->
-        <activity android:name="com.ushooting.activity.HomePageActivity" >
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 创意设计 -->
