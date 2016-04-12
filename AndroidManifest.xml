@@ -10,9 +10,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo_upai"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- 图片详情 -->
         <activity
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
@@ -26,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 首页 -->
         <activity android:name="com.example.ushooting.HomePageActivity" >
         </activity>
         <!-- 定制页面 -->
@@ -58,6 +60,7 @@
         <!-- 风景建筑 -->
         <activity android:name="com.ushooting.activity.LandscapeArchitectureActivity" >
         </activity>
+        <!-- 魅力写真 -->
         <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
         </activity>
     </application>
