@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
+        android:minSdkVersion="15"
         android:targetSdkVersion="18" />
 
     <application
@@ -56,6 +56,10 @@
 
         <!-- 自拍 -->
         <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
+        </activity>
+
+        <!-- 消息页面 -->
+        <activity android:name="com.jiangkiaquan.message.activity.Message" >
         </activity>
 
         <!-- 预约页面 -->
