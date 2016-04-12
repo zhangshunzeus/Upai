@@ -37,7 +37,8 @@
             <activity android:name="com.zhangwen.customization.MorePhotographer"></activity>
 			<!-- 摄影师资料页面 -->
 			<activity android:name="com.zhangwen.customization.OrderPhotographerData"></activity>
-            
+           <!--  开拍预付页面 -->
+           <activity android:name="com.zhangwen.customization.UPCustomizationWeddingKaiPaiPay"></activity>
         <!-- 首页 -->
         <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>

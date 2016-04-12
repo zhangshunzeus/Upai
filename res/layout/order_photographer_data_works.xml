@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <GridView 
+
+    <GridView
         android:id="@+id/works_gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:horizontalSpacing="50dp"
         android:numColumns="auto_fit"
         android:padding="10dp"
-        
-        android:horizontalSpacing="50dp"
-        android:verticalSpacing="20dp"/>
-    
+        android:verticalSpacing="20dp" />
 
 </LinearLayout>
