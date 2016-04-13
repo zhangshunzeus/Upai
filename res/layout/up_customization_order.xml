@@ -269,5 +269,10 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+    <include 
+        android:id="@+id/customization_order_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_of_the_menu"/>
 
 </LinearLayout>

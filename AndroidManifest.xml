@@ -17,11 +17,7 @@
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <!-- 我的 -->
         <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
@@ -65,6 +61,11 @@
 
         <!-- 预约页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
