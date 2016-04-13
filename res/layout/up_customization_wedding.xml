@@ -15,7 +15,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:padding="10dp"
             android:src="@drawable/customization_return" />
 
         <TextView
@@ -32,17 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
             android:src="@drawable/share_checked" />
     </RelativeLayout>
-    <ScrollView 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scroll_wedding">
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -153,7 +143,7 @@
         android:padding="10dp"
         android:text="@string/wedding_photoer"
         android:textColor="#b1b1b1"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -168,7 +158,7 @@
             android:layout_height="wrap_content"
             android:text="@string/wedding_guanfang"
             android:textColor="#b1b1b1"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -176,7 +166,7 @@
             android:layout_marginLeft="13dp"
             android:text="@string/wedding_renqi"
             android:textColor="#b1b1b1"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -184,7 +174,7 @@
             android:layout_marginLeft="13dp"
             android:text="@string/wedding_gaopinzhi"
             android:textColor="#b1b1b1"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -192,7 +182,7 @@
             android:layout_marginLeft="13dp"
             android:text="@string/wedding_gaoji"
             android:textColor="#b1b1b1"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
     </LinearLayout>
 
     <TextView
@@ -339,8 +329,5 @@
             android:gravity="center"
             android:src="@drawable/xiala_white_xiao" />
     </LinearLayout>
-    
-     </LinearLayout>
-    </ScrollView>
 
 </LinearLayout>

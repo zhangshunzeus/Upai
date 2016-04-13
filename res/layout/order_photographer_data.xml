@@ -5,17 +5,15 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <ScrollView
-        android:id="@+id/scroll_wedding"
+    <!-- <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:focusableInTouchMode="false" >
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical" > -->
 
             <RelativeLayout
                 android:id="@+id/add_attention"
@@ -100,7 +98,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
-                    android:padding="10dp"
                     android:src="@drawable/customization_return" />
             </RelativeLayout>
 
@@ -163,20 +160,20 @@
                 android:id="@+id/personal_data_fragment"
                 android:name="com.zhangwen.customization.OrderPhotographerDataPersonal"
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_height="match_parent" />
 
             <fragment
                 android:id="@+id/works_data_fragment"
                 android:name="com.zhangwen.customization.OrderPhotographerDataWorks"
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_height="match_parent" />
 
             <fragment
                 android:id="@+id/fans_data_fragment"
                 android:name="com.zhangwen.customization.OrderPhotographerDataFans"
                 android:layout_width="match_parent"
-                android:layout_height="300dp" />
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="match_parent" />
+        <!-- </LinearLayout>
+    </ScrollView> -->
 
 </LinearLayout>

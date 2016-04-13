@@ -15,7 +15,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:padding="10dp"
             android:src="@drawable/customization_return" />
 
         <TextView
@@ -26,15 +25,6 @@
             android:textColor="#ffffff"
             android:textSize="15sp" />
     </RelativeLayout>
-    
-    <ScrollView 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scroll_wedding">
-        <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,7 +52,7 @@
             android:id="@+id/hun_sha_context"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="80dp"
             android:layout_marginTop="121dp"
             android:text="@string/wedding_text"
             android:textColor="@color/white"
@@ -160,8 +150,7 @@
             android:button="@null"
             android:text="全款支付"
             android:textColor="@drawable/selector_text_style"
-            android:textSize="16sp" 
-            android:padding="10dp"/>
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/first_money_checked"
@@ -172,8 +161,7 @@
             android:button="@null"
             android:text="首款支付"
             android:textColor="@drawable/selector_text_style"
-            android:textSize="16sp" 
-            android:padding="10dp"/>
+            android:textSize="16sp" />
     </RadioGroup>
 	<!-- 首款支付显示隐藏 -->
     <LinearLayout
@@ -202,7 +190,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="100dp"
             android:background="@drawable/selector_parmoney_all2"
             android:button="@null"
             android:gravity="right"
@@ -266,7 +254,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="100dp"
                 android:background="@drawable/selector_parmoney_all2"
                 android:button="@null"
                 android:gravity="right"
@@ -275,7 +263,5 @@
                 android:textSize="30sp" />
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
-    </ScrollView>
 
 </LinearLayout>

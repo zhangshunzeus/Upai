@@ -1,4 +1,4 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -16,11 +16,5 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <!-- spinner类型 -->
-    <style name="spinner_style">
-    <item name="android:cacheColorHint">@color/white</item>
-    <!-- <item name="android:paddingLeft">10dp</item> -->
-    </style>
-    
 
 </resources>

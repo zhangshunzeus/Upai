@@ -4,17 +4,12 @@ import com.ushooting.activity.R;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 public class UPCustomizationOrder extends Activity {
 	RelativeLayout jiYi;
@@ -26,7 +21,6 @@ public class UPCustomizationOrder extends Activity {
 	RelativeLayout hunSha;
 	RelativeLayout hunShaX;
 	ImageView returns;
-	Spinner spinners;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,34 +42,29 @@ public class UPCustomizationOrder extends Activity {
 		wenXin.setOnClickListener(l);
 		wenXinX = (RelativeLayout) findViewById(R.id.wen_xin_cang);
 		wenXinX.setOnClickListener(l);
-
+    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		hunSha = (RelativeLayout) findViewById(R.id.hun_sha);
 		hunSha.setOnClickListener(l);
 		hunShaX = (RelativeLayout) findViewById(R.id.hun_sha_cang);
 		hunShaX.setOnClickListener(l);
-		returns = (ImageView) findViewById(R.id.return_finish);
+		returns=(ImageView)findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
-
-		spinners = (Spinner) findViewById(R.id.order_chongqing);
-		spinners.setOnItemSelectedListener(listener);
 	}
-
-	OnItemSelectedListener listener = new OnItemSelectedListener() {
-
-		@Override
-		public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-			// TODO Auto-generated method stub
-			TextView view = (TextView) arg1;
-			view.setTextColor(Color.WHITE);
-		}
-
-		@Override
-		public void onNothingSelected(AdapterView<?> arg0) {
-			// TODO Auto-generated method stub
-
-		}
-
-	};
 
 	OnClickListener l = new OnClickListener() {
 

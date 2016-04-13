@@ -31,6 +31,7 @@ public class UPCustomizationWedding extends Activity {
 	ImageView returns;
 	ImageView shared;
 
+
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
