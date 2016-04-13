@@ -24,7 +24,8 @@
             
         </activity>
         <!-- 首页 -->
-        <activity android:name="com.ushooting.HomePageActivity" >
+        <activity android:name="com.ushooting.activity.HomePageActivity" >
+            
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
@@ -44,6 +45,7 @@
         
         <!-- 其他主题 -->
         <activity android:name="com.ushooting.activity.OtherTopicsActivity">
+            
         </activity>
 
         <!-- 创意设计 -->
@@ -58,17 +60,18 @@
         </activity>
         <!-- 魅力写真 -->
         <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 我的 -->
         <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
         </activity>
         <!-- 我的已登录 -->
         <activity android:name="com.example.ruanjiawei.activity.MyLoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <!-- 我的相册 -->
         <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
@@ -94,10 +97,6 @@
 
         <!-- 自拍 -->
         <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
-        </activity>
-
-        <!-- 首页 -->
-        <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>
 
     </application>
