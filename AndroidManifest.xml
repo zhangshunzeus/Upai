@@ -4,6 +4,12 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="18" />
@@ -56,6 +62,17 @@
 
         <!-- 自拍 -->
         <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
+        </activity>
+        <!-- 我的作品 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyWorksActivity" >
+        </activity>
+
+        <!-- 设置 -->
+        <activity android:name="com.example.ruanjiawei.activity.SetActicity" >
+        </activity>
+
+        <!-- 个人信息 -->
+        <activity android:name="com.example.ruanjiawei.activity.PersonalInformationActivity" >
         </activity>
 
         <!-- 消息页面 -->
