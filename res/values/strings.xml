@@ -4,15 +4,23 @@
     <string name="app_name">UShooting</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <!-- 预约 -->
     <string name="sample_tex">\t\t有的美女头上顶着红色，紫色。蓝色等颜色大胆的的秀发
 	    ，和时尚潮流的服饰搭配起来看，很有摇滚的气息，自由奔放；而拥有自然发色的美女，在逆光中，显得轻松，飘逸，浪漫紊乱</string>
     <string name="hot_recomend">\t\t颜色大胆的秀发，和时尚潮流的服饰搭配起来看，很有摇滚的气息。xxxxxxxxxxxxxxxxxxxxxx</string>
-    <string name="pay_attention_content">摄影师Stevin Tuchiwsky单身上路，寻找那些宁静致远或者大气磅礴的风景，将自己融入\n风景中，营造出天涯浪子的不羁感。希望这些照片能给你的下次出行带来一些灵感。F</string>
     <string name="order">预约</string>
     <string name="start_photo">开拍</string>
+    <string name="start_photoer">开拍预付</string>
     <string name="wedding">婚纱摄影</string>
+    <string name="kaipai_paytext_title">温馨提示：</string>
+    <string name="kaipai_paytext_text">（1）提交订单是可选择预付与全款支付\n（2）当支付完成是与摄影师联系\n（3）摄影师工作完成后将订单号与摄影师对照完成尾款支付</string>
     <string name="wedding_text">我们采集全世界各地的花朵，让您成为花朵女神！</string>
     <string name="wedding_photoer">从事婚纱摄影行业15年，曾在金夫人婚纱摄影担任最高级摄影师、人气排行前三。</string>
+
+    <string name="pay_attention_content">摄影师Stevin Tuchiwsky单身上路，寻找那些宁静致远或者大气磅礴的风景，将自己融入\n风景中，营造出天涯浪子的不羁感。希望这些照片能给你的下次出行带来一些灵感。</string>
+	<string name="magazine">撒《COSDFAS》  《阿斯蒂芬》 《DGASDSADF》 《WEG》 《QFSD"FHGRE》 《男人装》 《装男人》（台版、过版）《阿斯顿发生》《为二位》水电费</string>
+	<string name="personal">\t\t伊超，80后，国内最年轻的新锐时尚摄影师。爱上对方就睡啦看到 啊沙发士大夫撒阿斯蒂芬阿斯顿老公撒旦老公的石头为了哦我i俄方将士大夫撒拉速度开房间拉伸的房间哦违法水电费了多少分精神多了阿拉是打飞机拉沙德；个洒落的房间爱丽丝； 发上来的房间哦违法记录撒酒疯啊阿斯蒂芬拉斯科技大佛i为福建撒地方就看上的房间爱上了快点放假。\n\t\t实力的风景撒发生的了房间爱上当管理我i额佛挡杀佛手里的咖啡机数量的开发商 类似的开放进来撒,上的看法时刻为二位额外热发大水。</string>
+    <string name="add_game">SAFLA首届三闾大夫啊啊士大夫撒了乐山大佛实力的风景萨拉。</string>
     <string name="wedding_guanfang">官方认证</string>
 
     <!-- 图片详情 -->

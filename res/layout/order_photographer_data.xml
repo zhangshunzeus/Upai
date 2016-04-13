@@ -1,84 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:orientation="vertical" 
-    android:background="@drawable/girls">
-        <RelativeLayout
-        android:id="@+id/add_attention"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/black_background" >
+        android:layout_height="wrap_content" >
 
-        <com.zhangwen.customization.CircleImageView
-            android:id="@+id/photo_head"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/hun_sha_kai_pai_head" />
-
-        <TextView
-            android:id="@+id/photoer_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/photo_head"
-            android:layout_centerHorizontal="true"
-            android:text="Steven  Pan"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/white"
-            android:textSize="9sp" />
-        <LinearLayout 
-            android:id="@+id/fans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/photoer_name"
-            android:layout_marginTop="11dp"
-            android:layout_centerHorizontal="true">
-            <TextView
-                android:id="@+id/popularity_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="人气  99K+"
-                android:textColor="@color/white"
-                android:textSize="9sp"/>
-            <TextView
-                android:id="@+id/fans_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="粉丝 1356"
-                android:textColor="@color/white"
-                android:layout_marginLeft="20dp"
-                android:textSize="9sp"/>
-        </LinearLayout>
+            android:orientation="vertical" > -->
 
-        <RelativeLayout
-            android:id="@+id/add_at"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/fans"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="8dp" 
-            android:layout_marginLeft="120dp">
+            <RelativeLayout
+                android:id="@+id/add_attention"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/girls" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/attention_frame" />
+                <com.zhangwen.customization.CircleImageView
+                    android:id="@+id/photo_head"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/hun_sha_kai_pai_head" />
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/photoer_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/photo_head"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Steven  Pan"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+
+                <LinearLayout
+                    android:id="@+id/fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/photoer_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/popularity_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人气  99K+"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/fans_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="粉丝 1356"
+                        android:textColor="@color/white"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/add_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fans"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/attention_frame" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/attention_jia"
+                        android:text="关注"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/return_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/customization_return" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/data_radiogroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:drawableLeft="@drawable/attention_jia" 
-                android:layout_centerHorizontal="true"
-                android:text="关注"
-                android:textColor="@color/white"
-                android:textSize="15sp"/>
-        </RelativeLayout>
-        
-        </RelativeLayout>
-    
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/data_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/photographer_data_selector"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:text="个人资料"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/data_works"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/photographer_data_selector"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:text="个人作品"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/data_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/photographer_data_selector"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:text="粉丝"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/red" />
+
+            <fragment
+                android:id="@+id/personal_data_fragment"
+                android:name="com.zhangwen.customization.OrderPhotographerDataPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:id="@+id/works_data_fragment"
+                android:name="com.zhangwen.customization.OrderPhotographerDataWorks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:id="@+id/fans_data_fragment"
+                android:name="com.zhangwen.customization.OrderPhotographerDataFans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        <!-- </LinearLayout>
+    </ScrollView> -->
 
 </LinearLayout>

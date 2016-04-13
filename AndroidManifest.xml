@@ -75,7 +75,6 @@
         <!-- 摄影师资料页面 -->
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
         </activity>
-
         <!-- 首页 -->
         <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>
