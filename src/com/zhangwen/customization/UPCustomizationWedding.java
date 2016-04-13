@@ -1,12 +1,14 @@
 package com.zhangwen.customization;
 
 import com.ushooting.activity.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ public class UPCustomizationWedding extends Activity {
 	LinearLayout morePhoto;
 	LinearLayout morePhotoCang;
 	TextView lookData;
+	ImageView returns;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,8 @@ public class UPCustomizationWedding extends Activity {
 
 		lookData = (TextView) findViewById(R.id.look_data);
 		lookData.setOnClickListener(l);
+		returns=(ImageView)findViewById(R.id.return_finish);
+		returns.setOnClickListener(l);
 
 	}
 
@@ -74,15 +79,14 @@ public class UPCustomizationWedding extends Activity {
 			case R.id.prepay:// 开拍预付
 				prepay.setVisibility(View.GONE);
 				prepayCang.setVisibility(View.VISIBLE);
+				Intent intent_payMoney=new Intent(UPCustomizationWedding.this,UPCustomizationWeddingKaiPaiPay.class);
+				startActivity(intent_payMoney);
 				break;
 			case R.id.more_photo:// 更多摄影师
 				morePhoto.setVisibility(View.GONE);
 				morePhotoCang.setVisibility(View.VISIBLE);
-
-				Intent intent = new Intent(UPCustomizationWedding.this,
-						MorePhotographer.class);
-
-				startActivity(intent);
+				Intent intent_morePhoto=new Intent(UPCustomizationWedding.this,MorePhotographer.class);
+				startActivity(intent_morePhoto); 
 				break;
 			case R.id.look_data:
 				Intent intent_photodata = new Intent(
@@ -90,6 +94,9 @@ public class UPCustomizationWedding extends Activity {
 						OrderPhotographerData.class);
 				startActivity(intent_photodata);
 
+				break;
+			case R.id.return_finish:
+				finish();
 				break;
 			default:
 				break;

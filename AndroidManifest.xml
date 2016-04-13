@@ -42,12 +42,8 @@
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
         </activity>
         
+        <!-- 其他主题 -->
         <activity android:name="com.ushooting.activity.OtherTopicsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 创意设计 -->
@@ -63,6 +59,47 @@
         <!-- 魅力写真 -->
         <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
         </activity>
+        <!-- 我的 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
+        </activity>
+        <!-- 我的已登录 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyLoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 我的相册 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
+        </activity>
+        <!-- 业余摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.AmaterurPhotographyActivity" >
+        </activity>
+
+        <!-- 首页评论 -->
+        <activity android:name="com.example.ruanjiawei.activity.CommentsActivity" >
+        </activity>
+        <!-- 器材 -->
+        <activity android:name="com.example.ruanjiawei.activity.EquipmentActivity" >
+        </activity>
+
+        <!-- 登录 -->
+        <activity android:name="com.example.ruanjiawei.activity.LoginActicity" >
+        </activity>
+
+        <!-- 专业摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.ProfessionalActivity" >
+        </activity>
+
+        <!-- 自拍 -->
+        <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
+        </activity>
+
+        <!-- 首页 -->
+        <activity android:name="com.ushooting.activity.HomePageActivity" >
+        </activity>
+
     </application>
 
 </manifest>

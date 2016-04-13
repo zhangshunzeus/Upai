@@ -5,5 +5,7 @@
     <color name="red">#f51515</color>
     <color name="pay_money">#c0c0c0</color>
     <color name="kaipai">#b1b1b1</color>
+    <color name="orange">#F97655</color>
+    <color name="text_background">#E3E3E3</color>
     
 </resources>
