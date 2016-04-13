@@ -1,31 +1,22 @@
-/*package com.ushooting.activity;
+package com.ushooting.activity;
 
-import java.util.ArrayList;
-
-import com.ushooting.fragment.CompetitionFragment;
-import com.ushooting.fragment.HomePageFragment;
-import com.ushooting.fragment.LoginFragment;
-import com.ushooting.fragment.MessagePageFragment;
-import com.ushooting.fragment.UPCustomizationMainFragment;
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.view.Window;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-public class FragmentMainActivity extends FragmentActivity  {
+public class FragmentMainActivity extends Activity  {
 
-	private RadioGroup group; //这界面的radiogroup
-	private FragmentManager fragmentManager; //fragment的管理者
-	private android.support.v4.app.FragmentTransaction transaction; //fragment的处理者
-	private ArrayList<Fragment> fragments = new ArrayList<Fragment>();
-	private HomePageFragment homeFragment=new HomePageFragment(); //加载的首页板块的Fragment
-	private CompetitionFragment competitionFragment=new CompetitionFragment(); //加载的热门赛事板块的Fragment
-	private LoginFragment loginFragment=new LoginFragment(); //加载的登陆板块的Fragment
-	private MessagePageFragment messagePageFragment=new MessagePageFragment(); //加载的消息板块的Fragment
-	private UPCustomizationMainFragment uPCustomizationMainFragment=new UPCustomizationMainFragment(); //加载的定制板块的Fragment
+	RadioGroup radioGroup;
+	RadioButton tv_home_page,tv_dynamic,tv_custom,tv_message,tv_my;
+	Fragment[] myfragment;
+	FragmentTransaction transaction;
+	FragmentManager manager;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,26 +25,29 @@ public class FragmentMainActivity extends FragmentActivity  {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_fagment_main);
 		
-		loadFragmentIniv();
+		myfragment = new Fragment[5];
+		manager = getFragmentManager();
+		myfragment[0] = manager.findFragmentById(R.id.fragment_HomePageFragment);
+	//	myfragment[1] = manager.findFragmentById(R.id.fragment_CompetitionFragment);
+		myfragment[2] = manager.findFragmentById(R.id.fragment_LoginFragment);
+	//	myfragment[3] = manager.findFragmentById(R.id.fragment_MessagePageFragment);
+		myfragment[4] = manager.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
+		
+		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+		transaction.show(myfragment[0]).commit();
+		setFragmentIndicator();
 		
 	}
 
-	private void loadFragmentIniv() {
+	private void setFragmentIndicator() {
 		// TODO Auto-generated method stub
-		group = (RadioGroup) findViewById(R.id.radio_group);
-		group.setOnCheckedChangeListener(listener);
-		fragmentManager = getSupportFragmentManager();
-		transaction = fragmentManager.beginTransaction();
-		homeFragment = new HomePageFragment();
-		
-		transaction.add(R.id.fragment_main_line, homeFragment,"homeFragment");
-		transaction.add(R.id.fragment_main_line, competitionFragment,"competitionFragment");
-		transaction.add(R.id.fragment_main_line, loginFragment,"loginFragment");
-		transaction.add(R.id.fragment_main_line, messagePageFragment,"messagePageFragment");
-		transaction.add(R.id.fragment_main_line, uPCustomizationMainFragment,"uPCustomizationMainFragment");
-		
-		transaction.commitAllowingStateLoss();
-		
+		radioGroup = (RadioGroup) findViewById(R.id.radio_group);
+		tv_home_page = (RadioButton) findViewById(R.id.tv_home_page);
+		tv_dynamic = (RadioButton) findViewById(R.id.tv_dynamic);
+		tv_custom = (RadioButton) findViewById(R.id.tv_custom);
+		tv_message = (RadioButton) findViewById(R.id.tv_message);
+		tv_my = (RadioButton) findViewById(R.id.tv_my);
+		radioGroup.setOnCheckedChangeListener(listener);
 	}
 	
 	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
@@ -61,39 +55,28 @@ public class FragmentMainActivity extends FragmentActivity  {
 		@Override
 		public void onCheckedChanged(RadioGroup group, int checkedId) {
 			// TODO Auto-generated method stub
-			fragmentManager = getSupportFragmentManager();
-			transaction = fragmentManager.beginTransaction();
-			
-			if(homeFragment!=null){
-				transaction.hide(homeFragment);
-			}
-			if(competitionFragment!=null){
-				transaction.hide(competitionFragment);
-			}
-			if(loginFragment!=null){
-				transaction.hide(loginFragment);
-			}
-			if(messagePageFragment!=null){
-				transaction.hide(messagePageFragment);
-			}
-			if(uPCustomizationMainFragment!=null){
-				transaction.hide(uPCustomizationMainFragment);
-			}
-			
+			transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
 			switch (checkedId) {
-			case R.id.tv_home_page: //点击首页切换的Fragment
-				if(homeFragment==null){
-					homeFragment=new HomePageFragment();
-					transaction.add(R.id.fragment_main_line, homeFragment,"homeFragment");
-					
-				}else{
-					transaction.show(homeFragment);
-				}
+
+			case R.id.tv_home_page:
+				transaction.show(myfragment[0]).commit();
+				break;
+			case R.id.tv_dynamic:
+				transaction.show(myfragment[1]).commit();
+				break;
+			case R.id.tv_custom:
+				transaction.show(myfragment[2]).commit();
+				break;
+			case R.id.tv_message:
+				transaction.show(myfragment[3]).commit();
+				break;
+			case R.id.tv_my:
+				transaction.show(myfragment[4]).commit();
+				break;
+			default:
 				break;
 			}
-			
 		}
 	};
 	
 }
-*/

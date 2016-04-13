@@ -58,6 +58,10 @@
         </activity>
         <!-- 魅力写真 -->
         <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
+            
+        </activity>
+        <!-- fragment页面 -->
+        <activity android:name="com.ushooting.activity.FragmentMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
