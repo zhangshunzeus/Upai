@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ushooting.activity.R;
+import com.zhangwen.adapter.OrderPhotographerDataFansAdapter;
+import com.zhangwen.demo.OrderPhotographerDataFansDemo;
 
 import android.app.Fragment;
 import android.os.Bundle;

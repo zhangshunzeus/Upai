@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ushooting.activity.R;
+import com.zhangwen.adapter.MorePhotographerAdapter;
+import com.zhangwen.demo.MorePhotographerDamo;
 
 import android.app.Activity;
 import android.os.Bundle;
