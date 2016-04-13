@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="23dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp"
+    android:paddingTop="22dp" >
+
+    <ImageView
+        android:id="@+id/lv_coment_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/coment1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/lv_coment_img"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/lv_coment_name_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*[樱树の流月]*"
+            android:textColor="@color/text95"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lv_coment_personality_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="太漂亮了，比我想象的漂亮"
+            android:textColor="@color/textc1"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lv_coment_time_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:text="11:10"
+        android:textColor="@color/text"
+        android:textSize="13sp" />
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.zhangwen.customization;
 
 import com.ushooting.activity.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,8 +54,8 @@ public class UPCustomizationWedding extends Activity {
 		morePhoto.setOnClickListener(l);
 		morePhotoCang = (LinearLayout) findViewById(R.id.more_photo_cang);
 		morePhotoCang.setOnClickListener(l);
-		
-		lookData=(TextView)findViewById(R.id.look_data);
+
+		lookData = (TextView) findViewById(R.id.look_data);
 		lookData.setOnClickListener(l);
 		returns=(ImageView)findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
@@ -88,8 +89,11 @@ public class UPCustomizationWedding extends Activity {
 				startActivity(intent_morePhoto); 
 				break;
 			case R.id.look_data:
-				Intent intent_photodata=new Intent(UPCustomizationWedding.this,OrderPhotographerData.class);
+				Intent intent_photodata = new Intent(
+						UPCustomizationWedding.this,
+						OrderPhotographerData.class);
 				startActivity(intent_photodata);
+
 				break;
 			case R.id.return_finish:
 				finish();
