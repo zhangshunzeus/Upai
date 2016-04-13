@@ -42,7 +42,22 @@ public class UPCustomizationOrder extends Activity {
 		wenXin.setOnClickListener(l);
 		wenXinX = (RelativeLayout) findViewById(R.id.wen_xin_cang);
 		wenXinX.setOnClickListener(l);
-
+    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		hunSha = (RelativeLayout) findViewById(R.id.hun_sha);
 		hunSha.setOnClickListener(l);
 		hunShaX = (RelativeLayout) findViewById(R.id.hun_sha_cang);
