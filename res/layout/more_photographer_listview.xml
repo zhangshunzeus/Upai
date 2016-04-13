@@ -19,14 +19,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/black_background" /> -->
 
-        <!-- <ImageView
-            android:id="@+id/back"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/black_background" /> -->
-
         <com.zhangwen.customization.CircleImageView
             android:id="@+id/photo_head"
             android:layout_width="60dp"
