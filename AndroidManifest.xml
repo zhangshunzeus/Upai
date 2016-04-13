@@ -17,17 +17,18 @@
         </activity>
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!-- 我的 -->
         <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
         </activity>
         <!-- 我的已登录 -->
         <activity android:name="com.example.ruanjiawei.activity.MyLoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <!-- 我的相册 -->
         <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
@@ -68,7 +69,8 @@
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
         </activity>
-
+        <!-- 开拍预付页面 -->
+		<activity android:name="com.zhangwen.customization.UPCustomizationWeddingKaiPaiPay"></activity>
         <!-- 更多摄影师页面 -->
         <activity android:name="com.zhangwen.customization.MorePhotographer" >
         </activity>
