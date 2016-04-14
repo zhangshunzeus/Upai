@@ -2,14 +2,18 @@ package com.zhangwen.customization;
 
 import com.ushooting.activity.R;
 
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -25,7 +29,9 @@ public class UPCustomizationWedding extends Activity {
 	LinearLayout morePhotoCang;
 	TextView lookData;
 	ImageView returns;
+	ImageView shared;
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -54,13 +60,38 @@ public class UPCustomizationWedding extends Activity {
 		morePhoto.setOnClickListener(l);
 		morePhotoCang = (LinearLayout) findViewById(R.id.more_photo_cang);
 		morePhotoCang.setOnClickListener(l);
-
+		//查看资料
 		lookData = (TextView) findViewById(R.id.look_data);
 		lookData.setOnClickListener(l);
-		returns=(ImageView)findViewById(R.id.return_finish);
+		//返回
+		returns = (ImageView) findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
-
+		//共享
+		
+		LayoutInflater inflater=LayoutInflater.from(this);
+		View view=inflater.inflate(R.layout.up_customization_wedding_shared, null);
+		final PopupWindow popupWindow=new PopupWindow(view,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,false);
+		
+		popupWindow.setBackgroundDrawable(new BitmapDrawable());
+		popupWindow.setOutsideTouchable(true);
+		popupWindow.setFocusable(true);
+		shared=(ImageView)findViewById(R.id.share_check);
+		shared.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				if (popupWindow.isShowing()) {
+					popupWindow.dismiss();
+				}else {
+					popupWindow.showAsDropDown(arg0);
+				}	
+			}
+		});
+		
+		
 	}
+	
 
 	OnClickListener l = new OnClickListener() {
 
@@ -79,21 +110,18 @@ public class UPCustomizationWedding extends Activity {
 			case R.id.prepay:// 开拍预付
 				prepay.setVisibility(View.GONE);
 				prepayCang.setVisibility(View.VISIBLE);
-				Intent intent_payMoney=new Intent(UPCustomizationWedding.this,UPCustomizationWeddingKaiPaiPay.class);
+				Intent intent_payMoney = new Intent(UPCustomizationWedding.this, UPCustomizationWeddingKaiPaiPay.class);
 				startActivity(intent_payMoney);
 				break;
 			case R.id.more_photo:// 更多摄影师
 				morePhoto.setVisibility(View.GONE);
 				morePhotoCang.setVisibility(View.VISIBLE);
-				Intent intent_morePhoto=new Intent(UPCustomizationWedding.this,MorePhotographer.class);
-				startActivity(intent_morePhoto); 
+				Intent intent_morePhoto = new Intent(UPCustomizationWedding.this, MorePhotographer.class);
+				startActivity(intent_morePhoto);
 				break;
-			case R.id.look_data:
-				Intent intent_photodata = new Intent(
-						UPCustomizationWedding.this,
-						OrderPhotographerData.class);
+			case R.id.look_data://跳转到查看资料
+				Intent intent_photodata = new Intent(UPCustomizationWedding.this, OrderPhotographerData.class);
 				startActivity(intent_photodata);
-
 				break;
 			case R.id.return_finish:
 				finish();
