@@ -40,7 +40,7 @@ public class Message extends Activity {
 	private LinearLayout layout;
 
 	private FragmentManager manager = getFragmentManager();
-	private FragmentTransaction transaction;
+	private FragmentTransaction transaction = manager.beginTransaction();
 
 	private Sample sample;// 作品集的frament
 	private MessagePage mPage;// 消息首页的fragemtn
@@ -54,6 +54,7 @@ public class Message extends Activity {
 	private Intent intent;
 	// 判断当前显示是否为消息也
 	private boolean isMessage;
+	private Fragment courrentFragment;// 当前显示的frament
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class Message extends Activity {
 
 		intent = getIntent();
 		loadFrament();
-
+		courrentFragment = mPage;
 		// 设置要显示的frament为首页
 		if (intent.getBooleanExtra("ismessage", true)) {
 			showFrament(mPage);
@@ -89,6 +90,7 @@ public class Message extends Activity {
 	 */
 	private void loadFrament() {
 		sample = new Sample();
+
 		mPage = new MessagePage();
 		sendMessae = new SendMessae();
 		coment = new Coment();
@@ -96,6 +98,16 @@ public class Message extends Activity {
 		recomend = new HotRecomend();
 		moreframent = new More();
 		competition = new Competition();
+
+		transaction.add(R.id.message_liner, sample);
+		transaction.add(R.id.message_liner, mPage);
+		transaction.add(R.id.message_liner, sendMessae);
+		transaction.add(R.id.message_liner, coment);
+		transaction.add(R.id.message_liner, chat);
+		transaction.add(R.id.message_liner, recomend);
+		transaction.add(R.id.message_liner,moreframent);
+		transaction.add(R.id.message_liner,competition);
+
 	}
 
 	public OnClickListener listener = new OnClickListener() {
@@ -166,10 +178,17 @@ public class Message extends Activity {
 	// 显示fragment
 	private void showFrament(Fragment fragment) {
 		Log.i("ShowFrament", "进入方法");
+		// 如果当前显示的和需要显示的一样
+		if (courrentFragment.hashCode() == fragment.hashCode()) {
+			return;
+		}
 		transaction = manager.beginTransaction();
+
+		transaction.hide(courrentFragment);
 		transaction.add(R.id.message_liner, fragment);
 		transaction.show(fragment);
 		transaction.commit();
+		courrentFragment = fragment;
 	}
 
 	// 返回张顺主页 a=0,2,4
