@@ -6,22 +6,17 @@
     android:orientation="vertical" >
 
     <RelativeLayout
+        android:id="@+id/add_attention"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/black_background" />
+        android:layout_height="match_parent"
+        android:background="@drawable/black_background" >
 
         <com.zhangwen.customization.CircleImageView
             android:id="@+id/photo_head"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="25dp"
             android:src="@drawable/hun_sha_kai_pai_head" />
 
         <TextView
@@ -31,16 +26,17 @@
             android:layout_below="@+id/photo_head"
             android:layout_centerHorizontal="true"
             android:text="Steven  Pan"
+            android:layout_marginTop="5dp"
             android:textColor="@color/white"
             android:textSize="9sp" />
 
         <RelativeLayout
-            android:id="@+id/add_attention"
+            android:id="@+id/add_at"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/photoer_name"
             android:layout_centerInParent="true"
-            android:layout_marginTop="5dp" 
+            android:layout_marginTop="8dp" 
             android:layout_marginLeft="120dp">
 
             <ImageView
@@ -64,16 +60,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/add_attention"
-            android:layout_marginTop="8dp"
+            android:layout_below="@+id/add_at"
+            android:layout_marginTop="11dp"
             android:layout_centerHorizontal="true">
-            <TextView 
+            <TextView
+                android:id="@+id/popularity_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="人气  99K+"
                 android:textColor="@color/white"
                 android:textSize="9sp"/>
-            <TextView 
+            <TextView
+                android:id="@+id/fans_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="粉丝 1356"
@@ -82,23 +80,28 @@
                 android:textSize="9sp"/>
         </LinearLayout>
         <TextView 
+            android:id="@+id/photo_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/fans"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="18dp"
             android:layout_centerHorizontal="true"
             android:text="@string/pay_attention_content"
             android:textColor="@color/white"
-            android:textSize="7sp"/>
+            android:textSize="12sp"
+            android:padding="5dp"/>
     </RelativeLayout>
    <!--  更多摄影师点击之后隐藏 -->
     <RelativeLayout
             android:id="@+id/add_attention_cang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:visibility="gone">
 
             <ImageView
+                android:id="@+id/frame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/already_attention_frame" />
@@ -106,8 +109,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:src="@drawable/already_attention" />
-
         </RelativeLayout>
 
 </LinearLayout>

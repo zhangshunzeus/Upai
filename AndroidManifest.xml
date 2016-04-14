@@ -4,30 +4,39 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="18" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo_upai"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!-- 图片详情 -->
         <activity
             android:name="com.example.ruanjiawei.activity.ImageDetailsActivity"
             android:label="@string/app_name" >
         </activity>
+
         <!-- 消息页面 -->
         <activity android:name="com.jiangkiaquan.message.activity.Message" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <!-- 首页 -->
+        <activity android:name="com.ushooting.activity.HomePageActivity" >
         </activity>
 
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
+           
         </activity>
         <!-- 预约页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
@@ -35,15 +44,85 @@
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
         </activity>
+        <!-- 更多摄影师页面 -->
+        <activity android:name="com.zhangwen.customization.MorePhotographer" >
+        </activity>
+        <!-- 摄影师资料页面 -->
+        <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
+        </activity>
+
+        <!-- 其他主题 -->
+        <activity android:name="com.ushooting.activity.OtherTopicsActivity" >
+        </activity>
 
         <!-- 创意设计 -->
         <activity android:name="com.ushooting.activity.CreativeDesignActivity" >
         </activity>
+
         <!-- 动物萌宠 -->
         <activity android:name="com.ushooting.activity.PetActivity" >
         </activity>
         <!-- 风景建筑 -->
         <activity android:name="com.ushooting.activity.LandscapeArchitectureActivity" >
+        </activity>
+        <!-- 魅力写真 -->
+        <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
+        </activity>
+        <!-- fragment页面 -->
+        <activity android:name="com.ushooting.activity.FragmentMainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.ushooting.HomePageActivity" >
+        </activity>
+        <!-- 我的 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyActicity" >
+        </activity>
+        <!-- 我的已登录 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyLoginActivity" >
+        </activity>
+        <!-- 我的相册 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyPhotoActivity" >
+        </activity>
+        <!-- 业余摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.AmaterurPhotographyActivity" >
+        </activity>
+
+        <!-- 首页评论 -->
+        <activity android:name="com.example.ruanjiawei.activity.CommentsActivity" >
+        </activity>
+        <!-- 器材 -->
+        <activity android:name="com.example.ruanjiawei.activity.EquipmentActivity" >
+        </activity>
+
+        <!-- 登录 -->
+        <activity android:name="com.example.ruanjiawei.activity.LoginActicity" >
+        </activity>
+
+        <!-- 专业摄影 -->
+        <activity android:name="com.example.ruanjiawei.activity.ProfessionalActivity" >
+        </activity>
+
+        <!-- 自拍 -->
+        <activity android:name="com.example.ruanjiawei.activity.TakeActivity" >
+        </activity>
+        <!-- 我的作品 -->
+        <activity android:name="com.example.ruanjiawei.activity.MyWorksActivity" >
+        </activity>
+
+        <!-- 设置 -->
+        <activity android:name="com.example.ruanjiawei.activity.SetActicity" >
+        </activity>
+
+        <!-- 个人信息 -->
+        <activity android:name="com.example.ruanjiawei.activity.PersonalInformationActivity" >
+        </activity>
+
+        <!-- 开拍预付页面 -->
+        <activity android:name="com.zhangwen.customization.UPCustomizationWeddingKaiPaiPay" >
         </activity>
     </application>
 

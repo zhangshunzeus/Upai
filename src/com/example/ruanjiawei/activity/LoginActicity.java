@@ -12,7 +12,7 @@ public class LoginActicity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.login);
-//你又在登录注册了.....
+
 	}
 
 }

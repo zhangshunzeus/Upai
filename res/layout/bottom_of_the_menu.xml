@@ -5,12 +5,13 @@
     android:orientation="vertical" >
 
     <RadioGroup
+        android:id="@+id/radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp"
-        android:background="@color/home_page_banner_up_text_color" >
+        android:padding="3dp"
+        android:background="@color/home_page_banner_up_text_color"
+        android:gravity="center" >
         
         <RadioButton
             android:id="@+id/tv_home_page" 

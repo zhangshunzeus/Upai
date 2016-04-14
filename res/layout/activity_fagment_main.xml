@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/activity_fragment_linear"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+        <fragment
+            android:id="@+id/fragment_HomePageFragment"
+            android:name="com.ushooting.fragment.HomePageFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- <fragment
+            android:id="@+id/fragment_CompetitionFragment"
+            android:name="com.ushooting.fragment.CompetitionFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> -->
+
+        <fragment
+            android:id="@+id/fragment_LoginFragment"
+            android:name="com.ushooting.fragment.LoginFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- <fragment
+            android:id="@+id/fragment_MessagePageFragment"
+            android:name="com.ushooting.fragment.MessagePageFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> -->
+
+        <fragment
+            android:id="@+id/fragment_UPCustomizationMainFragment"
+            android:name="com.ushooting.fragment.UPCustomizationMainFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_of_the_menu" />
+
+</LinearLayout>
