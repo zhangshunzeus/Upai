@@ -66,7 +66,7 @@ public class MorePhotographerAdapter extends BaseAdapter{
 			holderPh.fans=(TextView)view.findViewById(R.id.fans_number);
 			holderPh.contextpaoto=(TextView)view.findViewById(R.id.photo_content);
 			add_attention_change=(RelativeLayout)view.findViewById(R.id.add_attention);
-			add_attention_last=(RelativeLayout)view.findViewById(R.id.add_attention_cang);
+			//add_attention_last=(RelativeLayout)view.findViewById(R.id.add_attention_cang);
 			add_attention_change.setOnClickListener(listener);
 			add_attention_last.setOnClickListener(listener);
 			view.setTag(holderPh);

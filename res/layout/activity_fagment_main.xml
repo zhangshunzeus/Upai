@@ -16,23 +16,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <!-- <fragment
+        <fragment
             android:id="@+id/fragment_CompetitionFragment"
             android:name="com.ushooting.fragment.CompetitionFragment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" /> -->
+            android:layout_height="wrap_content" /> 
 
         <fragment
             android:id="@+id/fragment_LoginFragment"
             android:name="com.ushooting.fragment.LoginFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
-        <!-- <fragment
+ 
+        <fragment
             android:id="@+id/fragment_MessagePageFragment"
             android:name="com.ushooting.fragment.MessagePageFragment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" /> -->
+            android:layout_height="wrap_content" />
 
         <fragment
             android:id="@+id/fragment_UPCustomizationMainFragment"
