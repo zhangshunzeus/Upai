@@ -16,10 +16,7 @@
 
     <application
         android:allowBackup="true"
-
-
         android:icon="@drawable/logo_upai"
-
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
@@ -42,19 +39,21 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <!-- 预约页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
+           
         </activity>
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
+            
         </activity>
         <!-- 更多摄影师页面 -->
         <activity android:name="com.zhangwen.customization.MorePhotographer" >
         </activity>
         <!-- 摄影师资料页面 -->
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
+            
         </activity>
 
         <!-- 其他主题 -->
@@ -73,16 +72,10 @@
         </activity>
         <!-- 魅力写真 -->
         <activity android:name="com.ushooting.activity.CharmingPhotoActivity" >
-
-            
         </activity>
         <!-- fragment页面 -->
-        <activity android:name="com.ushooting.activity.FragmentMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.ushooting.activity.FragmentMainActivity" >
+ 
         </activity>
         <activity android:name="com.example.ushooting.HomePageActivity" >
         </activity>
@@ -129,12 +122,9 @@
         <activity android:name="com.example.ruanjiawei.activity.PersonalInformationActivity" >
         </activity>
 
-
         <!-- 开拍预付页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWeddingKaiPaiPay" >
         </activity>
-
-
     </application>
 
 </manifest>

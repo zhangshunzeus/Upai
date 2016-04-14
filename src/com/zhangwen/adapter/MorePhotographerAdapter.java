@@ -89,8 +89,8 @@ public class MorePhotographerAdapter extends BaseAdapter{
 		@Override
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
-			add_attention_change.setVisibility(View.GONE);
-			add_attention_last.setVisibility(View.VISIBLE);
+			//add_attention_change.setVisibility(View.GONE);
+			//add_attention_last.setVisibility(View.VISIBLE);
 		}
 		
 		

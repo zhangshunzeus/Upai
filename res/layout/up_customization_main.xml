@@ -2,101 +2,119 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/customization_main_background_pic"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    
+    android:layout_height="match_parent"
     android:orientation="vertical" >
-    <ScrollView 
+
+    <ScrollView
+        android:id="@+id/scroll_wedding"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scroll_wedding">
-        <LinearLayout 
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:layout_weight="1" >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/customization_main_background">
+            android:background="@drawable/customization_main_background"
+            android:orientation="vertical" >
 
-    <RelativeLayout
-        android:id="@+id/selector_theme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="197dp" >
+            <RelativeLayout
+                android:id="@+id/selector_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="197dp" >
 
-        <ImageView
-            android:id="@+id/customization_theme_yuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_main_yuan" />
+                <ImageView
+                    android:id="@+id/customization_theme_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_main_yuan"
+                    android:contentDescription="@drawable/customization_main_yuan" />
 
-        <ImageView
-            android:id="@+id/customization_theme_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_main_theme_pic" />
+                <ImageView
+                    android:id="@+id/customization_theme_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_main_theme_pic"
+                    android:contentDescription="@drawable/customization_main_theme_pic" />
 
-        <ImageView
-            android:id="@+id/customization_theme_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_selector_background"
-            android:visibility="gone" />
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/customization_theme_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_selector_background"
+                    android:contentDescription="@drawable/customization_selector_background" 
+                    android:visibility="gone" />
+            </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/theme_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/customization_theme" />
+            <ImageView
+                android:id="@+id/theme_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/customization_theme" 
+                android:contentDescription="@drawable/customization_theme"/>
 
-    <RelativeLayout
-        android:id="@+id/selector_order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="96dp" >
+            <RelativeLayout
+                android:id="@+id/selector_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="96dp" >
 
-        <ImageView
-            android:id="@+id/customization_order_yuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_main_yuan" />
+                <ImageView
+                    android:id="@+id/customization_order_yuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_main_yuan"
+                    android:contentDescription="@drawable/customization_main_yuan" />
 
-        <ImageView
-            android:id="@+id/customization_order_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_main_order_pic" />
+                <ImageView
+                    android:id="@+id/customization_order_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_main_order_pic"
+                    android:contentDescription="@drawable/customization_main_order_pic" />
 
-        <ImageView
-            android:id="@+id/customization_order_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/customization_selector_background"
-            android:visibility="gone" />
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/customization_order_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/customization_selector_background"
+                    android:contentDescription="@drawable/customization_selector_background"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/order_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/customization_order" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/order_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/customization_order"
+                android:contentDescription="@drawable/customization_order" />
+        </LinearLayout>
     </ScrollView>
+
+    <include
+        android:id="@+id/button_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_of_the_menu" />
 
 </LinearLayout>

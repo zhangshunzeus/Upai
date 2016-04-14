@@ -42,7 +42,6 @@
         android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="false" >
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -343,7 +342,7 @@
                     android:gravity="center"
                     android:src="@drawable/xiala_white_xiao" />
             </LinearLayout>
-        </LinearLayout>
+       </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

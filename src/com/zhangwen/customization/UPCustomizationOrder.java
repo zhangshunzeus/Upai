@@ -95,14 +95,17 @@ public class UPCustomizationOrder extends Activity {
 				wenXin.setVisibility(View.GONE);
 				wenXinX.setVisibility(View.VISIBLE);
 				break;
-			case R.id.hun_sha:
+			case R.id.hun_sha:// 显示隐藏并跳转到婚纱详情开拍页面
 				hunSha.setVisibility(View.GONE);
 				hunShaX.setVisibility(View.VISIBLE);
 				Intent intent = new Intent(UPCustomizationOrder.this, UPCustomizationWedding.class);
 				startActivity(intent);
+				UPCustomizationOrder.this.finish();
 				break;
-			case R.id.return_finish:
+			case R.id.return_finish:// 返回并跳转到定制页面
 				finish();
+				Intent intent_main = new Intent(UPCustomizationOrder.this, UPCustomizationMain.class);
+				startActivity(intent_main);
 				break;
 			default:
 				break;
