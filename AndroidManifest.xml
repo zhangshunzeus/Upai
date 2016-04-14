@@ -25,8 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ushooting.HomePageActivity" >
-        </activity>
+
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
         </activity>
