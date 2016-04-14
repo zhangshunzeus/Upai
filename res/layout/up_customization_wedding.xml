@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
+            android:padding="10dp"
             android:src="@drawable/customization_return" />
 
         <TextView
@@ -31,303 +32,318 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:src="@drawable/share_checked" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scroll_wedding"
         android:layout_width="match_parent"
-        android:layout_height="300dp" >
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="false" >
 
-        <ImageView
-            android:id="@+id/big_title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="223dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/hun_sha_kai_pai_title" />
-
-        <TextView
-            android:id="@+id/wedding_title"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="84dp"
-            android:text="@string/wedding"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/hun_sha_context"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="121dp"
-            android:text="@string/wedding_text"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp" >
 
-        <com.zhangwen.customization.CircleImageView
-            android:id="@+id/head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/hun_sha_context"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/hun_sha_kai_pai_head" />
+                <ImageView
+                    android:id="@+id/big_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="223dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hun_sha_kai_pai_title" />
 
-        <TextView
-            android:id="@+id/attention"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:alpha="0.5"
-            android:background="@drawable/my_self_frame"
-            android:drawableLeft="@drawable/jia_guang_zhu"
-            android:gravity="center"
-            android:text="关注"
-            android:textColor="@color/white"
-            android:textSize="10sp" />
-        <!-- 这是关注按钮变化隐藏 -->
+                <TextView
+                    android:id="@+id/wedding_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="84dp"
+                    android:text="@string/wedding"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/attention_cang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:alpha="0.5"
-            android:background="@drawable/my_self_frame_red"
-            android:drawableLeft="@drawable/yi_guan_zhu"
-            android:gravity="center"
-            android:visibility="gone" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/hun_sha_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="121dp"
+                    android:text="@string/wedding_text"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/collection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="13dp"
-        android:drawableRight="@drawable/collector"
-        android:padding="10dp"
-        android:text="伊超"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
-    <!-- 这是收藏点击变化隐藏 -->
+                <com.zhangwen.customization.CircleImageView
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hun_sha_context"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/hun_sha_kai_pai_head" />
 
-    <TextView
-        android:id="@+id/collection_cang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="13dp"
-        android:drawableRight="@drawable/collection_cang"
-        android:padding="10dp"
-        android:text="伊超"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:visibility="gone" />
+                <TextView
+                    android:id="@+id/attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/my_self_frame"
+                    android:drawableLeft="@drawable/jia_guang_zhu"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+                <!-- 这是关注按钮变化隐藏 -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:lineSpacingExtra="3dp"
-        android:padding="10dp"
-        android:text="@string/wedding_photoer"
-        android:textColor="#b1b1b1"
-        android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/attention_cang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/my_self_frame_red"
+                    android:drawableLeft="@drawable/yi_guan_zhu"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp" >
+            <TextView
+                android:id="@+id/collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@drawable/collector"
+                android:padding="10dp"
+                android:text="伊超"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <!-- 这是收藏点击变化隐藏 -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wedding_guanfang"
-            android:textColor="#b1b1b1"
-            android:textSize="11sp" />
+            <TextView
+                android:id="@+id/collection_cang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp"
+                android:drawableRight="@drawable/collection_cang"
+                android:padding="10dp"
+                android:text="伊超"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="13dp"
-            android:text="@string/wedding_renqi"
-            android:textColor="#b1b1b1"
-            android:textSize="11sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:padding="10dp"
+                android:text="@string/wedding_photoer"
+                android:textColor="#b1b1b1"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="13dp"
-            android:text="@string/wedding_gaopinzhi"
-            android:textColor="#b1b1b1"
-            android:textSize="11sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="13dp"
-            android:text="@string/wedding_gaoji"
-            android:textColor="#b1b1b1"
-            android:textSize="11sp" />
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wedding_guanfang"
+                    android:textColor="#b1b1b1"
+                    android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/look_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:padding="10dp"
-        android:text="查看资料"
-        android:textColor="#666666"
-        android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="@string/wedding_renqi"
+                    android:textColor="#b1b1b1"
+                    android:textSize="12sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="@string/wedding_gaopinzhi"
+                    android:textColor="#b1b1b1"
+                    android:textSize="12sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="￥400"
-            android:textColor="@color/red"
-            android:textSize="24sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:text="@string/wedding_gaoji"
+                    android:textColor="#b1b1b1"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="总价：￥3200"
-            android:textColor="@color/pay_money"
-            android:textSize="12sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/look_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:text="查看资料"
+                android:textColor="#666666"
+                android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="37251人已开拍"
-        android:textColor="@color/kaipai"
-        android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp" >
 
-    <RelativeLayout
-        android:id="@+id/prepay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥400"
+                    android:textColor="@color/red"
+                    android:textSize="24sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/kaipai_frame" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="总价：￥3200"
+                    android:textColor="@color/pay_money"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/kaipai_text" />
-    </RelativeLayout>
-    <!-- 这是开拍预付点击变化隐藏 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="37251人已开拍"
+                android:textColor="@color/kaipai"
+                android:textSize="12sp" />
 
-    <RelativeLayout
-        android:id="@+id/prepay_cang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone" >
+            <RelativeLayout
+                android:id="@+id/prepay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/kaipai_red" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/kaipai_frame" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:src="@drawable/kaipai_white" />
-    </RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/kaipai_text" />
+            </RelativeLayout>
+            <!-- 这是开拍预付点击变化隐藏 -->
 
-    <LinearLayout
-        android:id="@+id/more_photo"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="35dp"
-        android:gravity="center"
-        android:orientation="vertical" >
+            <RelativeLayout
+                android:id="@+id/prepay_cang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
 
-        <ImageView
-            android:id="@+id/gengduo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/geng_duo" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/kaipai_red" />
 
-        <ImageView
-            android:id="@+id/xiala"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:src="@drawable/xia_la" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/kaipai_white" />
+            </RelativeLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:src="@drawable/xia_la_xiao" />
-    </LinearLayout>
-    <!-- 这是打开更多摄影师的点击按钮隐藏 -->
+            <LinearLayout
+                android:id="@+id/more_photo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/more_photo_cang"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/gengduo_background"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone" >
+                <ImageView
+                    android:id="@+id/gengduo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/geng_duo" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/gengduo" />
+                <ImageView
+                    android:id="@+id/xiala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/xia_la" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:src="@drawable/xiala_whiite" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/xia_la_xiao" />
+            </LinearLayout>
+            <!-- 这是打开更多摄影师的点击按钮隐藏 -->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:src="@drawable/xiala_white_xiao" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/more_photo_cang"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/gengduo_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/gengduo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:src="@drawable/xiala_whiite" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:src="@drawable/xiala_white_xiao" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
