@@ -12,9 +12,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MorePhotographerAdapter extends BaseAdapter{
 	List<MorePhotographerDamo> data;
@@ -22,6 +24,7 @@ public class MorePhotographerAdapter extends BaseAdapter{
 	LayoutInflater inflater;
 	RelativeLayout add_attention_change;
 	RelativeLayout add_attention_last;
+	CheckBox selector;
 	
 	public MorePhotographerAdapter() {
 		// TODO Auto-generated constructor stub
@@ -54,7 +57,7 @@ public class MorePhotographerAdapter extends BaseAdapter{
 
 	@SuppressLint("InflateParams")
 	@Override
-	public View getView(int position, View view, ViewGroup parent) {
+	public View getView(final int position, View view, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ViewHolderPhotographer holderPh;
 		if (view==null) {
@@ -67,8 +70,19 @@ public class MorePhotographerAdapter extends BaseAdapter{
 			holderPh.contextpaoto=(TextView)view.findViewById(R.id.photo_content);
 			add_attention_change=(RelativeLayout)view.findViewById(R.id.add_attention);
 			//add_attention_last=(RelativeLayout)view.findViewById(R.id.add_attention_cang);
-			add_attention_change.setOnClickListener(listener);
-			add_attention_last.setOnClickListener(listener);
+			//add_attention_change.setOnClickListener(listener);
+			//add_attention_last.setOnClickListener(listener);
+			selector=(CheckBox)view.findViewById(R.id.selector_check);
+			selector.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Toast.makeText(context, "点击了关注", Toast.LENGTH_SHORT).show();
+					CheckBox checkBox=(CheckBox)arg0;
+					data.get(position).checked=checkBox.isChecked();
+				}
+			});
 			view.setTag(holderPh);
 		}
 		
@@ -84,7 +98,7 @@ public class MorePhotographerAdapter extends BaseAdapter{
 		
 		return view;
 	}
-	OnClickListener listener=new OnClickListener(){
+	/*OnClickListener listener=new OnClickListener(){
 
 		@Override
 		public void onClick(View arg0) {
@@ -94,7 +108,8 @@ public class MorePhotographerAdapter extends BaseAdapter{
 		}
 		
 		
-	};
+	};*/
+	
 	
 	class ViewHolderPhotographer{
 		ImageView imageViewHead;

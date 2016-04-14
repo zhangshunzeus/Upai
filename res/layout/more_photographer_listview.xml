@@ -38,7 +38,8 @@
             android:layout_centerInParent="true"
             android:layout_marginLeft="120dp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="8dp" >
+            android:layout_marginTop="8dp" 
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -46,14 +47,14 @@
                 android:contentDescription="@drawable/attention_frame"
                 android:src="@drawable/attention_frame" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/selector_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:drawableLeft="@drawable/attention_jia"
-                android:drawableStart="@drawable/attention_jia"
-                android:text="关注"
+                android:layout_centerInParent="true"
+                android:background="@drawable/selector_attention"
+                
+                android:button="@null"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
         </RelativeLayout>
