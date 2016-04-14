@@ -53,26 +53,25 @@ public class UPCustomizationWeddingKaiPaiPay extends Activity {
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
-			boolean check=true;
+			boolean check = true;
 			switch (arg1) {
 			case R.id.all_money_checked:
 				if (check) {
 					allShow.setVisibility(View.VISIBLE);
-				}else {
 					firstShow.setVisibility(View.GONE);
+				} else {
+
 				}
-				
-				
+
 				break;
 			case R.id.first_money_checked:
 				if (check) {
 					firstShow.setVisibility(View.VISIBLE);
 					allShow.setVisibility(View.GONE);
-				}else {
-					
+				} else {
+
 				}
-				
-				
+
 				break;
 
 			default:

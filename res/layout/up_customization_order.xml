@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
+            android:padding="10dp"
             android:src="@drawable/customization_return" />
 
         <TextView
@@ -25,14 +26,17 @@
             android:textColor="#ffffff"
             android:textSize="15sp" />
 
-        <ImageView
+        <Spinner
             android:id="@+id/order_chongqing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="38dp"
-            android:src="@drawable/chongqing" />
+            android:layout_marginRight="40dp"
+            android:entries="@array/order_spinner"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:padding="10dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -40,6 +44,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="16dp"
+            android:padding="10dp"
             android:src="@drawable/dingwei" />
     </RelativeLayout>
 
@@ -52,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
- 
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -269,10 +274,11 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-    <include 
+
+    <include
         android:id="@+id/customization_order_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/bottom_of_the_menu"/>
+        layout="@layout/bottom_of_the_menu" />
 
 </LinearLayout>
