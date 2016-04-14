@@ -5,6 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/activity_fragment_linear"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"

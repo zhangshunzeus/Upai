@@ -4,14 +4,19 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
+import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
@@ -25,7 +30,8 @@ import com.jiangkaiquan.massge.fragment.SendMessae;
 
 /**
  * 消息的类,结构为activity 包含大的frament
- * @author jkqme
+ * 
+ * @author jkqme ismessage
  */
 public class Message extends Activity {
 	private ImageView back;
@@ -44,7 +50,12 @@ public class Message extends Activity {
 
 	private HotRecomend recomend;// 推荐的fragment
 	private More moreframent;// 跟多的framgment
-	private Competition competition;//热门赛事
+	private Competition competition;// 热门赛事
+	private Intent intent;
+	// 判断当前显示是否为消息也
+	private boolean isMessage;
+	private Fragment courrentFragment;// 当前显示的frament
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -60,11 +71,17 @@ public class Message extends Activity {
 		back.setOnClickListener(listener);
 		more.setOnClickListener(listener);
 
+		intent = getIntent();
 		loadFrament();
+		courrentFragment = mPage;
 		// 设置要显示的frament为首页
-		transaction.add(R.id.message_liner, competition);
-		transaction.show(competition);
-		transaction.commit();
+		if (intent.getBooleanExtra("ismessage", true)) {
+			showFrament(mPage);
+			isMessage = true;
+		} else {
+			showFrament(recomend);
+			isMessage = false;
+		}
 
 	}
 
@@ -73,23 +90,34 @@ public class Message extends Activity {
 	 */
 	private void loadFrament() {
 		sample = new Sample();
+
 		mPage = new MessagePage();
 		sendMessae = new SendMessae();
 		coment = new Coment();
 		chat = new Chat();
 		recomend = new HotRecomend();
 		moreframent = new More();
-		competition=new Competition();
+		competition = new Competition();
+
+		transaction.add(R.id.message_liner, sample);
+		transaction.add(R.id.message_liner, mPage);
+		transaction.add(R.id.message_liner, sendMessae);
+		transaction.add(R.id.message_liner, coment);
+		transaction.add(R.id.message_liner, chat);
+		transaction.add(R.id.message_liner, recomend);
+		transaction.add(R.id.message_liner,moreframent);
+		transaction.add(R.id.message_liner,competition);
+
 	}
 
-	private OnClickListener listener = new OnClickListener() {
+	public OnClickListener listener = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.message_back_bt:
-
+				finish();
 				break;
 			case R.id.message_more_tx:
 
@@ -97,13 +125,78 @@ public class Message extends Activity {
 
 			default:
 				break;
+
 			}
 		}
 	};
 	/**
+	 * 底部btton 的监听
+	 */
+	public OnCheckedChangeListener listeners = new OnCheckedChangeListener() {
+
+		@Override
+		public void onCheckedChanged(RadioGroup group, int checkedId) {
+			// TODO Auto-generated method stub
+
+			switch (checkedId) {
+			case R.id.tv_home_page:
+				finishToHompage(0);
+				break;
+			case R.id.tv_custom:
+				finishToHompage(2);
+				break;
+			case R.id.tv_my:
+				finishToHompage(4);
+				break;
+			// 跳转到message页面
+			case R.id.tv_dynamic:
+				if (isMessage) {
+					showFrament(mPage);
+					isMessage = false;
+				}
+				break;
+			case R.id.tv_message:
+				if (!isMessage) {
+					showFrament(mPage);
+					isMessage = true;
+				}
+
+			default:
+				break;
+
+			}
+		}
+	};
+
+	/**
 	 * 设置标题
 	 */
-	public void setTitle(String a){
+	public void setTitle(String a) {
 		title.setText(a);
+	}
+
+	// 显示fragment
+	private void showFrament(Fragment fragment) {
+		Log.i("ShowFrament", "进入方法");
+		// 如果当前显示的和需要显示的一样
+		if (courrentFragment.hashCode() == fragment.hashCode()) {
+			return;
+		}
+		transaction = manager.beginTransaction();
+
+		transaction.hide(courrentFragment);
+		transaction.add(R.id.message_liner, fragment);
+		transaction.show(fragment);
+		transaction.commit();
+		courrentFragment = fragment;
+	}
+
+	// 返回张顺主页 a=0,2,4
+	public void finishToHompage(int a) {
+		Bundle bundle = new Bundle();
+		bundle.putInt("home", a);
+		intent.putExtra("home", bundle);
+		setResult(2, intent);
+		finish();
 	}
 }
