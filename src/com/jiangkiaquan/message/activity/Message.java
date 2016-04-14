@@ -25,9 +25,7 @@ import com.jiangkaiquan.massge.fragment.SendMessae;
 
 /**
  * 消息的类,结构为activity 包含大的frament
- * 
  * @author jkqme
- * 
  */
 public class Message extends Activity {
 	private ImageView back;
