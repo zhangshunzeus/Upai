@@ -11,6 +11,5 @@ public class AmaterurPhotographyActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.amateur_photography);
- 
 	}
 }

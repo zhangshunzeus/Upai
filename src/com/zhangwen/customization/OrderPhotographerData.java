@@ -83,6 +83,7 @@ public class OrderPhotographerData extends Activity {
 		@Override
 		public void onCheckedChanged(RadioGroup arg0, int arg1) {
 			// TODO Auto-generated method stub
+			//开启事务
 			transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]);
 			switch (arg1) {
 			case R.id.data_personal:

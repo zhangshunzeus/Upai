@@ -39,19 +39,16 @@ public class FragmentMainActivity extends Activity {
 		myfragment[2] = manager.findFragmentById(R.id.fragment_LoginFragment);
 		myfragment[3] = manager.findFragmentById(R.id.fragment_MessagePageFragment);
 		myfragment[4] = manager.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
-		
-		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
-		myfragment[0] = manager
-				.findFragmentById(R.id.fragment_HomePageFragment);
+
+		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2])
+				.hide(myfragment[3]).hide(myfragment[4]);
+		myfragment[0] = manager.findFragmentById(R.id.fragment_HomePageFragment);
 
 		myfragment[2] = manager.findFragmentById(R.id.fragment_LoginFragment);
 
-		myfragment[4] = manager
-				.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
+		myfragment[4] = manager.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
 
-		transaction = manager.beginTransaction()
-
-		.hide(myfragment[0]).hide(myfragment[2]).hide(myfragment[4]);
+		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[2]).hide(myfragment[4]);
 		transaction.show(myfragment[0]).commit();
 		setFragmentIndicator();
 
@@ -73,8 +70,7 @@ public class FragmentMainActivity extends Activity {
 		@Override
 		public void onCheckedChanged(RadioGroup group, int checkedId) {
 			// TODO Auto-generated method stub
-			transaction = manager.beginTransaction().hide(myfragment[0])
-					.hide(myfragment[2]).hide(myfragment[4]);
+			transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[2]).hide(myfragment[4]);
 			switch (checkedId) {
 
 			case R.id.tv_home_page:
@@ -86,14 +82,12 @@ public class FragmentMainActivity extends Activity {
 				break;
 			// 跳转到message页面
 			case R.id.tv_dynamic:
-				Intent intent = new Intent(FragmentMainActivity.this,
-						Message.class);
+				Intent intent = new Intent(FragmentMainActivity.this, Message.class);
 				intent.putExtra("ismessage", false);
 				startActivityForResult(intent, 1);
 				break;
 			case R.id.tv_message:
-				Intent intent2 = new Intent(FragmentMainActivity.this,
-						Message.class);
+				Intent intent2 = new Intent(FragmentMainActivity.this, Message.class);
 				intent2.putExtra("ismessage", true);
 				startActivityForResult(intent2, 1);
 				break;
@@ -106,14 +100,13 @@ public class FragmentMainActivity extends Activity {
 		}
 	};
 
-	/** 
+	/**
 	 * 获取message 页面的返回数据，并决定显示的frament
 	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == 2) {
 			int a = data.getBundleExtra("home").getInt("home");
-			transaction = manager.beginTransaction().hide(myfragment[0])
-					.hide(myfragment[2]).hide(myfragment[4]);
+			transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[2]).hide(myfragment[4]);
 			switch (a) {
 			case 0:
 				transaction.show(myfragment[0]).commit();
