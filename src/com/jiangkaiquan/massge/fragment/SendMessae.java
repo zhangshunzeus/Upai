@@ -37,7 +37,7 @@ public class SendMessae extends Fragment {
 	 */
 	private void loadView(View v) {
 		listView = (ListView) v.findViewById(R.id.send_message_lv);
-		adpter = new SendMessageAdpter(null, getActivity());
+		adpter = new SendMessageAdpter(null, (Message)getActivity());
 		listView.setAdapter(adpter);
 	}
 	@Override

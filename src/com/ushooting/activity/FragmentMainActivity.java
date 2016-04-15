@@ -1,10 +1,7 @@
 package com.ushooting.activity;
 
-import java.sql.Date;
-
 import com.jiangkiaquan.message.activity.Message;
 
-import android.R.integer;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
