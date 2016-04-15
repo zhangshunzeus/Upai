@@ -156,13 +156,13 @@ public class Message extends Activity {
 			// 跳转到message页面
 			case R.id.tv_dynamic:
 				if (isMessage) {
-					showFrament(mPage);
+					showFrament(recomend);
 					isMessage = false;
 				}
 				break;
 			case R.id.tv_message:
 				if (!isMessage) {
-					showFrament(recomend);
+					showFrament(mPage);
 					isMessage = true;
 				}
 

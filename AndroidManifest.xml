@@ -36,19 +36,21 @@
 
         <!-- 定制页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationMain" >
-           
         </activity>
         <!-- 预约页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationOrder" >
+           
         </activity>
         <!-- 婚纱摄影页面 -->
         <activity android:name="com.zhangwen.customization.UPCustomizationWedding" >
+            
         </activity>
         <!-- 更多摄影师页面 -->
         <activity android:name="com.zhangwen.customization.MorePhotographer" >
         </activity>
         <!-- 摄影师资料页面 -->
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
+            
         </activity>
 
         <!-- 其他主题 -->
@@ -70,11 +72,6 @@
         </activity>
         <!-- fragment页面 -->
         <activity android:name="com.ushooting.activity.FragmentMainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.example.ushooting.HomePageActivity" >
         </activity>

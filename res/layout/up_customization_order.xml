@@ -51,7 +51,8 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -276,7 +277,7 @@
     </ScrollView>
 
     <include
-        android:id="@+id/customization_order_button"
+        android:id="@+id/button_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/bottom_of_the_menu" />

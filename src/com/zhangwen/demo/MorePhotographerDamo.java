@@ -9,6 +9,7 @@ public class MorePhotographerDamo {
 	private String popularity;
 	private String fans;
 	private String photoContext;
+	public boolean checked;
 
 	public int getImageHead() {
 		return imageHead;

@@ -112,19 +112,25 @@ public class UPCustomizationWedding extends Activity {
 				prepayCang.setVisibility(View.VISIBLE);
 				Intent intent_payMoney = new Intent(UPCustomizationWedding.this, UPCustomizationWeddingKaiPaiPay.class);
 				startActivity(intent_payMoney);
+				UPCustomizationWedding.this.finish();
 				break;
 			case R.id.more_photo:// 更多摄影师
 				morePhoto.setVisibility(View.GONE);
 				morePhotoCang.setVisibility(View.VISIBLE);
 				Intent intent_morePhoto = new Intent(UPCustomizationWedding.this, MorePhotographer.class);
 				startActivity(intent_morePhoto);
+				UPCustomizationWedding.this.finish();
 				break;
 			case R.id.look_data://跳转到查看资料
 				Intent intent_photodata = new Intent(UPCustomizationWedding.this, OrderPhotographerData.class);
 				startActivity(intent_photodata);
+				UPCustomizationWedding.this.finish();
 				break;
 			case R.id.return_finish:
 				finish();
+				Intent intent_return = new Intent(UPCustomizationWedding.this, UPCustomizationOrder.class);
+				startActivity(intent_return);
+				UPCustomizationWedding.this.finish();
 				break;
 			default:
 				break;

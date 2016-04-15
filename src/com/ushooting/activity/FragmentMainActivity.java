@@ -31,6 +31,13 @@ public class FragmentMainActivity extends Activity {
 
 		myfragment = new Fragment[5];
 		manager = getFragmentManager();
+		myfragment[0] = manager.findFragmentById(R.id.fragment_HomePageFragment);
+		myfragment[1] = manager.findFragmentById(R.id.fragment_CompetitionFragment);
+		myfragment[2] = manager.findFragmentById(R.id.fragment_LoginFragment);
+		myfragment[3] = manager.findFragmentById(R.id.fragment_MessagePageFragment);
+		myfragment[4] = manager.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
+		
+		transaction = manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
 		myfragment[0] = manager
 				.findFragmentById(R.id.fragment_HomePageFragment);
 
@@ -96,7 +103,7 @@ public class FragmentMainActivity extends Activity {
 		}
 	};
 
-	/**
+	/** 
 	 * 获取message 页面的返回数据，并决定显示的frament
 	 */
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
