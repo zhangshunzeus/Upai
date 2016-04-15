@@ -4,23 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_activity_viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="1" >
 
-        <fragment
+      <!--   <fragment
             android:id="@+id/fragment_HomePageFragment"
             android:name="com.ushooting.fragment.HomePageFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <!-- <fragment
+         <fragment
             android:id="@+id/fragment_CompetitionFragment"
             android:name="com.ushooting.fragment.CompetitionFragment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" /> -->
+            android:layout_height="wrap_content" /> 
 
         <fragment
             android:id="@+id/fragment_LoginFragment"
@@ -28,18 +29,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <!-- <fragment
+         <fragment
             android:id="@+id/fragment_MessagePageFragment"
             android:name="com.ushooting.fragment.MessagePageFragment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" /> -->
-
+            android:layout_height="wrap_content" />
         <fragment
             android:id="@+id/fragment_UPCustomizationMainFragment"
             android:name="com.ushooting.fragment.UPCustomizationMainFragment"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_height="wrap_content" /> -->
+    </android.support.v4.view.ViewPager>
 
     <include
         android:layout_width="match_parent"

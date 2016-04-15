@@ -4,8 +4,8 @@ import com.jiangkaiquan.adpter.CompetitionAdpter;
 import com.jiangkiaquan.message.activity.Message;
 import com.ushooting.activity.R;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +36,8 @@ public class CompetitionFragment extends Fragment {
 
 		super.onCreate(savedInstanceState);
 		Message message;
-		message = (Message) getActivity();
-		message.setTitle("摄集");
+		//message = (Message) getActivity();
+		//message.setTitle("摄集");
 	}
 
 	@Override
@@ -45,8 +45,8 @@ public class CompetitionFragment extends Fragment {
 		// TODO Auto-generated method stub
 		super.onResume();
 		Message message;
-		message = (Message) getActivity();
+		//message = (Message) getActivity();
 
-		message.setTitle("热门推荐");
+		//message.setTitle("热门推荐");
 	}
 }
