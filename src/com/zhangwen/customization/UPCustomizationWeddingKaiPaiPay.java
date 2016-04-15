@@ -4,6 +4,7 @@ import com.ushooting.activity.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,6 +46,8 @@ public class UPCustomizationWeddingKaiPaiPay extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			finish();
+			Intent intent_wedding = new Intent(UPCustomizationWeddingKaiPaiPay.this, UPCustomizationWedding.class);
+			startActivity(intent_wedding);
 		}
 	};
 

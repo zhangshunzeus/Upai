@@ -3,6 +3,7 @@ package com.zhangwen.customization;
 
 
 
+import com.ushooting.activity.CharmingPhotoActivity;
 import com.ushooting.activity.R;
 
 import android.app.Activity;
@@ -49,6 +50,9 @@ public class UPCustomizationMain extends Activity {
 			} else {
 				imageThemeCheck.setVisibility(View.GONE);
 			}
+			Intent intent_theme=new Intent(UPCustomizationMain.this,CharmingPhotoActivity.class);
+			startActivity(intent_theme);
+			//UPCustomizationMain.this.finish();
 
 		}
 	};
@@ -66,6 +70,7 @@ public class UPCustomizationMain extends Activity {
 			}
 			Intent intent=new Intent(UPCustomizationMain.this,UPCustomizationOrder.class);
 			startActivity(intent);
+			UPCustomizationMain.this.finish();
 		}
 
 	};

@@ -17,6 +17,7 @@ public class AmaterurPhotographyActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.amateur_photography);
+
 		
 		iv_return = (ImageView) findViewById(R.id.iv_return);
 		iv_return.setOnClickListener(l);

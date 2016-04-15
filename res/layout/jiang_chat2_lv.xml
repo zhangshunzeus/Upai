@@ -16,11 +16,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginRight="15dp"
         android:layout_toLeftOf="@id/chat_2_img"
-        android:background="@drawable/b0coner"
+        android:background="@drawable/chatsolid2"
         android:padding="10dp"
         android:text="你好"
+        android:gravity="right"
         android:textSize="15sp" />
 
 </RelativeLayout>

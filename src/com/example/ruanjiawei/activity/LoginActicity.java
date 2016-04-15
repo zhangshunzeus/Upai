@@ -10,12 +10,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class LoginActicity extends Activity {
 	
 	TextView tv_registered;
 	Button btn_login;
+	ImageView iv_return;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -28,6 +30,9 @@ public class LoginActicity extends Activity {
 		
 		btn_login= (Button) findViewById(R.id.btn_login);
 		btn_login.setOnClickListener(l);
+		
+		iv_return = (ImageView) findViewById(R.id.iv_return);
+		iv_return.setOnClickListener(l);
 
 	}
 	
@@ -46,6 +51,9 @@ public class LoginActicity extends Activity {
 				Intent intent_my = new Intent();
 				intent_my.setClass(LoginActicity.this,MyLoginActivity.class);
 				startActivity(intent_my);
+				break;
+			case R.id.iv_return:
+				finish();
 				break;
 			default:
 				break;

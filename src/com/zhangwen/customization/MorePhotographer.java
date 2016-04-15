@@ -8,6 +8,7 @@ import com.zhangwen.adapter.MorePhotographerAdapter;
 import com.zhangwen.demo.MorePhotographerDamo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,6 +47,8 @@ public class MorePhotographer extends Activity {
 			switch (arg0.getId()) {
 			case R.id.return_finish:
 				finish();
+				Intent intent_wedding = new Intent(MorePhotographer.this, UPCustomizationWedding.class);
+				startActivity(intent_wedding);
 				break;
 
 			default:

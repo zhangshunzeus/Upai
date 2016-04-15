@@ -5,11 +5,16 @@ import com.ushooting.adapter.LandscapeArchitectureAdapter;
 import com.ushooting.demo.LandscapeArchitectureDemo;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View.OnClickListener;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class LandscapeArchitectureActivity extends Activity {
 
+	ImageView iv_back;
+	
 	LandscapeArchitectureAdapter mAdapter;
 	ListView mList;
 	ArrayList<LandscapeArchitectureDemo> list = new ArrayList<LandscapeArchitectureDemo>();
@@ -24,6 +29,10 @@ public class LandscapeArchitectureActivity extends Activity {
 		getData();
 		mAdapter = new LandscapeArchitectureAdapter(this, list);
 		mList.setAdapter(mAdapter);
+		
+		iv_back = (ImageView) findViewById(R.id.iv_back);
+		iv_back.setOnClickListener(l);
+		
 	}
 
 	private void getData() {
@@ -37,5 +46,21 @@ public class LandscapeArchitectureActivity extends Activity {
 			list.add(buy);
 		}
 	}
+	
+	OnClickListener l = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.iv_back:
+				finish();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 
 }

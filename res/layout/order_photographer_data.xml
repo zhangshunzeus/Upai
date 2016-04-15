@@ -5,17 +5,17 @@
     android:background="@color/white"
     android:orientation="vertical" >
 
-    <ScrollView
+<!--     <ScrollView
         android:id="@+id/scroll_wedding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:focusable="true"
+        android:focusable="false"
         android:focusableInTouchMode="false" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical" > -->
 
             <RelativeLayout
                 android:id="@+id/add_attention"
@@ -176,7 +176,7 @@
                 android:name="com.zhangwen.customization.OrderPhotographerDataFans"
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
-        </LinearLayout>
-    </ScrollView>
+        <!-- </LinearLayout>
+    </ScrollView> -->
 
 </LinearLayout>

@@ -9,10 +9,12 @@ import com.ushooting.fragment.LoginFragment;
 import com.ushooting.fragment.MessagePageFragment;
 import com.ushooting.fragment.UPCustomizationMainFragment;
 import android.annotation.SuppressLint;
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.Window;
@@ -25,8 +27,6 @@ public class FragmentMainActivity extends FragmentActivity {
 	RadioGroup radioGroup;
 	RadioButton tv_home_page, tv_dynamic, tv_custom, tv_message, tv_my;
 	ArrayList<Fragment> fragmentList;
-	// FragmentTransaction transaction;
-	// FragmentManager manager;
 	ViewPager viewPager;
 	ViewPagerAdapter adapter;
 
@@ -36,24 +36,7 @@ public class FragmentMainActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_fagment_main);
-
-		// manager = getFragmentManager();
-		// myfragment[0] =
-		// manager.findFragmentById(R.id.fragment_HomePageFragment);
-		// myfragment[1] =
-		// manager.findFragmentById(R.id.fragment_CompetitionFragment);
-		// myfragment[2] =
-		// manager.findFragmentById(R.id.fragment_LoginFragment);
-		// myfragment[3] =
-		// manager.findFragmentById(R.id.fragment_MessagePageFragment);
-		// myfragment[4] =
-		// manager.findFragmentById(R.id.fragment_UPCustomizationMainFragment);
-
-		// transaction =
-		// manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
-		// transaction.show(myfragment[0]).commit();
 		setFragmentIndicator();
-
 	}
 
 	private void setFragmentIndicator() {
@@ -169,39 +152,71 @@ public class FragmentMainActivity extends FragmentActivity {
 
 		}
 	};
-	OnCheckedChangeListener listener = new OnCheckedChangeListener() {
+
+	public OnCheckedChangeListener listener = new OnCheckedChangeListener() {
 
 		@Override
 		public void onCheckedChanged(RadioGroup group, int checkedId) {
 			// TODO Auto-generated method stub
-			// transaction =
-			// manager.beginTransaction().hide(myfragment[0]).hide(myfragment[1]).hide(myfragment[2]).hide(myfragment[3]).hide(myfragment[4]);
+
+
+/*			transaction = manager.beginTransaction().hide(myfragment[0])
+					.hide(myfragment[2]).hide(myfragment[4]);*/
+
 			switch (checkedId) {
 
 			case R.id.tv_home_page:
 				viewPager.setCurrentItem(0);
-				// transaction.show(myfragment[0]).commit();
 				break;
 			case R.id.tv_dynamic:
 				viewPager.setCurrentItem(1);
-				// transaction.show(myfragment[1]).commit();
 				break;
 			case R.id.tv_custom:
 				viewPager.setCurrentItem(2);
-				// transaction.show(myfragment[2]).commit();
 				break;
 			case R.id.tv_message:
 				viewPager.setCurrentItem(3);
-				// transaction.show(myfragment[3]).commit();
 				break;
 			case R.id.tv_my:
 				viewPager.setCurrentItem(4);
-				// transaction.show(myfragment[4]).commit();
 				break;
 			default:
 				break;
 			}
 		}
 	};
+	private Object transaction;
+	private FragmentManager manager;
+	private Fragment[] myfragment;
+	
 
+	/** 
+	 * 获取message 页面的返回数据，并决定显示的frament
+	 */
+	@SuppressWarnings("unused")
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == 2) {
+			int a = data.getBundleExtra("home").getInt("home");
+			transaction = manager.beginTransaction().hide(myfragment[0])
+					.hide(myfragment[2]).hide(myfragment[4]);
+			switch (a) {
+			case 0:
+				((FragmentTransaction) transaction).show(myfragment[0]).commit();
+
+				break;
+			case 2:
+				((FragmentTransaction) transaction).show(myfragment[2]).commit();
+				break;
+
+			case 4:
+				((FragmentTransaction) transaction).show(myfragment[4]).commit();
+				break;
+
+			default:
+				break;
+			}
+		}
+	}
 }
+
+
