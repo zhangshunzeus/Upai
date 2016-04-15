@@ -61,17 +61,18 @@ public class HotRecomend extends Fragment {
 	@Override
 	public void onPause() {
 		// TODO Auto-generated method stub
-		super.onPause();
-		message.more.setVisibility(View.INVISIBLE);
 
+		message.more.setVisibility(View.INVISIBLE);
+		super.onPause();
 	}
 
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
-		super.onResume();
+
 		message.more.setVisibility(View.VISIBLE);
 		message.setTitle("热门推荐");
+		super.onResume();
 	}
 
 	/*

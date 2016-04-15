@@ -49,6 +49,9 @@
         <!-- 摄影师资料页面 -->
         <activity android:name="com.zhangwen.customization.OrderPhotographerData" >
         </activity>
+        <!-- 热门活动页面 -->
+        <activity android:name="com.zhangwen.customization.PopularActivities" >
+        </activity>
 
         <!-- 其他主题 -->
         <activity android:name="com.ushooting.activity.OtherTopicsActivity" >

@@ -6,8 +6,11 @@ import java.util.HashMap;
 import com.ushooting.activity.R;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -74,8 +77,37 @@ public class HotRecoendAdpter extends BaseAdapter {
 			holder.recomend_context = (TextView) convertView
 					.findViewById(R.id.lv_hot_recoemd_context_tx);
 			convertView.setTag(holder);
+			holder.head.setOnClickListener(listener);
+			holder.recomend_contextImg.setOnClickListener(listener);
 		}
 		return convertView;
+	}
+
+	private OnClickListener listener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.lv_hot_recomend_head_img:
+				sendToMesssage();
+				break;
+			case R.id.lv_hot_recomend_context_img:
+				sendToMesssage();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
+
+	private void sendToMesssage() {
+		Bundle bundle = new Bundle();
+		bundle.putString("fragment", "comptition");
+		Intent intent = new Intent("sss");
+		intent.putExtras(bundle);
+		context.sendBroadcast(intent);
 	}
 
 	class Holder {
