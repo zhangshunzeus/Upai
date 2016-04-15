@@ -122,7 +122,7 @@ public class Message extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.message_back_bt:
-				finish();
+				onBackDown();
 				break;
 			case R.id.message_more_tx:
 				showFrament(moreframent);
