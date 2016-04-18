@@ -4,6 +4,8 @@ import com.example.ruanjiawei.activity.AmaterurPhotographyActivity;
 import com.example.ruanjiawei.activity.ImageDetailsActivity;
 import com.example.ruanjiawei.activity.ProfessionalActivity;
 import com.ushooting.activity.R;
+import com.zhangwen.customization.PopularActivities;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -69,7 +71,9 @@ public class HomePageFragment extends Fragment {
 				startActivity(intent_professional);
 				break;
 			case R.id.tv_popular_activities:
-
+				Intent intent_popular_activity = new Intent();
+				intent_popular_activity.setClass(getActivity(),PopularActivities.class);
+				startActivity(intent_popular_activity);
 				break;
 
 			default:
