@@ -51,13 +51,13 @@ public class MessagePage extends Fragment {
 				// TODO Auto-generated method stub
 				switch (v.getId()) {
 				case R.id.message_page_care_tx:
-					message.showFragmentByName("sameple");
+		//			message.showFragmentByName("sameple");
 					break;
 				case R.id.message_page_comment_tx:
-					message.showFragmentByName("comment");
+		//			message.showFragmentByName("comment");
 					break;
 				case R.id.message_page_sendmsg_tx:
-					message.showFragmentByName("sendMessage");
+		//			message.showFragmentByName("sendMessage");
 					break;
 
 				default:

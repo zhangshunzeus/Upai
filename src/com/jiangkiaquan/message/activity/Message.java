@@ -197,7 +197,7 @@ public class Message extends Activity {
 		courrentFragment = fragment;
 	}
 
-	public void showFragmentByName(String name) {
+	/*public void showFragmentByName(String name) {
 		switch (name) {
 		case "sameple":
 			showFrament(sample);
@@ -228,7 +228,7 @@ public class Message extends Activity {
 			Toast.makeText(this, "页面不存在", 1000).show();
 			break;
 		}
-	}
+	}*/
 
 	/**
 	 * 接收带有页面跳转的broadcast
@@ -241,7 +241,7 @@ public class Message extends Activity {
 			if (intent.getAction().equals("sss")) {
 				String string = intent.getExtras().getString("fragment");
 				Log.i("Broadcast", string);
-				showFragmentByName(string);
+			//	showFragmentByName(string);
 			}
 		}
 	};
