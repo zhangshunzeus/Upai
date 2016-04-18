@@ -16,6 +16,7 @@ public class PopularActivities extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		//热门活动页面
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.popular_activities);
 		returns=(ImageView)findViewById(R.id.return_finish);
@@ -23,7 +24,7 @@ public class PopularActivities extends Activity{
 	}
 	
 	OnClickListener l=new OnClickListener(){
-
+		//返回按钮监听
 		@Override
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub

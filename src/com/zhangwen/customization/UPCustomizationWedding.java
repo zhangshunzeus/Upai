@@ -66,33 +66,37 @@ public class UPCustomizationWedding extends Activity {
 		//返回
 		returns = (ImageView) findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
-		//共享
-		
+		//使用popupwindow弹出共享界面
 		LayoutInflater inflater=LayoutInflater.from(this);
+		//引入窗口配置文件
 		View view=inflater.inflate(R.layout.up_customization_wedding_shared, null);
+		//创建popup对象
 		final PopupWindow popupWindow=new PopupWindow(view,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,false);
-		
+		//设置参数，点击外部可消失
 		popupWindow.setBackgroundDrawable(new BitmapDrawable());
+		//设置点击窗口外边消失
 		popupWindow.setOutsideTouchable(true);
+		//设置参数获得焦点，否则无法点击 
 		popupWindow.setFocusable(true);
 		shared=(ImageView)findViewById(R.id.share_check);
+		//设置点击事件
 		shared.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				if (popupWindow.isShowing()) {
+					// 隐藏窗口，如果设置了点击窗口外小时即不需要此方式隐藏
 					popupWindow.dismiss();
+					
 				}else {
+					// 显示窗口 
 					popupWindow.showAsDropDown(arg0);
 				}	
 			}
 		});
-		
-		
 	}
 	
-
 	OnClickListener l = new OnClickListener() {
 
 		@Override
@@ -126,7 +130,7 @@ public class UPCustomizationWedding extends Activity {
 				startActivity(intent_photodata);
 				UPCustomizationWedding.this.finish();
 				break;
-			case R.id.return_finish:
+			case R.id.return_finish://返回并跳轉到預定頁面
 				finish();
 				Intent intent_return = new Intent(UPCustomizationWedding.this, UPCustomizationOrder.class);
 				startActivity(intent_return);

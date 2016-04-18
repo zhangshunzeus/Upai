@@ -23,28 +23,26 @@ public class MorePhotographer extends Activity {
 	List<MorePhotographerDamo> data = new ArrayList<MorePhotographerDamo>();
 	MyListview listView;
 	MorePhotographerAdapter morePhoto;
-	RelativeLayout add;
-	RelativeLayout addl;
 	ImageView returns;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏Android的标题栏
 		setContentView(R.layout.up_customization_more_photographer);
 		listView = (MyListview) findViewById(R.id.more_photo_list);
 		getData();
 		morePhoto = new MorePhotographerAdapter(data, MorePhotographer.this);
 		listView.setAdapter(morePhoto);
 		returns = (ImageView) findViewById(R.id.return_finish);
-		returns.setOnClickListener(l);
-		listView.setonRefreshListener(refreshListener);
+		returns.setOnClickListener(l);//返回按钮的监听
+		listView.setonRefreshListener(refreshListener);//监听刷新数据
 
 	}
 
 	OnRefreshListener refreshListener = new OnRefreshListener() {
-
+		//监听刷新
 		@Override
 		public void onRefresh() {
 			// TODO Auto-generated method stub
@@ -58,6 +56,7 @@ public class MorePhotographer extends Activity {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
+					//设置刷新显示的数据内容
 					MorePhotographerDamo damo = new MorePhotographerDamo();
 					damo.setImageHead(R.drawable.hun_sha_kai_pai_head);
 					damo.setPhotographerName("Steven  Pan刷新le");
@@ -75,7 +74,7 @@ public class MorePhotographer extends Activity {
 					listView.onRefreshComplete();
 				}
 
-			}.execute(null, null, null);
+			}.execute(null, null, null);//开启线程
 		}
 	};
 
@@ -85,7 +84,7 @@ public class MorePhotographer extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			case R.id.return_finish:
+			case R.id.return_finish://返回并跳轉到開拍頁面
 				finish();
 				Intent intent_wedding = new Intent(MorePhotographer.this, UPCustomizationWedding.class);
 				startActivity(intent_wedding);
@@ -99,6 +98,7 @@ public class MorePhotographer extends Activity {
 
 	public void getData() {
 		for (int i = 0; i < 5; i++) {
+			//传入布局要显示的数据
 			MorePhotographerDamo damo = new MorePhotographerDamo();
 			damo.setImageHead(R.drawable.hun_sha_kai_pai_head);
 			damo.setPhotographerName("Steven  Pan");

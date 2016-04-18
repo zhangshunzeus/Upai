@@ -66,7 +66,7 @@ public class OrderPhotographerData extends Activity {
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			switch (arg0.getId()) {
-			case R.id.return_finish:
+			case R.id.return_finish://返回按钮并跳转
 				finish();
 				Intent intent_wedding = new Intent(OrderPhotographerData.this, UPCustomizationWedding.class);
 				startActivity(intent_wedding);

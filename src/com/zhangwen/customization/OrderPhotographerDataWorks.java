@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-
+//个人作品详情页面
 public class OrderPhotographerDataWorks extends Fragment {
 	List<OrderPhotographerDataWorksGridDemo> data = new ArrayList<OrderPhotographerDataWorksGridDemo>();
 	GridView gridView;
@@ -30,7 +30,7 @@ public class OrderPhotographerDataWorks extends Fragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
-
+		//使用了gridview来展示个人作品的数据
 		gridView = (GridView) getView().findViewById(R.id.works_gridview);
 		getData();
 		adapter = new OrderPhotographerDataWorksGridListAdapter(data, getActivity());
@@ -43,16 +43,6 @@ public class OrderPhotographerDataWorks extends Fragment {
 			demo.setWorksTitle("爱丽丝之恋");
 			demo.setWorksText("轮回的路上，有着深邃的记忆，穿越多情河，你我在红尘中相连，刹那芳华，相离天涯与海角。");
 			data.add(demo);
-		}
-		 
-		
+		}	
 	}
-	
-	
-	
-	
-	
-	
-	
-
 }

@@ -15,13 +15,14 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
+//开拍预付页面
 public class UPCustomizationWeddingKaiPaiPay extends Activity {
 	RadioGroup checked;
-	RadioButton all;
-	RadioButton first;
-	LinearLayout allShow;
-	LinearLayout firstShow;
-	ImageView returns;
+	RadioButton all;// 全部付款按钮
+	RadioButton first;// 首款支付按钮
+	LinearLayout allShow;// 显示全部付款数据
+	LinearLayout firstShow;// 显示首款支付数据
+	ImageView returns;// 返回按钮
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
