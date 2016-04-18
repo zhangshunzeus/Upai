@@ -3,21 +3,10 @@
     android:id="@+id/customization_main_background_pic"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/customization_main_background">
 
-    <ScrollView
-        android:id="@+id/scroll_wedding"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:focusable="true"
-        android:focusableInTouchMode="false"
-        android:layout_weight="1" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/customization_main_background"
-            android:orientation="vertical" >
+    
 
             <RelativeLayout
                 android:id="@+id/selector_theme"
@@ -108,7 +97,6 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/customization_order"
                 android:contentDescription="@drawable/customization_order" />
-        </LinearLayout>
-    </ScrollView>
+       
 
 </LinearLayout>
