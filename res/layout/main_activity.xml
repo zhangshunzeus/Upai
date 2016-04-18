@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/fragement_home_page"
+        android:name="com.ushooting.fragment.HomePageFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+    
+    <fragment
+        android:id="@+id/fragement_competition_page"
+        android:name="com.ushooting.fragment.CompetitionFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+    
+    <fragment
+        android:id="@+id/fragement_login_page"
+        android:name="com.ushooting.fragment.LoginFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+    
+    <fragment
+        android:id="@+id/fragement_message_page"
+        android:name="com.ushooting.fragment.MessagePageFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+    
+    <fragment
+        android:id="@+id/fragement_upcustomizationmain_page"
+        android:name="com.ushooting.fragment.UPCustomizationMainFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_of_the_menu" />
+
+</LinearLayout>
