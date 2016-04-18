@@ -3,8 +3,8 @@ package com.ushooting.fragment;
 import com.jiangkiaquan.message.activity.Message;
 import com.ushooting.activity.R;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,16 +23,16 @@ public class MessagePageFragment extends Fragment {
 
 		super.onCreate(savedInstanceState);
 		Message message;
-		message = (Message) getActivity();
-		message.setTitle("消息");
+		//message = (Message) getActivity();
+		//message.setTitle("消息");
 	}
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
 		Message message;
-		message = (Message) getActivity();
-		message.setTitle("消息");
+		//message = (Message) getActivity();
+		//message.setTitle("消息");
 	}
 }
 

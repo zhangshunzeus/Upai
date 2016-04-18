@@ -8,7 +8,10 @@ import com.ushooting.demo.CreativeDesignDemo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 public class CreativeDesignActivity extends Activity {
@@ -16,6 +19,7 @@ public class CreativeDesignActivity extends Activity {
 	CreativeDesignAdapter mAdapter;
 	ListView mList;
 	ArrayList<CreativeDesignDemo> list = new ArrayList<CreativeDesignDemo>();
+	ImageView iv_back;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,9 @@ public class CreativeDesignActivity extends Activity {
 		mAdapter = new CreativeDesignAdapter(this, list);
 		//绑定Adapter
 		mList.setAdapter(mAdapter);
+		
+		iv_back = (ImageView) findViewById(R.id.iv_back);
+		iv_back.setOnClickListener(l);
 	
 	}
 
@@ -48,5 +55,21 @@ public class CreativeDesignActivity extends Activity {
 		}
 		
 	}
+	
+	OnClickListener l = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.iv_back:
+				finish();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 	
 }

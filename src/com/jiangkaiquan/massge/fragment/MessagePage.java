@@ -1,9 +1,7 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkiaquan.message.activity.Message;
-import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;

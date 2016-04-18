@@ -20,8 +20,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
-
-import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
