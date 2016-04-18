@@ -8,76 +8,76 @@
         android:id="@+id/radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="3dp"
         android:background="@color/home_page_banner_up_text_color"
-        android:gravity="center" >
-        
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
         <RadioButton
-            android:id="@+id/tv_home_page" 
+            android:id="@+id/tv_home_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="首页"
-            android:textSize="10sp"
-            android:textColor="@drawable/home_page_size_click"
-            android:drawableTop="@drawable/home_page_click"
-            android:drawablePadding="5dp"
-            android:gravity="center"
             android:layout_weight="1"
-            android:button="@null" />
-        
-        <RadioButton 
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/home_page_click"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@drawable/home_page_size_click"
+            android:textSize="10sp" />
+
+        <RadioButton
             android:id="@+id/tv_dynamic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="动态"
-            android:textSize="10sp"
-            android:textColor="@drawable/home_page_size_click"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/dynamic_click"
             android:gravity="center"
-            android:drawablePadding="2dp"
-            android:layout_weight="1"
-            android:button="@null" />
-        
-        <RadioButton 
+            android:text="动态"
+            android:textColor="@drawable/home_page_size_click"
+            android:textSize="10sp" />
+
+        <RadioButton
             android:id="@+id/tv_custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="定制"
-            android:textSize="10sp"
-            android:textColor="@drawable/home_page_size_click"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/custom_click"
             android:gravity="center"
-            android:drawablePadding="2dp"
-            android:layout_weight="1"
-            android:button="@null" />
-        
-        <RadioButton 
+            android:text="定制"
+            android:textColor="@drawable/home_page_size_click"
+            android:textSize="10sp" />
+
+        <RadioButton
             android:id="@+id/tv_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="消息"
+            android:layout_weight="1"
+            android:button="@null"
             android:drawablePadding="2dp"
-            android:textSize="10sp"
-            android:textColor="@drawable/home_page_size_click"
             android:drawableTop="@drawable/message_click"
             android:gravity="center"
-            android:layout_weight="1"
-            android:button="@null" />
-        
+            android:text="消息"
+            android:textColor="@drawable/home_page_size_click"
+            android:textSize="10sp" />
+
         <RadioButton
-            android:id="@+id/tv_my" 
+            android:id="@+id/tv_my"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="我的"
+            android:layout_weight="1"
+            android:button="@null"
             android:drawablePadding="2dp"
-            android:textSize="10sp"
-            android:textColor="@drawable/home_page_size_click"
             android:drawableTop="@drawable/my_click"
             android:gravity="center"
-            android:layout_weight="1"
-            android:button="@null" />
-        
+            android:text="我的"
+            android:textColor="@drawable/home_page_size_click"
+            android:textSize="10sp" />
     </RadioGroup>
 
 </LinearLayout>

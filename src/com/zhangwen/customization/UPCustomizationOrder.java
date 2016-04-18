@@ -104,8 +104,8 @@ public class UPCustomizationOrder extends Activity {
 				break;
 			case R.id.return_finish:// 返回并跳转到定制页面
 				finish();
-				Intent intent_main = new Intent(UPCustomizationOrder.this, UPCustomizationMain.class);
-				startActivity(intent_main);
+				/*Intent intent_main = new Intent(UPCustomizationOrder.this, UPCustomizationMain.class);
+				startActivity(intent_main);*/
 				break;
 			default:
 				break;
