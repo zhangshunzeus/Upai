@@ -31,7 +31,8 @@
             android:id="@+id/iv_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/add" />
+            android:src="@drawable/add"
+            android:padding="5dp" />
     </LinearLayout>
 
     <ScrollView
@@ -162,64 +163,131 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" >
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
 
-                <ImageView
-                    android:id="@+id/iv_soft"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/soft" />
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp" >
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/iv_soft"
-                    android:src="@drawable/transparency_in_the_picture" />
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/iv_soft"
-                    android:gravity="left"
-                    android:orientation="horizontal"
-                    android:padding="5dp" >
-
-                    <TextView
+                    <ImageView
+                        android:id="@+id/iv_soft"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/praise"
-                        android:drawablePadding="5dp"
-                        android:text="32"
-                        android:textColor="@color/menu_text_color"
-                        android:textSize="12sp" />
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/soft" />
 
-                    <TextView
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:drawableLeft="@drawable/zs_like"
-                        android:drawablePadding="5dp"
-                        android:text="35"
-                        android:textColor="@color/menu_text_color"
-                        android:textSize="12sp" />
+                        android:layout_alignBottom="@+id/iv_soft"
+                        android:src="@drawable/transparency_in_the_picture" />
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv_soft"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/praise"
+                            android:drawablePadding="5dp"
+                            android:text="32"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableLeft="@drawable/zs_like"
+                            android:drawablePadding="5dp"
+                            android:text="35"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/collection"
+                            android:drawablePadding="5dp"
+                            android:text="46"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_soft_other"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/collection"
-                        android:drawablePadding="5dp"
-                        android:text="46"
-                        android:textColor="@color/menu_text_color"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </RelativeLayout>
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/soft" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_soft_other"
+                        android:src="@drawable/transparency_in_the_picture" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv_soft_other"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/praise"
+                            android:drawablePadding="5dp"
+                            android:text="32"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableLeft="@drawable/zs_like"
+                            android:drawablePadding="5dp"
+                            android:text="35"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/collection"
+                            android:drawablePadding="5dp"
+                            android:text="46"
+                            android:textColor="@color/menu_text_color"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

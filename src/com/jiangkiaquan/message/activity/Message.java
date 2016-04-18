@@ -20,8 +20,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
-import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
@@ -88,6 +88,7 @@ public class Message extends Activity {
 			isMessage = false;
 		}
 		register();
+		//ViewFlipper flipper=
 	}
 
 	/**

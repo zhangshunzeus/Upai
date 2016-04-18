@@ -7,6 +7,7 @@ import com.ushooting.activity.R;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -86,12 +87,14 @@ public class MessagePage extends Fragment {
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
-		super.onResume();
 		Message message;
 		message = (Message) getActivity();
+		Log.i("MessagePage", "onResume");
 		message.setTitle("消息");
+		super.onResume();
+		
 	}
-
+	
 	/*
 	 * 加载底部button
 	 */
@@ -105,5 +108,5 @@ public class MessagePage extends Fragment {
 		tv_my = (RadioButton) view.findViewById(R.id.tv_my);
 		radioGroup.setOnCheckedChangeListener(message.listeners);
 	}
-
+	private void chageTitle(){}
 }
