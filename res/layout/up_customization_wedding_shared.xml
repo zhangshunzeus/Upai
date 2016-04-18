@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/qq" />
+            android:src="@drawable/share_qq" />
 
         <ImageView
             android:layout_width="wrap_content"
