@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -15,8 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-
-import com.ushooting.activity.FragmentMainActivity;
+import android.widget.Toast;
 import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
@@ -73,7 +76,7 @@ public class Message extends Activity {
 
 		intent = getIntent();
 		loadFrament();
-		courrentFragment = mPage;
+		courrentFragment = chat;
 		// 设置要显示的frament为首页
 		if (intent.getBooleanExtra("ismessage", true)) {
 			showFrament(mPage);
@@ -82,7 +85,7 @@ public class Message extends Activity {
 			showFrament(recomend);
 			isMessage = false;
 		}
-
+		register();
 	}
 
 	/**
@@ -105,8 +108,8 @@ public class Message extends Activity {
 		transaction.add(R.id.message_liner, coment);
 		transaction.add(R.id.message_liner, chat);
 		transaction.add(R.id.message_liner, recomend);
-		transaction.add(R.id.message_liner,moreframent);
-		transaction.add(R.id.message_liner,competition);
+		transaction.add(R.id.message_liner, moreframent);
+		transaction.add(R.id.message_liner, competition);
 
 	}
 
@@ -117,10 +120,10 @@ public class Message extends Activity {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.message_back_bt:
-				finish();
+				onBackDown();
 				break;
 			case R.id.message_more_tx:
-
+				showFrament(moreframent);
 				break;
 
 			default:
@@ -151,7 +154,7 @@ public class Message extends Activity {
 			// 跳转到message页面
 			case R.id.tv_dynamic:
 				if (isMessage) {
-					showFrament(mPage);
+					showFrament(recomend);
 					isMessage = false;
 				}
 				break;
@@ -169,7 +172,7 @@ public class Message extends Activity {
 	};
 
 	/**
-	 * 设置标题
+	 * 设置标题 frament调用
 	 */
 	public void setTitle(String a) {
 		title.setText(a);
@@ -177,6 +180,7 @@ public class Message extends Activity {
 
 	// 显示fragment
 	private void showFrament(Fragment fragment) {
+
 		Log.i("ShowFrament", "进入方法");
 		// 如果当前显示的和需要显示的一样
 		if (courrentFragment.hashCode() == fragment.hashCode()) {
@@ -191,6 +195,89 @@ public class Message extends Activity {
 		courrentFragment = fragment;
 	}
 
+	/*public void showFragmentByName(String name) {
+		switch (name) {
+		case "sameple":
+			showFrament(sample);
+			break;
+		case "mPage":
+			showFrament(mPage);
+			break;
+		case "sendMessage":
+			showFrament(sendMessae);
+			break;
+		case "comment":
+			showFrament(coment);
+			break;
+		case "chat":
+			showFrament(chat);
+			break;
+		case "recomed":
+			showFrament(recomend);
+			break;
+		case "morframent":
+			showFrament(moreframent);
+			break;
+		case "comptition":
+			showFrament(competition);
+			break;
+
+		default:
+			Toast.makeText(this, "页面不存在", 1000).show();
+			break;
+		}
+	}*/
+
+	/**
+	 * 接收带有页面跳转的broadcast
+	 */
+	private BroadcastReceiver receiver = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			// TODO Auto-generated method stub
+			if (intent.getAction().equals("sss")) {
+				String string = intent.getExtras().getString("fragment");
+				Log.i("Broadcast", string);
+			//	showFragmentByName(string);
+			}
+		}
+	};
+
+	// 注册广播
+	private void register() {
+		IntentFilter filter = new IntentFilter("sss");
+		registerReceiver(receiver, filter);
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		try {
+			unregisterReceiver(receiver);
+		} catch (Exception e) {
+		}
+		super.onPause();
+	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		try {
+			unregisterReceiver(receiver);
+		} catch (Exception e) {
+		}
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+
+		register();
+		super.onResume();
+	}
+
 	// 返回张顺主页 a=0,2,4
 	public void finishToHompage(int a) {
 		Bundle bundle = new Bundle();
@@ -198,5 +285,48 @@ public class Message extends Activity {
 		intent.putExtra("home", bundle);
 		setResult(2, intent);
 		finish();
+	}
+
+	// back键拦截
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == event.KEYCODE_BACK) {
+			onBackDown();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	/*
+	 * 当按back键时的响应
+	 */
+	private void onBackDown() {
+		int i = courrentFragment.hashCode();
+		if (i == sample.hashCode()) {
+			showFrament(mPage);
+		} else if (i == mPage.hashCode()) {
+			if (!isMessage) {
+				showFrament(recomend);
+			} else {
+				finish();
+			}
+		} else if (i == sendMessae.hashCode()) {
+			showFrament(mPage);
+		} else if (i == coment.hashCode()) {
+			showFrament(mPage);
+		} else if (i == chat.hashCode()) {
+			showFrament(sendMessae);
+		} else if (i == recomend.hashCode()) {
+			if (isMessage) {
+				showFrament(mPage);
+			} else {
+				finish();
+			}
+		} else if (i == competition.hashCode()) {
+			showFrament(recomend);
+		} else if (i == moreframent.hashCode()) {
+			showFrament(recomend);
+		}
 	}
 }

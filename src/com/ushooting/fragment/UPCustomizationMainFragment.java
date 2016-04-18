@@ -1,10 +1,11 @@
 package com.ushooting.fragment;
 
+import com.ushooting.activity.CharmingPhotoActivity;
 import com.ushooting.activity.R;
 import com.zhangwen.customization.UPCustomizationOrder;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class UPCustomizationMainFragment extends Fragment {
 	ImageView imageOrderCheck;
 	RelativeLayout themeCheck;
 	RelativeLayout orderCheck;
+	ImageView customization_theme_yuan;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class UPCustomizationMainFragment extends Fragment {
 		imageThemeCheck.setOnClickListener(themes);
 		imageOrderCheck = (ImageView) view.findViewById(R.id.customization_order_background);
 		imageOrderCheck.setOnClickListener(orders);
+		customization_theme_yuan = (ImageView) view.findViewById(R.id.customization_theme_yuan);
+		customization_theme_yuan.setOnClickListener(l);
 		
 		themeCheck=(RelativeLayout)view.findViewById(R.id.selector_theme);
 		themeCheck.setOnClickListener(themes);
@@ -35,6 +39,24 @@ public class UPCustomizationMainFragment extends Fragment {
 		orderCheck.setOnClickListener(orders);
 		return view;
 	}
+	
+	android.view.View.OnClickListener l = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.customization_theme_yuan:
+				Intent intent_customization_theme_yuan = new Intent();
+				intent_customization_theme_yuan.setClass(getActivity(), CharmingPhotoActivity.class);
+				startActivity(intent_customization_theme_yuan);
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 	
 	OnClickListener themes = new OnClickListener() {
 

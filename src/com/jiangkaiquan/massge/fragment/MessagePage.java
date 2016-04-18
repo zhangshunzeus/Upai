@@ -1,18 +1,18 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkiaquan.message.activity.Message;
-import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
-
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.TextView;
 
 /**
  * 消息首页
@@ -23,6 +23,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 public class MessagePage extends Fragment {
 	RadioGroup radioGroup;
 	RadioButton tv_home_page, tv_dynamic, tv_custom, tv_message, tv_my;
+	private TextView care, comment, sendmsg;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,7 +31,44 @@ public class MessagePage extends Fragment {
 		View view = inflater.inflate(R.layout.jiang_message_page, null);
 		// TODO Auto-generated method stub
 		buttomview(view);
+		loadBt(view);
 		return view;
+	}
+
+	/**
+	 * 加载frament内的控件
+	 * 
+	 * @param view
+	 */
+	private void loadBt(View view) {
+		final Message message = (Message) getActivity();
+		OnClickListener listener = new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				switch (v.getId()) {
+				case R.id.message_page_care_tx:
+		//			message.showFragmentByName("sameple");
+					break;
+				case R.id.message_page_comment_tx:
+		//			message.showFragmentByName("comment");
+					break;
+				case R.id.message_page_sendmsg_tx:
+		//			message.showFragmentByName("sendMessage");
+					break;
+
+				default:
+					break;
+				}
+			}
+		};
+		care = (TextView) view.findViewById(R.id.message_page_care_tx);
+		comment = (TextView) view.findViewById(R.id.message_page_comment_tx);
+		sendmsg = (TextView) view.findViewById(R.id.message_page_sendmsg_tx);
+		care.setOnClickListener(listener);
+		comment.setOnClickListener(listener);
+		sendmsg.setOnClickListener(listener);
 	}
 
 	@Override

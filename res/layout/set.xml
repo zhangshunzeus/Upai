@@ -10,6 +10,7 @@
         android:background="@color/black" >
 
         <ImageView
+            android:id="@+id/iv_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -290,6 +291,7 @@
                 android:background="#959595" />
 
             <Button
+                android:id="@+id/btn_exit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
