@@ -3,6 +3,7 @@ package com.zhangwen.customization;
 import com.ushooting.activity.R;
 
 import android.app.ActionBar.LayoutParams;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
@@ -31,6 +32,7 @@ public class UPCustomizationWedding extends Activity {
 	ImageView returns;
 	ImageView shared;
 
+	@SuppressLint("InflateParams")
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

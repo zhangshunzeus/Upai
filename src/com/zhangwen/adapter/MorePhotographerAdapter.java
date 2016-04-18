@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -79,9 +78,9 @@ public class MorePhotographerAdapter extends BaseAdapter {
 				}
 			});
 			view.setTag(holderPh);
+		}else {
+			holderPh = (ViewHolderPhotographer) view.getTag();
 		}
-
-		holderPh = (ViewHolderPhotographer) view.getTag();
 		MorePhotographerDamo mDamo = data.get(position);
 		// holderPh.imageViewHead.set(mDamo.getImageHead());
 		holderPh.photoName.setText(mDamo.getPhotographerName());

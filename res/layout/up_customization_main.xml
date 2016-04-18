@@ -13,7 +13,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="197dp" >
+                android:layout_marginTop="100dp" >
 
                 <ImageView
                     android:id="@+id/customization_theme_yuan"
@@ -97,6 +97,5 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/customization_order"
                 android:contentDescription="@drawable/customization_order" />
-
 
 </LinearLayout>

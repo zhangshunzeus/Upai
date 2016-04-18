@@ -16,18 +16,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@drawable/friend_circle"
             android:src="@drawable/friend_circle" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@drawable/share_qq"
             android:src="@drawable/share_qq" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@drawable/qq_spase"
             android:src="@drawable/qq_spase" />
     </LinearLayout>
 
@@ -42,12 +45,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@drawable/wei_bo"
             android:src="@drawable/wei_bo" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:contentDescription="@drawable/wei_xin"
             android:src="@drawable/wei_xin" />
     </LinearLayout>
 

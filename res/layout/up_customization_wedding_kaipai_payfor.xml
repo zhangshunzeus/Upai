@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:padding="10dp"
             android:src="@drawable/customization_return" />
 
@@ -47,6 +48,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:contentDescription="@drawable/hun_sha_kai_pai_title"
             android:src="@drawable/hun_sha_kai_pai_title" />
 
         <TextView
@@ -64,6 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="121dp"
             android:text="@string/wedding_text"
             android:textColor="@color/white"
@@ -131,6 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:lineSpacingExtra="5dp"
             android:padding="5dp"
             android:text="@string/kaipai_paytext_text"
@@ -169,6 +173,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
             android:background="@drawable/selector_parmoney_all"
             android:button="@null"
             android:text="首款支付"
@@ -204,9 +209,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:background="@drawable/selector_parmoney_all2"
             android:button="@null"
-            android:gravity="right"
+            android:gravity="center"
             android:text="支付"
             android:textColor="@drawable/selector_text_style"
             android:textSize="30sp" />
@@ -267,10 +273,11 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
                 android:background="@drawable/selector_parmoney_all2"
                 android:button="@null"
-                android:gravity="right"
+                android:gravity="center"
                 android:text="支付"
                 android:textColor="@drawable/selector_text_style"
                 android:textSize="30sp" />
