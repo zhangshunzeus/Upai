@@ -20,12 +20,13 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 public class MorePhotographer extends Activity {
-	List<MorePhotographerDamo> data=new ArrayList<MorePhotographerDamo>();
+	List<MorePhotographerDamo> data = new ArrayList<MorePhotographerDamo>();
 	MyListview listView;
 	MorePhotographerAdapter morePhoto;
 	RelativeLayout add;
 	RelativeLayout addl;
 	ImageView returns;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -36,13 +37,13 @@ public class MorePhotographer extends Activity {
 		getData();
 		morePhoto = new MorePhotographerAdapter(data, MorePhotographer.this);
 		listView.setAdapter(morePhoto);
-		returns=(ImageView)findViewById(R.id.return_finish);
+		returns = (ImageView) findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
 		listView.setonRefreshListener(refreshListener);
 
 	}
-	
-	OnRefreshListener refreshListener =new OnRefreshListener(){
+
+	OnRefreshListener refreshListener = new OnRefreshListener() {
 
 		@Override
 		public void onRefresh() {
@@ -52,9 +53,9 @@ public class MorePhotographer extends Activity {
 				@Override
 				protected Void doInBackground(Void... params) {
 					// TODO Auto-generated method stub
-					try{
+					try {
 						Thread.sleep(1000);
-					}catch(Exception e){
+					} catch (Exception e) {
 						e.printStackTrace();
 					}
 					MorePhotographerDamo damo = new MorePhotographerDamo();
@@ -65,19 +66,20 @@ public class MorePhotographer extends Activity {
 					damo.setPhotoContext(
 							"摄影师Stevin Tuchiwsky单身上路，寻找那些宁静致远或者大气磅礴的风景，将自己融入\n风景中，营造出天涯浪子的不羁感。希望这些照片能给你的下次出行带来一些灵感.");
 					data.add(damo);
-					
+
 					return null;
 				}
+
 				protected void onPostExecute(Void result) {
 					morePhoto.notifyDataSetChanged();
 					listView.onRefreshComplete();
 				}
-				
+
 			}.execute(null, null, null);
 		}
 	};
-	
-	OnClickListener l=new OnClickListener(){
+
+	OnClickListener l = new OnClickListener() {
 
 		@Override
 		public void onClick(View arg0) {
@@ -93,8 +95,6 @@ public class MorePhotographer extends Activity {
 				break;
 			}
 		}
-		
-		
 	};
 
 	public void getData() {
