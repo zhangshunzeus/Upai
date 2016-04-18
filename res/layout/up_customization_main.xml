@@ -42,7 +42,7 @@
                     android:layout_centerInParent="true"
                     android:src="@drawable/customization_main_theme_pic"
                     android:contentDescription="@drawable/customization_main_theme_pic" />
-
+				<!-- 点击显示隐藏主题 -->
                 <ImageView
                     android:id="@+id/customization_theme_background"
                     android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
                     android:layout_centerInParent="true"
                     android:src="@drawable/customization_main_order_pic"
                     android:contentDescription="@drawable/customization_main_order_pic" />
-
+				<!-- 点击显示隐藏预约 -->
                 <ImageView
                     android:id="@+id/customization_order_background"
                     android:layout_width="wrap_content"
@@ -110,11 +110,5 @@
                 android:contentDescription="@drawable/customization_order" />
         </LinearLayout>
     </ScrollView>
-
-    <include
-        android:id="@+id/button_menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/bottom_of_the_menu" />
 
 </LinearLayout>
