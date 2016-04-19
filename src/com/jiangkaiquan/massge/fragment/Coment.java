@@ -4,8 +4,8 @@ import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.ComentAdpter;
 import com.jiangkiaquan.message.activity.Message;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +25,7 @@ public class Coment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.jiang_coment, null);
+		View view = inflater.inflate(R.layout.jiang_coment,null);
 		loadView(view);
 		return view;
 	}
@@ -41,21 +41,4 @@ public class Coment extends Fragment {
 		listView.setAdapter(adpter);
 	}
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-
-		super.onCreate(savedInstanceState);
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("评论");
-	}
-	@Override
-	public void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("评论");
-	}
 }

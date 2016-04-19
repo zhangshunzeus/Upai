@@ -1,14 +1,15 @@
 package com.jiangkiaquan.message.activity;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -19,7 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.Toast;
+
+import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
 
 import com.jiangkaiquan.massge.fragment.Chat;
@@ -36,13 +38,13 @@ import com.jiangkaiquan.massge.fragment.SendMessae;
  * 
  * @author jkqme ismessage
  */
-public class Message extends Activity {
+public class Message extends FragmentMainActivity {
 	private ImageView back;
 	public TextView more;// 热门推荐。更多按钮
 	private TextView title;
 	private LinearLayout layout;
 
-	private FragmentManager manager = getFragmentManager();
+	private FragmentManager manager = getSupportFragmentManager();
 	private FragmentTransaction transaction = manager.beginTransaction();
 
 	private Sample sample;// 作品集的frament
@@ -78,14 +80,9 @@ public class Message extends Activity {
 		loadFrament();
 		courrentFragment = chat;
 		// 设置要显示的frament为首页
-		if (intent.getBooleanExtra("ismessage", true)) {
-			showFrament(mPage);
-			isMessage = true;
-		} else {
-			showFrament(recomend);
-			isMessage = false;
-		}
+
 		register();
+		// ViewFlipper flipper=
 	}
 
 	/**
@@ -195,38 +192,17 @@ public class Message extends Activity {
 		courrentFragment = fragment;
 	}
 
-	/*public void showFragmentByName(String name) {
-		switch (name) {
-		case "sameple":
-			showFrament(sample);
-			break;
-		case "mPage":
-			showFrament(mPage);
-			break;
-		case "sendMessage":
-			showFrament(sendMessae);
-			break;
-		case "comment":
-			showFrament(coment);
-			break;
-		case "chat":
-			showFrament(chat);
-			break;
-		case "recomed":
-			showFrament(recomend);
-			break;
-		case "morframent":
-			showFrament(moreframent);
-			break;
-		case "comptition":
-			showFrament(competition);
-			break;
-
-		default:
-			Toast.makeText(this, "页面不存在", 1000).show();
-			break;
-		}
-	}*/
+	/*
+	 * public void showFragmentByName(String name) { switch (name) { case
+	 * "sameple": showFrament(sample); break; case "mPage": showFrament(mPage);
+	 * break; case "sendMessage": showFrament(sendMessae); break; case
+	 * "comment": showFrament(coment); break; case "chat": showFrament(chat);
+	 * break; case "recomed": showFrament(recomend); break; case "morframent":
+	 * showFrament(moreframent); break; case "comptition":
+	 * showFrament(competition); break;
+	 * 
+	 * default: Toast.makeText(this, "页面不存在", 1000).show(); break; } }
+	 */
 
 	/**
 	 * 接收带有页面跳转的broadcast
@@ -239,7 +215,7 @@ public class Message extends Activity {
 			if (intent.getAction().equals("sss")) {
 				String string = intent.getExtras().getString("fragment");
 				Log.i("Broadcast", string);
-			//	showFragmentByName(string);
+				// showFragmentByName(string);
 			}
 		}
 	};

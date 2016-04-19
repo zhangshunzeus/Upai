@@ -1,17 +1,21 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkaiquan.adpter.HotRecoendAdpter;
-import com.jiangkiaquan.message.activity.Message;
+
+import com.ushooting.activity.FragmentMainActivity;
 import com.ushooting.activity.R;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 /**
  * 热门推荐的frament
@@ -20,7 +24,7 @@ import android.widget.RadioGroup;
  * 
  */
 public class HotRecomend extends Fragment {
-	private Message message;
+	private FragmentMainActivity message;
 	private ListView listView;
 	private HotRecoendAdpter adpter;
 
@@ -31,9 +35,9 @@ public class HotRecomend extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.jiang_hot_recomend, null);
+		View view = inflater.inflate(R.layout.jiang_hot_recomend,null);
 		loadView(view);
-		buttomview(view);
+		loadTitle(view);
 		return view;
 	}
 
@@ -44,48 +48,26 @@ public class HotRecomend extends Fragment {
 	 */
 	private void loadView(View v) {
 		listView = (ListView) v.findViewById(R.id.hot_recoment_lv);
-		adpter = new HotRecoendAdpter(null, message);
+		adpter = new HotRecoendAdpter(null,getActivity());
 		listView.setAdapter(adpter);
-	}
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		message = (Message) getActivity();
-		// 显示更多按钮
-		message.more.setVisibility(View.VISIBLE);
-		message.setTitle("热门推荐");
-	}
-
-	@Override
-	public void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-		message.more.setVisibility(View.INVISIBLE);
 
 	}
 
-	@Override
-	public void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		message.more.setVisibility(View.VISIBLE);
-		message.setTitle("热门推荐");
-	}
-
-	/*
-	 * 加载底部button
+	/**
+	 * 顶部加载
+	 * 
+	 * @param view
 	 */
-	private void buttomview(View view) {
-		Message message = (Message) getActivity();
-		radioGroup = (RadioGroup) view.findViewById(R.id.radio_group);
-		tv_home_page = (RadioButton) view.findViewById(R.id.tv_home_page);
-		tv_dynamic = (RadioButton) view.findViewById(R.id.tv_dynamic);
-		tv_custom = (RadioButton) view.findViewById(R.id.tv_custom);
-		tv_message = (RadioButton) view.findViewById(R.id.tv_message);
-		tv_my = (RadioButton) view.findViewById(R.id.tv_my);
-		radioGroup.setOnCheckedChangeListener(message.listeners);
+	private void loadTitle(View view) {
+		Dynamic dynamic = (Dynamic) getParentFragment();
+		TextView title = (TextView) view.findViewById(R.id.message_title_tx);
+		title.setText("热门推荐");
+		TextView more = (TextView) view.findViewById(R.id.message_more_tx);
+		more.setVisibility(View.VISIBLE);
+		ImageView back = (ImageView) view.findViewById(R.id.message_back_bt);
+		back.setOnClickListener(dynamic.listener);
+		more.setOnClickListener(dynamic.listener);
+
 	}
 
 }

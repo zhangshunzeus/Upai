@@ -4,15 +4,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <android.support.v4.view.ViewPager
+    <com.jiangkaiquan.view.MyViewPager
         android:id="@+id/fragment_activity_viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:layout_weight="1" >
 
+        <fragment
+            android:id="@+id/fragment_HomePageFragment"
+            android:name="com.ushooting.fragment.HomePageFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    </android.support.v4.view.ViewPager>
+        <fragment
+            android:id="@+id/fragment_LoginFragment"
+            android:name="com.ushooting.fragment.LoginFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <fragment
+            android:id="@+id/fragment_UPCustomizationMainFragment"
+            android:name="com.ushooting.fragment.UPCustomizationMainFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.jiangkaiquan.view.MyViewPager>
 
     <include
         android:layout_width="match_parent"
