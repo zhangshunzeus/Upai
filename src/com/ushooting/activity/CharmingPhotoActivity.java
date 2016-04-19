@@ -83,7 +83,7 @@ public class CharmingPhotoActivity extends Activity {
 				startActivity(intent);
 				
 			}
-		});
+		}).show();
 		
 		builder.setPositiveButton("动物萌宠", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
@@ -94,7 +94,7 @@ public class CharmingPhotoActivity extends Activity {
 				startActivity(intent);
 				
 			}
-		});
+		}).show();
 		
 		builder.setPositiveButton("风景建筑", new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
@@ -105,7 +105,7 @@ public class CharmingPhotoActivity extends Activity {
 				startActivity(intent);
 				
 			}
-		});
+		}).show();
 		
 		builder.setNegativeButton("其他主题", new DialogInterface.OnClickListener() {
 
