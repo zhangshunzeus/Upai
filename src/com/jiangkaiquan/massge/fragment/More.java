@@ -1,19 +1,24 @@
 package com.jiangkaiquan.massge.fragment;
 
 import com.jiangkaiquan.adpter.MoreAdpter;
-import com.jiangkiaquan.message.activity.Message;
+
 import com.ushooting.activity.R;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+
 /**
  * 更多的frament
+ * 
  * @author jkqme
- *
+ * 
  */
 public class More extends Fragment {
 	private ListView listView;
@@ -25,29 +30,27 @@ public class More extends Fragment {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.jiang_more, null);
 		loadView(view);
+		loadTitle(view);
 		return view;
 	}
 
 	private void loadView(View v) {
 		listView = (ListView) v.findViewById(R.id.more_lv);
-		adpter = new MoreAdpter(null,getActivity());
+		adpter = new MoreAdpter(null, getActivity());
 		listView.setAdapter(adpter);
 	}
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 
-		super.onCreate(savedInstanceState);
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("更多");
-	}
-	@Override
-	public void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("更多");
+	/**
+	 * 顶部加载
+	 * 
+	 * @param view
+	 */
+	private void loadTitle(View view) {
+		Dynamic dynamic = (Dynamic) getParentFragment();
+		TextView title = (TextView) view.findViewById(R.id.message_title_tx);
+		title.setText("更多");
+		ImageView back = (ImageView) view.findViewById(R.id.message_back_bt);
+		back.setOnClickListener(dynamic.listener);
+
 	}
 }

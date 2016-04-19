@@ -14,5 +14,5 @@ public class OrderPhotographerDataPersonal extends Fragment{
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.order_photographer_data_personal, container, false);
 	}
-
+ 
 }

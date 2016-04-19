@@ -4,8 +4,8 @@ import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.SendMessageAdpter;
 import com.jiangkiaquan.message.activity.Message;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +24,7 @@ public class SendMessae extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.jiang_send_message, null);
+		View view = inflater.inflate(R.layout.jiang_send_message,null);
 		// TODO Auto-generated method stub
 		loadView(view);
 		return view;
@@ -37,16 +37,8 @@ public class SendMessae extends Fragment {
 	 */
 	private void loadView(View v) {
 		listView = (ListView) v.findViewById(R.id.send_message_lv);
-		adpter = new SendMessageAdpter(null, (Message)getActivity());
+		adpter = new SendMessageAdpter(null, getActivity());
 		listView.setAdapter(adpter);
 	}
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 
-		super.onCreate(savedInstanceState);
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("私信");
-	}
 }

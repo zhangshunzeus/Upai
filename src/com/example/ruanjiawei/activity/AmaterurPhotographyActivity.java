@@ -9,23 +9,22 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 public class AmaterurPhotographyActivity extends Activity {
-	
+
 	ImageView iv_return;
-	
+
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.amateur_photography);
 
-		
 		iv_return = (ImageView) findViewById(R.id.iv_return);
 		iv_return.setOnClickListener(l);
 
 	}
-	
+
 	OnClickListener l = new OnClickListener() {
-		
+
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
@@ -39,5 +38,5 @@ public class AmaterurPhotographyActivity extends Activity {
 			}
 		}
 	};
-	
+
 }

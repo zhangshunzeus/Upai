@@ -1,7 +1,10 @@
 package com.ushooting.activity;
 
+
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -31,7 +34,6 @@ public class CharmingPhotoActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_charming_photo);
-
 		iv_back = (ImageView) findViewById(R.id.iv_back);
 		iv_back.setOnClickListener(l);
 		iv_add = (ImageView) findViewById(R.id.iv_add);
@@ -82,6 +84,8 @@ public class CharmingPhotoActivity extends Activity {
 	}
 
 	OnClickListener l = new OnClickListener() {
+		
+		private View imageView;
 
 		@Override
 		public void onClick(View v) {
@@ -93,6 +97,8 @@ public class CharmingPhotoActivity extends Activity {
 			case R.id.check_one:
 				Intent intent_meili_xiezhen=new Intent(CharmingPhotoActivity.this,CharmingPhotoActivity.class);
 				startActivity(intent_meili_xiezhen);
+			case R.id.iv_add:
+				showPopuwindow(imageView);
 				break;
 			case R.id.check_two:
 				Intent intent_dongwu_mengchong=new Intent(CharmingPhotoActivity.this,PetActivity.class);
@@ -116,5 +122,63 @@ public class CharmingPhotoActivity extends Activity {
 			}
 		}
 	};
+	private int items;
+	//private LinearLayout layout;
+	//private ListView listView;
+	
+	private void showPopuwindow(View parent){
+	//	layout = (LinearLayout) LayoutInflater.from(CharmingPhotoActivity.this).inflate(R.layout.popupwindow, null);
+	//	listView  = (ListView) layout.findViewById(R.id.popupwindow_list);
+	//	listView.setAdapter(new ArrayAdapter<String>(CharmingPhotoActivity.this,R.layout));
+	}
+	
+	private void Dialog() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		
+		builder.setItems(items,new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
 
+				Intent intent = new Intent(CharmingPhotoActivity.this,CreativeDesignActivity.class);
+				startActivity(intent);
+				
+			}
+		}).show();
+		
+		builder.setPositiveButton("动物萌宠", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+
+				Intent intent = new Intent(CharmingPhotoActivity.this,PetActivity.class);
+				startActivity(intent);
+				
+			}
+		}).show();
+		
+		builder.setPositiveButton("风景建筑", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+
+				Intent intent = new Intent(CharmingPhotoActivity.this,LandscapeArchitectureActivity.class);
+				startActivity(intent);
+				
+			}
+		}).show();
+		
+		builder.setNegativeButton("其他主题", new DialogInterface.OnClickListener() {
+
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+
+				Intent intent = new Intent(CharmingPhotoActivity.this,OtherTopicsActivity.class);
+				startActivity(intent);
+				
+			}
+		}).show();
+	    }
+	
 }
