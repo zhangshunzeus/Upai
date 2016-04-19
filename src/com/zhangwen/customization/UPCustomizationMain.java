@@ -18,7 +18,7 @@ public class UPCustomizationMain extends Activity {
 	RelativeLayout themeCheck;
 	RelativeLayout orderCheck;
 	//定制首页 
-	@Override
+	@Override 
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
