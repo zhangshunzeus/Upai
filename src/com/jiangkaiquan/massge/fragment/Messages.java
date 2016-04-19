@@ -3,6 +3,7 @@ package com.jiangkaiquan.massge.fragment;
 import java.lang.reflect.Field;
 
 import com.ushooting.activity.FragmentMainActivity;
+import com.ushooting.activity.MainActivity;
 import com.ushooting.activity.R;
 
 import android.content.BroadcastReceiver;
@@ -29,7 +30,7 @@ import android.widget.TextView;
 public class Messages extends Fragment {
 	private ImageView back;
 	private TextView title;
-	private FragmentMainActivity activity;
+	private MainActivity activity;
 	// private LinearLayout layout;
 	private FragmentManager manager;
 	private FragmentTransaction transaction;
@@ -75,7 +76,7 @@ public class Messages extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		activity = (FragmentMainActivity) getActivity();
+		activity = (MainActivity) getActivity();
 		chat = new Chat();
 		coment = new Coment();
 		mPage = new MessagePage();
@@ -212,4 +213,17 @@ public class Messages extends Fragment {
 			}
 		}
 	};
+
+	/**
+	 * 判断是可关闭app
+	 * 
+	 * @return
+	 */
+	public boolean canClose() {
+		if (crrentDisplay.hashCode() == mPage.hashCode()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

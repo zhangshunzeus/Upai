@@ -3,6 +3,7 @@ package com.jiangkaiquan.massge.fragment;
 import java.lang.reflect.Field;
 
 import com.ushooting.activity.FragmentMainActivity;
+import com.ushooting.activity.MainActivity;
 import com.ushooting.activity.R;
 
 import android.content.BroadcastReceiver;
@@ -28,7 +29,7 @@ import android.view.accessibility.AccessibilityEvent;
  * 
  */
 public class Dynamic extends Fragment {
-	private FragmentMainActivity activity;
+	private MainActivity activity;
 	// private LinearLayout layout;
 	private FragmentManager manager;
 	private FragmentTransaction transaction;
@@ -66,7 +67,7 @@ public class Dynamic extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		activity = (FragmentMainActivity) getActivity();
+		activity = (MainActivity) getActivity();
 		recomend = new HotRecomend();
 		more = new More();
 		competition = new Competition();
@@ -185,5 +186,15 @@ public class Dynamic extends Fragment {
 			}
 		}
 	};
-
+/**
+ * 判断是可关闭app
+ * @return
+ */
+	public boolean canClose() {
+		if (crrentDisplay.hashCode() == competition.hashCode()) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 }
