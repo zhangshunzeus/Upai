@@ -91,8 +91,8 @@ public class SendMessageAdpter extends BaseAdapter {
 
 	private void sendBroadcast() {
 		Bundle bundle = new Bundle();
-		bundle.putString("fragment", "chat");
-		Intent intent = new Intent("sss");
+		bundle.putInt("fragments", 4);
+		Intent intent = new Intent("ss");
 		intent.putExtras(bundle);
 		context.sendBroadcast(intent);
 	}

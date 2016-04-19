@@ -3,16 +3,18 @@ package com.jiangkaiquan.massge.fragment;
 import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.ChatAdpter;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
 /**
  * 聊天的frament
+ * 
  * @author jkqme
- *
+ * 
  */
 public class Chat extends Fragment {
 	private ListView listView;
@@ -22,7 +24,7 @@ public class Chat extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.jiang_chat, null);
+		View view = inflater.inflate(R.layout.jiang_chat,null);
 		loadView(view);
 		return view;
 

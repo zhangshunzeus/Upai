@@ -104,7 +104,7 @@ public class HotRecoendAdpter extends BaseAdapter {
 
 	private void sendToMesssage() {
 		Bundle bundle = new Bundle();
-		bundle.putString("fragment", "comptition");
+		bundle.putInt("fragment", 2);
 		Intent intent = new Intent("sss");
 		intent.putExtras(bundle);
 		context.sendBroadcast(intent);

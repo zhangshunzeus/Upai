@@ -4,8 +4,8 @@ import com.ushooting.activity.R;
 import com.jiangkaiquan.adpter.SampleAdpter;
 import com.jiangkiaquan.message.activity.Message;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,25 +36,23 @@ public class Sample extends Fragment {
 		lView.setAdapter(adpter);
 		return view;
 	}
-	
+
 	private void loadVary() {
 		adpter = new SampleAdpter(null, getActivity());
 	}
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 
 		super.onCreate(savedInstanceState);
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("作品集");
+		
 	}
+
 	@Override
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		Message message;
-		message = (Message) getActivity();
-		message.setTitle("作品集");
+	
 	}
 }
