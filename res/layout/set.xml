@@ -111,6 +111,7 @@
                 android:background="#959595" />
 
             <LinearLayout
+                android:id="@+id/mydata"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
