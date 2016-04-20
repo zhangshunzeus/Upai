@@ -5,6 +5,7 @@ import com.ushooting.activity.R;
 import android.app.ActionBar.LayoutParams;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class UPCustomizationWedding extends Activity {
 	TextView lookData;
 	ImageView returns;
 	ImageView shared;
+	LinearLayout popup;
 
 	@SuppressLint("InflateParams")
 	@SuppressWarnings("deprecation")
@@ -68,19 +70,23 @@ public class UPCustomizationWedding extends Activity {
 		//返回
 		returns = (ImageView) findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
+		LinearLayout layout=new LinearLayout(getApplication());
+		layout.setLayoutParams(new LayoutParams(-1, -1));
 		//使用popupwindow弹出共享界面
 		LayoutInflater inflater=LayoutInflater.from(this);
 		//引入窗口配置文件
-		View view=inflater.inflate(R.layout.up_customization_wedding_shared, null);
+		View view=inflater.inflate(R.layout.up_customization_wedding_shared, layout);
+		shared=(ImageView)findViewById(R.id.share_check);
+		popup=(LinearLayout)findViewById(R.id.popup);
 		//创建popup对象
-		final PopupWindow popupWindow=new PopupWindow(view,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT,false);
+		final PopupWindow popupWindow=new PopupWindow(view,-1,-1,false);
 		//设置参数，点击外部可消失
 		popupWindow.setBackgroundDrawable(new BitmapDrawable());
 		//设置点击窗口外边消失
 		popupWindow.setOutsideTouchable(true);
 		//设置参数获得焦点，否则无法点击 
 		popupWindow.setFocusable(true);
-		shared=(ImageView)findViewById(R.id.share_check);
+		//getLayoutInflater();
 		//设置点击事件
 		shared.setOnClickListener(new OnClickListener() {
 			
