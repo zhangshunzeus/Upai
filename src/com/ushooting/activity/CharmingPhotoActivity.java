@@ -45,6 +45,7 @@ public class CharmingPhotoActivity extends Activity {
 		LayoutInflater inflater = LayoutInflater.from(this);
 		// 引入窗口配置文件
 		View view = inflater.inflate(R.layout.mei_li_xie_zhen_add, layout);
+		//设置引入的布局文件中需要点击的控件id
 		checkOne = (LinearLayout)view.findViewById(R.id.check_one);
 		checkOne.setOnClickListener(l);
 		checkTwo = (LinearLayout)view.findViewById(R.id.check_two);
@@ -94,25 +95,25 @@ public class CharmingPhotoActivity extends Activity {
 			case R.id.iv_back:
 				finish();
 				break;
-			case R.id.check_one:
+			case R.id.check_one://跳转到魅力写真页面
 				Intent intent_meili_xiezhen=new Intent(CharmingPhotoActivity.this,CharmingPhotoActivity.class);
 				startActivity(intent_meili_xiezhen);
 			case R.id.iv_add:
 				showPopuwindow(imageView);
 				break;
-			case R.id.check_two:
+			case R.id.check_two://跳转到动物萌宠页面
 				Intent intent_dongwu_mengchong=new Intent(CharmingPhotoActivity.this,PetActivity.class);
 				startActivity(intent_dongwu_mengchong);
 				break;
-			case R.id.check_three:
+			case R.id.check_three://跳转到风景建筑页面
 				Intent intent_fengjing_jianzhu=new Intent(CharmingPhotoActivity.this,LandscapeArchitectureActivity.class);
 				startActivity(intent_fengjing_jianzhu);
 				break;
-			case R.id.check_four:
+			case R.id.check_four://跳转到创意设计页面
 				Intent intent_chuangyi_sheji=new Intent(CharmingPhotoActivity.this,CreativeDesignActivity.class);
 				startActivity(intent_chuangyi_sheji);
 				break;
-			case R.id.check_five:
+			case R.id.check_five://跳转到其他主题页面
 				Intent intent_qita_zhuti=new Intent(CharmingPhotoActivity.this,OtherTopicsActivity.class);
 				startActivity(intent_qita_zhuti);
 				break;
