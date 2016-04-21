@@ -4,8 +4,8 @@ import com.example.ruanjiawei.activity.AmaterurPhotographyActivity;
 import com.example.ruanjiawei.activity.ImageDetailsActivity;
 import com.example.ruanjiawei.activity.ProfessionalActivity;
 import com.ushooting.activity.R;
+import com.ushooting.adapter.ImageAdapter;
 import com.zhangwen.customization.PopularActivities;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,12 +21,19 @@ public class HomePageFragment extends Fragment {
 
 	ImageView iv_banner_intent;
 	TextView tv_hot, tv_amateur_photography, tv_professional_photography, tv_popular_activities;
+	@SuppressWarnings("deprecation")
+	Gallery gallery;
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 
 		View view = inflater.inflate(R.layout.activity_home_page, container, false);
+		
+		gallery = (Gallery) view.findViewById(R.id.gallery_img);
+		ImageAdapter imageAdapter = new ImageAdapter(getActivity());
+        gallery.setAdapter(imageAdapter);
 		
 		iv_banner_intent = (ImageView) view.findViewById(R.id.iv_banner_intent);
 		iv_banner_intent.setOnClickListener(listener);

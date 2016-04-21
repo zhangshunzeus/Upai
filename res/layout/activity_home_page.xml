@@ -10,8 +10,8 @@
         android:layout_height="48dp"
         android:background="@color/app_bg"
         android:gravity="center"
-        android:padding="13dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:padding="13dp" >
 
         <ImageView
             android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#333333"/>
+            android:background="#333333" />
 
         <ImageView
             android:id="@+id/iv_search"
@@ -209,70 +209,13 @@
                         android:background="@color/line" />
                 </LinearLayout>
 
-                <LinearLayout
+                <Gallery
+                    android:id="@+id/gallery_img"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="9dp"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" >
-
-                        <ImageView
-                            android:id="@+id/hot_img_one"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/hot_img_one" />
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@id/hot_img_one"
-                            android:alpha="0.5"
-                            android:background="@color/app_bg"
-                            android:paddingBottom="6dp"
-                            android:paddingLeft="12dp"
-                            android:paddingRight="12dp"
-                            android:paddingTop="6dp"
-                            android:text="拍出欧美大牌范儿"
-                            android:textColor="@color/home_page_banner_up_text_color"
-                            android:textSize="9sp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp" >
-
-                        <ImageView
-                            android:id="@+id/hot_img_two"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_weight="1"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/hot_img_two" />
-
-                        <TextView
-                            android:layout_width="130dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@id/hot_img_two"
-                            android:alpha="0.5"
-                            android:background="@color/app_bg"
-                            android:paddingBottom="6dp"
-                            android:paddingLeft="12dp"
-                            android:paddingRight="12dp"
-                            android:paddingTop="6dp"
-                            android:text="拍出欧美大牌范儿"
-                            android:textColor="@color/home_page_banner_up_text_color"
-                            android:textSize="9sp" />
-                    </RelativeLayout>
-                </LinearLayout>
+                    android:spacing="5dp" />
+                
             </LinearLayout>
 
             <LinearLayout
@@ -467,7 +410,5 @@
                 android:src="@drawable/to_view_more" />
         </LinearLayout>
     </ScrollView>
-
-   
 
 </LinearLayout>
