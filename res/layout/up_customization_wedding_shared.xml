@@ -21,7 +21,7 @@
             android:contentDescription="@drawable/friend_circle"
             android:src="@drawable/friend_circle" />
 
-         <ImageView
+          <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
         
         android:orientation="horizontal" >
 
-         <ImageView
+          <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@drawable/wei_xin"
-            android:src="@drawable/wei_xin" /> 
+            android:src="@drawable/wei_xin" />  
     </LinearLayout>
 
 </LinearLayout>
