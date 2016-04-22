@@ -22,6 +22,7 @@
             android:src="@drawable/friend_circle" />
 
           <ImageView
+            android:id="@+id/qq_shared"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
