@@ -166,7 +166,8 @@
             android:text="全款支付"
             android:textColor="@drawable/selector_text_style"
             android:textSize="16sp" 
-            android:padding="8dp"/>
+            android:padding="8dp"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/first_money_checked"
@@ -181,15 +182,15 @@
             android:textSize="16sp" 
             android:padding="8dp"/>
     </RadioGroup>
-	<!-- 首款支付显示隐藏 -->
+	<!-- 全款支付显示隐藏 -->
     <LinearLayout
         android:id="@+id/all_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:visibility="gone" >
+         >
 
         <TextView
             android:layout_width="wrap_content"
@@ -206,6 +207,7 @@
             android:textSize="30sp" />
 
         <CheckBox
+            android:id="@+id/payfor_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -230,7 +232,7 @@
             android:id="@+id/first_pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal"
             android:padding="10dp" >
 
@@ -271,6 +273,7 @@
                 android:textSize="30sp" />
 
             <CheckBox
+                android:id="@+id/payfor_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"

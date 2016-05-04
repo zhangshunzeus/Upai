@@ -1,14 +1,21 @@
 package com.zhangwen.customization;
 
+import org.json.JSONObject;
+
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
+import com.tencent.tauth.UiError;
 import com.ushooting.activity.R;
 
-import android.app.ActionBar.LayoutParams;
 import android.annotation.SuppressLint;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,6 +40,12 @@ public class UPCustomizationWedding extends Activity {
 	ImageView returns;
 	ImageView shared;
 	LinearLayout popup;
+	ImageView sharedQQ;
+	private Handler handler;
+	private Tencent tencent;
+	Bundle shareParams = null;
+	private static final String APP_ID = "222222";
+	View view;
 
 	@SuppressLint("InflateParams")
 	@SuppressWarnings("deprecation")
@@ -70,13 +83,18 @@ public class UPCustomizationWedding extends Activity {
 		//返回
 		returns = (ImageView) findViewById(R.id.return_finish);
 		returns.setOnClickListener(l);
+		
 		LinearLayout layout=new LinearLayout(getApplication());
 		layout.setLayoutParams(new LayoutParams(-1, -1));
 		//使用popupwindow弹出共享界面
 		LayoutInflater inflater=LayoutInflater.from(this);
 		//引入窗口配置文件
-		View view=inflater.inflate(R.layout.up_customization_wedding_shared, layout);
+		view=inflater.inflate(R.layout.up_customization_wedding_shared, layout);
 		shared=(ImageView)findViewById(R.id.share_check);
+		sharedQQ=(ImageView)view.findViewById(R.id.qq_shared);
+		final Context myContext = this.getApplicationContext();
+		tencent = Tencent.createInstance(APP_ID, myContext);
+		handler = new Handler();
 		popup=(LinearLayout)findViewById(R.id.popup);
 		//创建popup对象
 		final PopupWindow popupWindow=new PopupWindow(view,-1,-1,false);
@@ -101,6 +119,116 @@ public class UPCustomizationWedding extends Activity {
 					// 显示窗口 
 					popupWindow.showAsDropDown(arg0);
 				}	
+			}
+		});
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		ImageView button = (ImageView) view.findViewById(R.id.qq_shared);
+		button.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				onClickShareToQQ();
+			}
+		});
+	}
+
+	protected void onClickShareToQQ() {
+		Bundle bundle = getShareBundle();
+		if (bundle!=null) {
+			shareParams = bundle;
+			Thread thread = new Thread(shareThread);
+			thread.start();
+		}
+	}
+
+	private Bundle getShareBundle() {
+		Bundle bundle = new Bundle();
+		bundle.putString("title", "分享好友");
+		bundle.putString("imageUrl",
+				"http://img.ivsky.com/img/bizhi/img/201206/25/diablo_-019.jpg");
+		bundle.putString("targetUrl",
+				"http://d3.blizzard.cn/");
+		bundle.putString("summary", "把你的u拍美照分享给好友");
+		bundle.putString("site", "U拍分享");
+		bundle.putString("appName", "U拍");
+		return bundle;
+	}
+
+	Runnable shareThread = new Runnable() {
+
+		public void run() {
+			doShareToQQ(shareParams);
+			Message msg = shareHandler.obtainMessage();
+
+			// ��Message������뵽��Ϣ���е���
+			shareHandler.sendMessage(msg);
+
+		}
+	};
+
+	@SuppressLint("HandlerLeak")
+	Handler shareHandler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+		}
+	};
+	
+	private void doShareToQQ(Bundle params) {
+		tencent.shareToQQ(UPCustomizationWedding.this, params, new BaseUiListener() {
+			protected void doComplete(JSONObject values) {
+				showResult("shareToQQ:", "onComplete");
+			} 
+
+			@Override
+			public void onError(UiError e) {
+				showResult("shareToQQ:", "onError code:" + e.errorCode
+						+ ", msg:" + e.errorMessage + ", detail:"
+						+ e.errorDetail);
+			}
+
+			@Override
+			public void onCancel() {
+				showResult("shareToQQ", "onCancel");
+			}
+		});
+	} 
+	
+	private class BaseUiListener implements IUiListener {
+
+		@Override
+		public void onComplete(JSONObject response) {
+			// mBaseMessageText.setText("onComplete:");
+			// mMessageText.setText(response.toString());
+			doComplete(response);
+		}
+
+		protected void doComplete(JSONObject values) {
+
+		}
+
+		@Override
+		public void onError(UiError e) {
+			showResult("onError:", "code:" + e.errorCode + ", msg:"
+					+ e.errorMessage + ", detail:" + e.errorDetail);
+		}
+
+		@Override
+		public void onCancel() {
+			showResult("onCancel", "");
+		}
+	}
+	
+	private void showResult(final String base, final String msg) {
+		handler.post(new Runnable() {
+
+			@Override
+			public void run() {
 			}
 		});
 	}
